@@ -25,12 +25,19 @@ IDE atau Integrated Development Environent adalah *software* yang menyediakan fi
 ## Instalasi IDE
 IDE yang akan kita gunakan adalah Codeblocks yang bisa di-*download* di [sini](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download).
 
-Setelah *download* selesai langsung jalankan saja *installer*-nya. Waktu meng-*install* biarkan semua kotak tercentang. 
-![01-centang-install](/0.Introduction/img/01-instal.png)
+| <img src="https://user-images.githubusercontent.com/70790033/178111655-bdde4218-6f85-477c-8381-0701795e0861.png" width="400"> | 
+|:--:| 
+| Setelah *download* selesai, langsung jalankan saja *installer*-nya. Waktu meng-*install*, biarkan semua kotak tercentang.  |
 
 ## Mulai Menggunakan Codeblocks
-Di saat membuka Codeblocks pertama kali, pastikan GNU GCC Compiler sudah terdeteksi. 
-![02-compiler-detect](/0.Introduction/img/01-instal.png)
+
+| <img src="https://user-images.githubusercontent.com/70790033/178111678-333017a5-0eda-4b3e-9bcf-88c7258fd2a3.png" width="400"> | 
+|:--:| 
+| Di saat membuka Codeblocks pertama kali, pastikan GNU GCC Compiler sudah terdeteksi. |
+
+| <img src="https://user-images.githubusercontent.com/70790033/178111798-fae47fe1-0c99-4563-9329-0cc3f5e75dfd.png" width="650"> | 
+|:--:| 
+| Tampilan Codeblocks saat sudah terbuka |
 
 ### Membuat Project dan File Baru
 Sebelum menulis kode, kita perlu membuat project terlebih dahulu
@@ -58,10 +65,3 @@ Setelah project sudah dibuat
 ### Menjalankan Program
 1. Klik tombol run berwarna hijau yang ada di bar atas
 2. Jika muncul pop up pertanyaan "Do you want to build it now?", tekan yes 
-
-
-
-
-
-
-
