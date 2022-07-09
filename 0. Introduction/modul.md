@@ -25,12 +25,12 @@ IDE atau Integrated Development Environent adalah *software* yang menyediakan fi
 ## Instalasi IDE
 IDE yang akan kita gunakan adalah Codeblocks yang bisa di-*download* di [sini](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download).
 
-Setelah *download* selesai langsung jalankan saja *installer*-nya. 
-
-Waktu meng-*install* biarkan semua kotak tercentang. 
+Setelah *download* selesai langsung jalankan saja *installer*-nya. Waktu meng-*install* biarkan semua kotak tercentang. 
+![01-centang-install](/0.Introduction/img/01-instal.png)
 
 ## Mulai Menggunakan Codeblocks
 Di saat membuka Codeblocks pertama kali, pastikan GNU GCC Compiler sudah terdeteksi. 
+![02-compiler-detect](/0.Introduction/img/01-instal.png)
 
 ### Membuat Project dan File Baru
 Sebelum menulis kode, kita perlu membuat project terlebih dahulu
