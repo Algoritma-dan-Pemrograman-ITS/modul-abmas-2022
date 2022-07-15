@@ -47,6 +47,8 @@ Sebelum menulis kode, kita perlu membuat project terlebih dahulu
 4. Tuliskan project title, pilih folder tempat project, lalu klik Next
 5. Pastikan bahwa compiler yang digunakan adalah GNU GCC Compiler, lalu klik Finish
 
+https://user-images.githubusercontent.com/70790033/179145236-7e407e8b-3ab2-4da4-93f9-424b4abf38b4.mp4
+
 Cara alternatifnya
 1. Pilih File di bar atas
 2. Pilih New, lalu pilih Project
@@ -55,6 +57,8 @@ Cara alternatifnya
 5. Tuliskan project title, pilih folder tempat project, lalu klik Next
 6. Pastikan bahwa compiler yang digunakan adalah GNU GCC Compiler, lalu klik Finish
 
+https://user-images.githubusercontent.com/70790033/179145477-f9c8b62e-e9e6-45fc-bb1d-2ec0586eb67f.mp4
+
 ### Menulis dan Mengedit Kode
 Setelah project sudah dibuat
 1. Di sidebar kiri, double-click project yang sudah kita buat
@@ -62,6 +66,11 @@ Setelah project sudah dibuat
 3. Akan muncul file main.cpp, double-click lagi untuk memunculkannya dalam text editor
 4. Setelah text editor muncul, akan langsung tertulis kode program untuk Hello World, kita bisa mulai mengedit kode ini sesuai keinginan
 
+https://user-images.githubusercontent.com/70790033/179146060-8c110019-1c73-4635-95a0-2f1dc116f209.mp4
+
 ### Menjalankan Program
 1. Klik tombol run berwarna hijau yang ada di bar atas
 2. Jika muncul pop up pertanyaan "Do you want to build it now?", tekan yes 
+
+https://user-images.githubusercontent.com/70790033/179146386-5c6270ab-6300-4f29-be76-fad252c0cb5b.mp4
+
