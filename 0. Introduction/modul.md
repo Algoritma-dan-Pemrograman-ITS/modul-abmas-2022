@@ -1,8 +1,6 @@
-# Pengenalan Pemrograman dan Tools yang dibutuhkan
+# Daftar Isi
 
-## Daftar Isi
-
-## Mengenal Program, Pemrograman dan Bahasa Pemrograman
+# Mengenal Program, Pemrograman dan Bahasa Pemrograman
 
 Program adalah serangkaian instruksi yang dieksekusi oleh mesin untuk mencapai tujuan tertentu. Program biasanya menerima masukan, lalu memprosesnya untuk menghasilkan suatu keluaran. 
 
@@ -19,8 +17,8 @@ Untuk bahasa C++, penerjemahan ini disebut sebagai **kompilasi** dan dilakukan o
 
 > tulis program → kompilasi → eksekusi
 
-## Mengenal IDE
-IDE atau Integrated Development Environent adalah *software* yang menyediakan fitur-fitur yang diperlukan untuk menulis dan menjalankan program. Termasuk di antaranya *text editor* untuk menulis dan mengedit kode program, dan juga *compiler*. 
+# Mengenal IDE
+**IDE** atau **Integrated Development Environment** adalah *software* yang menyediakan fitur-fitur yang diperlukan untuk menulis dan menjalankan program. Termasuk di antaranya *text editor* untuk menulis dan mengedit kode program, dan juga *compiler*. 
 
 ## Instalasi IDE
 IDE yang akan kita gunakan adalah Codeblocks yang bisa di-*download* di [sini](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download).
@@ -28,8 +26,6 @@ IDE yang akan kita gunakan adalah Codeblocks yang bisa di-*download* di [sini](h
 | <img src="https://user-images.githubusercontent.com/70790033/178111655-bdde4218-6f85-477c-8381-0701795e0861.png" width="400"> | 
 |:--:| 
 | Setelah *download* selesai, langsung jalankan saja *installer*-nya. Waktu meng-*install*, biarkan semua kotak tercentang.  |
-
-## Mulai Menggunakan Codeblocks
 
 | <img src="https://user-images.githubusercontent.com/70790033/178111678-333017a5-0eda-4b3e-9bcf-88c7258fd2a3.png" width="400"> | 
 |:--:| 
@@ -39,7 +35,7 @@ IDE yang akan kita gunakan adalah Codeblocks yang bisa di-*download* di [sini](h
 |:--:| 
 | Tampilan Codeblocks saat sudah terbuka |
 
-### Membuat Project dan File Baru
+## Membuat Project dan File Baru
 Sebelum menulis kode, kita perlu membuat project terlebih dahulu
 1. Pilih Create a new project
 2. Pilih Console application, lalu klik Next 
@@ -59,7 +55,7 @@ Cara alternatifnya
 
 https://user-images.githubusercontent.com/70790033/179145477-f9c8b62e-e9e6-45fc-bb1d-2ec0586eb67f.mp4
 
-### Menulis dan Mengedit Kode
+## Menulis dan Mengedit Kode
 Setelah project sudah dibuat
 1. Di sidebar kiri, double-click project yang sudah kita buat
 2. Double-click Sources
@@ -68,9 +64,216 @@ Setelah project sudah dibuat
 
 https://user-images.githubusercontent.com/70790033/179146060-8c110019-1c73-4635-95a0-2f1dc116f209.mp4
 
-### Menjalankan Program
+## Menjalankan Program
 1. Klik tombol run berwarna hijau yang ada di bar atas
 2. Jika muncul pop up pertanyaan "Do you want to build it now?", tekan yes 
 
 https://user-images.githubusercontent.com/70790033/179146386-5c6270ab-6300-4f29-be76-fad252c0cb5b.mp4
 
+# Mengenal Bahasa C++
+
+## Program "Hello world!"
+
+Mari kita mulai dengan membuat program sederhana, yakni program untuk menampilkan kalimat **“Hello world!”** pada layar (*console*). Berikut adalah kode program tersebut:
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}
+```
+
+Jika program kita jalankan, akan menghasilkan output:
+
+```
+Hello world!
+```
+
+Untuk menjelaskan cara kerja program di atas, mari kita pisahkan bagian-bagian kodenya satu per satu.
+
+## Struktur Program
+
+### Preprocessor Directive dan Header File
+
+Baris 1 pada kode di atas disebut dengan **preprocessor directive**. Preprocessor directive adalah perintah awal kepada komputer sebelum menjalankan program kita. Preprocessor yang digunakan dalam hal ini adalah `#include`. 
+
+Preprocessor `#include` menjelaskan bahwa program menyertakan suatu file. Dalam program "Hello world!" di atas, file yang disertakan adalah **header file** `<iostream>`. Header file merupakan library bawaan C++ yang berisi deklarasi variabel, fungsi, dan tipe data yang diperlukan program. Dengan menyertakan header file, kita bisa menggunakan isi-isinya. 
+
+`<iostream>` adalah singkatan dari input-output stream, atau aliran input-output. Sesuai namanya, `<iostream>` adalah header file yang menyediakan cara melakukan input dan output dengan fungsi-fungsi seperti cin dan cout. 
+
+Sederhananya `using namespace std` digunakan untuk mempersingkat penulisan kode. std adalah standard library yang berasal dari `<iostream>`. Tanpa barisan kode ini, kita perlu menuliskan `std::` di awal cout, endl, cin. Seperti ini:
+
+```C++
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello world!" << std::endl;
+    return 0;
+}
+```
+
+### Whitespace
+
+Dapat diperhatikan pada kode bahwa baris 2 dan 4 kosong (tidak terdapat karakter apapun). Ini disebut dengan **whitespace**. Whitespace adalah area kosong pada kode, dan biasanya dtujukan agar kode mudah dibaca.
+
+Terdapat tiga jenis whitespace, yakni **space**, **tab**, dan **new line**. Baris 2 dan 4 adalah contoh dari new line.
+
+### Fungsi `main()`
+
+Fungsi `main()` pada kode di atas ditunjukan pada baris ke 5 hingga baris ke 9.
+
+```C++
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}
+```
+
+Dalam bahasa C, fungsi `main()` adalah fungsi utama yang harus ada. Jika program kita ibaratkan sebuah rumah, fungsi `main()` adalah pintu masuknya. Dia menandakan tempat dimulainya eksekusi kode. 
+
++ Baris 5 menunjukkan nama dari fungsi dan tipe return dari fungsi tersebut. int merupakan tipe return dari fungsi yang bernama `main()`. 
++ Baris 6 terdapat tanda  `{` yang menandakan pembuka dari fungsi `main()`.
++ Baris 7 s.d 8 merupakan tubuh dari fungsi `main()`.
++ Baris 9 terdapat tanda `}` yang menandakan penutup dari fungsi `main()`. Pada dasarnya, tubuh dari sebuah fungsi berada di antara tanda `{ }`.
+
+### Statement
+
+Di dalam fungsi `main()`, terdapat dua **statement** yang ditunjukkan pada baris 7 dan 8. Sebagian besar statement diakhiri oleh tanda titik-koma (`;`).
+
+```c++
+cout << "Hello world!" << endl;
+return 0;
+```
+
+Statement pada baris 7 menginstruksikan program untuk memanggil fungsi `cout`. `cout` adalah singkatan dari console out. Dia disediakan oleh `<iostream>` dan digunakan untuk mencetak output pada konsol (layar). Kode `cout << "Hello world!"` berarti `"Hello world!"` dimasukkan ke dalam cout untuk ditampilkan pada konsol. Kemudian, terdapat pula `endl` atau end line yang menandakan akhir dari aliran I/O. 
+
+Statement pada baris 8 disebut dengan return statement. Perintah `return 0` pada fungsi `main()` digunakan untuk mengakhiri program dan menandakan program tersebut berhasil dieksekusi.
+
+## Komentar
+
+**Komentar** (_comment_) adalah bagian dari program yang tidak akan dieksekusi. Komentar sangat berguna untuk mendeskripsikan program yang dibuat, misalnya saja untuk menjelaskan bagian dari kode agar mudah dipahami oleh programmer lainnya. Terdapat dua jenis komentar dalam bahasa C++.
+
+### Komentar Single-Line
+
+Seperti namanya, komentar single-line hanya bekerja pada satu baris. Komentar single-line diawali dengan simbol `//` . Semua karakter (pada satu baris) dibelakang simbol `//` akan diabaikan.
+
+```c++
+// Ini adalah komentar single-line  
+  
+// Fungsi untuk mencetak ke layar  
+cout << "Hello world!" << endl;
+
+```
+
+### Komentar Multi-Line
+
+Sedangkan komentar multi-line dapat bekerja pada lebih dari satu baris. Pasangan simbol `/*` dan `*/` digunakan untuk membuat komentar multi-line. Semua karakter yang berada di antara dua simbol tersebut akan diabaikan.
+
+```c++
+/* 
+Ini adalah komentar multi-line 
+Semua yang berada di sini akan 
+diabaikan 
+*/  
+```
+## Keyword
+
+**Keyword** merupakan kata-kata khusus yang digunakan bahasa C++ untuk tujuan tertentu, misalnya void, int, public, dsb. Kata-kata ini tidak bisa digunakan untuk nama variabel atau fungsi. Berikut adalah daftar keyword pada bahasa C++.
+
+|            |          |             |             |
+|------------|----------|-------------|-------------|
+| `asm`      | `double` | `new`       | `switch`    |
+| `auto`     | `else`   | `operator`  | `template`  |
+| `break`    | `enum`   | `private`   | `this`      |
+| `case`     | `extern` | `protected` | `throw`     |
+| `catch`    | `float`  | `public`    | `try`       |
+| `char`     | `for`    | `register`  | `typedef`   |
+| `class`    | `friend` | `return`    | `union`     |
+| `const`    | `goto`   | `short`     | `unsigned`  |
+| `continue` | `if`     | `signed`    | `virtual`   |
+| `default`  | `inline` | `sizeof`    | `void`      |
+| `delete`   | `int`    | `static`    | `volatile ` |
+| `do`       | `long`   | `struct`    | `while `    |
+
+## Identifier
+
+**Identifier** merujuk pada penamaan sebuah entitas, seperti pada [variabel](#variabel), fungsi, structures dan lain-lain. Karena identifier menamai sebuah entitas, maka nama dari identifier harus unik (dua entitas tidak boleh mempunyai nama identifier yang sama).
+
+Aturan penamaan identifier:
+
++ Identifier bukan merupakan [keyword](#keyword).
++ Identifier hanya boleh terdiri dari huruf lowercase, huruf uppercase, digit, dan simbol underscore ( _ ).
++ Identifier tidak boleh mengandung whitespace.
++ Identifier harus dimulai dengan huruf atau simbol underscore. Tidak boleh dimulai dengan digit/angka.
++ Bersifat case-sensitive, artinya identifier `variable` berbeda dengan `vAriaBle`.
+
+## Variabel
+
+### Pengenalan Variabel
+
+Pada dasarnya program bekerja dengan mengolah data. Nah, data ini bisa kita simpan dalam suatu wadah yang disebut **variabel**. Nilai data dari variabel dapat berubah-ubah selama proses program. Dalam bahasa C++, variabel menyimpan data dengan tipe data tertentu. Jika variabel kita ibaratkan sebuah gelas, maka tipe data adalah jenis cairan yang kita tuangkan ke dalamnya. 
+
+### Deklarasi dan Definisi Variabel
+
+Pada bahasa C++, variabel harus dideklarasikan dulu sebelum digunakan. Seperti halnya gelas tadi, gelas tersebut harus ada terlebih dahulu sebelum bisa digunakan.
+
+Untuk mendeklarasikan sebuah variabel, sintaksnya adalah sebagai berikut.
+
+```
+<tipe_data> <identifier>
+```
+
+Misalkan, potongan kode berikut mendeklarasikan variabel `x` yang bertipe `int`.
+
+```c++
+int x
+```
+
+Jika ingin mendeklarasikan lebih dari satu variabel dengan tipe data yang sama, kita bisa menggunakan operator koma (`,`).
+
+```
+<tipe_data> <variabel1>, <variabel2>, ... dst;
+```
+
+```c++
+int x, y;
+```
+
+## Pengisian Nilai Pada Variabel
+
+Setelah mendeklarasikan variabel, kita bisa mengisinya dengan sebuah nilai. Pengisian ini kita lakukan dengan operator assignment (simbol `=`).
+
+```
+identifier_variabel = <nilai yang bersesuaian>
+```
+
+Contoh:
+
+```c++
+int x, y;  
+x = 5;  
+y = -3; 
+```
+
+Dalam hal ini, variabel `x` dan `y` akan mempunyai nilai masing-masing `5` dan `-3`. 
+
+## Inisialisasi Variabel
+
+Deklarasi dan pengisian nilai pada variabel dapat dilakukan dalam satu instruksi sekaligus. Hal ini disebut dengan **inisialisasi**. Dengan melakukan inisialisasi variabel, berarti kita memberikan nilai awal pada variabel tersebut.
+
+```
+tipe_data identifier_variabel = <nilai yang bersesuaian>;
+```
+
+Contoh:
+
+```c++
+int x = 6;
+```
