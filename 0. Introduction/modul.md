@@ -246,7 +246,7 @@ Jika ingin mendeklarasikan lebih dari satu variabel dengan tipe data yang sama, 
 int x, y;
 ```
 
-## Pengisian Nilai Pada Variabel
+### Pengisian Nilai Pada Variabel
 
 Setelah mendeklarasikan variabel, kita bisa mengisinya dengan sebuah nilai. Pengisian ini kita lakukan dengan operator assignment (simbol `=`).
 
@@ -258,13 +258,13 @@ Contoh:
 
 ```c++
 int x, y;  
-x = 5;  
-y = -3; 
+x = 40;  
+y = -4; 
 ```
 
-Dalam hal ini, variabel `x` dan `y` akan mempunyai nilai masing-masing `5` dan `-3`. 
+Dalam hal ini, variabel `x` dan `y` akan mempunyai nilai masing-masing `40` dan `-4`. 
 
-## Inisialisasi Variabel
+### Inisialisasi Variabel
 
 Deklarasi dan pengisian nilai pada variabel dapat dilakukan dalam satu instruksi sekaligus. Hal ini disebut dengan **inisialisasi**. Dengan melakukan inisialisasi variabel, berarti kita memberikan nilai awal pada variabel tersebut.
 
@@ -276,4 +276,104 @@ Contoh:
 
 ```c++
 int x = 6;
+```
+
+## Konstanta dan Literal
+
+Konstanta mirip seperti variabel. Keduanya sama-sama bisa kita gunakan untuk menyimpan data. Bedanya, isi data dalam konstanta tidak bisa diubah. Literal adalah nilai data yang kita masukkan dalam konstanta. Contohnya:
+
+```c++
+5       // Literal bilangan bulat  
+1.23    // Literal bilangan real  
+'S'     // Literal karakter  
+"Hai"   // Literal string  
+```
+
+Berikut adalah jenis-jenis literal dalam bahasa C++.
+
+| Jenis Literal             | Contoh                        | Tipe Default  |
+|---------------------------|:------------------------------|:--------------|
+| Bilangan bulat            | `10, 0, -1 dll.`              | int           |
+| Bilangan real (floating)  | `202.15, 33.24, -12.45 dll.`  | double        |
+| Karakter                  | `‘A’, ‘1’, ‘#’`               | char          |
+| String                    | `“Hai”`                       | const char[4] |
+
+### Bilangan Bulat
+
+Terdapat tiga cara untuk menuliskan literal bilangan bulat. Yakni menggunakan basis 10 (desimal), basis 8 (oktal) dan basis 16 (heksadesimal).
++ **Desimal** - ditulis seperti bilangan pada umumnya. Contohnya `100, -22`.
++ **Oktal** - diawali dengan angka “0”, kemudian diikuti bilangan oktal. Contohnya `077, 033`.
++ **Heksadesimal** - diawali dengan “0x”, kemudian diikuti bilangan heksadesimal. Contohnya `0x7f, 0x521`.
+
+### Bilangan Real (floating)
+
+Bilangan real (floating) dituliskan dengan menggunakan pemisah tanda titik (.) antara bilangan bulat dan bilangan pecahannya. Contohnya `2.321, -11.22, 0.00012`.
+
+### Karakter
+
+Literal karakter dituliskan dengan mengapitnya menggunakan tanda petik satu (`' '`). Misalnya karakter A ditulis `'A'`. Selain karakter normal, terdapat beberapa karakter dengan fungsi-fungsi khusus. Misalnya, “new line” direpresentasikan dengan `'\n'`, simbol backslash direpresentasikan dengan `'\\'`. Karakter-karakter tersebut disebut dengan escape sequence. Berikut adalah escape sequence yang terdapat dalam bahasa C++.
+
+| Escape Sequence | Karakter            |
+|-----------------|:--------------------|
+| `\b`            | Backspace           |
+| `\f`            | Form feed           |
+| `\n`            | Newline             |
+| `\r`            | Return              |
+| `\t`            | Tab horisontal      |
+| `\v`            | Tab vertikal        |
+| `\\`            | Backslash           |
+| `\'`            | Tanda petik satu    |
+| `\"`            | Tanda petik dua     |
+| `\?`            | Tanda tanya         |
+| `\0`            | Karakter null       |
+
+### String
+
+String adalah kumpulan dari satu karakter atau lebih. Literal string diapit oleh tanda petik dua (`" "`). Misalnya, `"Hello world!"`. Representasi string dalam bahasa C menggunakan array bertipe `char`. Kita akan mempelajarinya di bagian selanjutnya.
+
+## Mendefinisikan Konstanta
+
+Untuk mendefinisikan konstanta, dapat dilakukan dengan cara-cara seperti berikut.
+
+### Mendefinisikan Variabel Konstan
+
+Variabel juga dapat dibuat konstan nilainya agar tidak berubah selama program berjalan. Variabel konstan dibuat dengan menambahkan keyword `const` saat pendefinisian variabel.
+ 
+```c++
+const tipe_data nama_var = <nilai yang bersesuaian>
+```
+
+Perlu diperhatikan bahwa definisi variabel konstan harus disertai pengisian nilainya.
+Contoh:
+
+```c++
+const int konstInt = 23;  
+const double konstDouble = 23.12;
+```
+
+Segala bentuk perubahan yang dilakukan terhadap variabel konstan akan menghasilkan error.
+
+```c++
+const int konstInt = 23;  
+konsInt = 11; // Error
+```
+
+### Menggunakan #define
+
+Cara lainnya adalah menggunakan prepocessor directive `#define`. Sintaksnya adalah sebagai berikut.
+ 
+```
+#define nama <nilai yang bersesuaian>
+```
+
+Contoh:
+```c++
+#define konstInt 23  
+#define konstDouble 23.11  
+  
+int main()  
+{  
+    int    a = konstInt;  
+    double b = konstDouble;  
+}  
 ```
