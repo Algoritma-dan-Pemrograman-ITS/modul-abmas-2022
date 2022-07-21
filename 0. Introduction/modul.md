@@ -311,7 +311,7 @@ Bilangan real (floating) dituliskan dengan menggunakan pemisah tanda titik (.) a
 
 ### Karakter
 
-Literal karakter dituliskan dengan mengapitnya menggunakan tanda petik satu (`' '`). Misalnya karakter A ditulis `'A'`. Selain karakter normal, terdapat beberapa karakter dengan fungsi-fungsi khusus. Misalnya, “new line” direpresentasikan dengan `'\n'`, simbol backslash direpresentasikan dengan `'\\'`. Karakter-karakter tersebut disebut dengan escape sequence. Berikut adalah escape sequence yang terdapat dalam bahasa C++.
+Literal karakter dituliskan dengan mengapitnya menggunakan tanda petik satu (`' '`). Misalnya karakter A ditulis `'A'`. Selain karakter normal, terdapat beberapa karakter dengan fungsi-fungsi khusus yang disebut escape sequence. Berikut adalah escape sequence yang terdapat dalam bahasa C++:
 
 | Escape Sequence | Karakter            |
 |-----------------|:--------------------|
@@ -343,7 +343,7 @@ Variabel juga dapat dibuat konstan nilainya agar tidak berubah selama program be
 const tipe_data nama_var = <nilai yang bersesuaian>
 ```
 
-Perlu diperhatikan bahwa definisi variabel konstan harus disertai pengisian nilainya.
+Perlu diperhatikan bahwa ketika mendefinisikan variabel konstan, kita harus langsung mengisinya dengan nilai. 
 Contoh:
 
 ```c++
@@ -351,7 +351,7 @@ const int konstInt = 23;
 const double konstDouble = 23.12;
 ```
 
-Segala bentuk perubahan yang dilakukan terhadap variabel konstan akan menghasilkan error.
+Jika kita mencoba mengubah variabel konstan, akan terjadi eror. 
 
 ```c++
 const int konstInt = 23;  
@@ -360,7 +360,7 @@ konsInt = 11; // Error
 
 ### Menggunakan #define
 
-Cara lainnya adalah menggunakan prepocessor directive `#define`. Sintaksnya adalah sebagai berikut.
+Cara lainnya adalah menggunakan preprocessor directive `#define`. Sintaksnya adalah sebagai berikut.
  
 ```
 #define nama <nilai yang bersesuaian>
