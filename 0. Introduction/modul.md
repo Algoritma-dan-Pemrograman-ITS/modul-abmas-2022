@@ -377,3 +377,210 @@ int main()
     double b = konstDouble;  
 }  
 ```
+
+# Tipe Data Dasar
+
+Tiap data yang disimpan dalam variabel mempunyai tipe. Tipe data ini akan menentukan jangkauan nilai dan memori yang dipakai variabel, serta format penulisan kode. Dalam bahasa C++, terdapat beberapa jenis tipe data: tipe data dasar, tipe data turunan, dan void. Untuk kali ini kita akan berfokus pada tipe data dasar.
+
+Setiap tipe data mempunyai jangkauan nilai. Jika nilai yang dimasukkan ke dalam variabel ada di luar jangkauan nilai tipe datanya, maka nilai yang tersimpan tidak akan sesuai. Sebagai contoh:
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a = 2147483650;
+    int b = -2147483650;
+    cout << a << endl;
+    cout << b << endl;
+    return 0;
+}
+
+```
+
+Jangkauan nilai dari variable bertipe int adalah antara -2.147.483.648 sampai 2.147.483.647. Namun, dalam kode di atas, kita memasukkan -2.147.483.650 dan 2.147.483.650 ke dalam variabel a dan b yang bertipe int. Jika kita jalankan kode tersebut, outputnya:
+
+```
+-2147483646
+2147483646
+```
+
+Terlihat bahwa nilai yang tersimpan dalam variabel a dan b tidak sesuai dengan yang kita masukkan. 
+
+## Tipe Bilangan Bulat
+
+Bilangan Bulat adalah bilangan yang tidak mempunyai nilai pecahan. Tipe data bilangan bulat pada bahasa C++ diantaranya sebagai berikut.
+
+<table>
+    <thead>
+        <tr>
+            <th rowspan="2" align="center">Tipe Data</th>
+            <th rowspan="2" align="center">Memori (Byte)</th>
+            <th colspan="3" align="center">Jangkauan Nilai</th>
+            <th rowspan="2" align="center">Format Specifier</th>
+        </tr>
+        <tr>
+            <th align="center">Min</th>
+            <th align="center"></th>
+            <th align="center">Max</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>short</td>
+            <td align="center">2</td>
+            <td align="center">-2<sup>15</sup></td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>15</sup> - 1</td>
+            <td align="center">%hi</td>
+        </tr>
+        <tr>
+            <td>unsigned short</td>
+            <td align="center">2 - 4</td>
+            <td align="center">0</td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>16</sup> - 1</td>
+            <td align="center">%hu</td>
+        </tr>
+        <tr>
+            <td>int</td>
+            <td align="center">4</td>
+            <td align="center">-2<sup>31</sup></td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>31</sup> - 1</td>
+            <td align="center">%d</td>
+        </tr>
+        <tr>
+            <td>unsigned int</td>
+            <td align="center">4</td>
+            <td align="center">0</td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>32</sup> - 1</td>
+            <td align="center">%u</td>
+        </tr>
+        <tr>
+            <td>long</td>
+            <td align="center">4</td>
+            <td align="center">-2<sup>31</sup></td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>31</sup> - 1</td>
+            <td align="center">%ld</td>
+        </tr>
+        <tr>
+            <td>unsigned long</td>
+            <td align="center">4</td>
+            <td align="center">0</td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>32</sup> - 1</td>
+            <td align="center">%lu</td>
+        </tr>
+        <tr>
+            <td>long long</td>
+            <td align="center">8</td>
+            <td align="center">-2<sup>63</sup></td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>63</sup> - 1</td>
+            <td align="center">%lld</td>
+        </tr>
+        <tr>
+            <td>unsigned long long</td>
+            <td align="center">8</td>
+            <td align="center">0</td>
+            <td align="center">s.d</td>
+            <td align="center">2<sup>64</sup> - 1</td>
+            <td align="center">%llu</td>
+        </tr>
+    </tbody>
+</table>
+
+Seperti namanya, tipe-tipe data di atas digunakan untuk merepresentasikan bilangan bulat (positif dan negatif) dan nol. Misalnya, 0, -5, 12, -1, 200 dsb. Perlu ditekankan bahwa tipe-tipe data di atas tidak bisa digunakan untuk merepresentasikan bilangan berkoma, seperti 0.5, 0.25, -0.42, dsb. 
+
+Jika diperhatikan, beberapa tipe data di atas mempunyai awalan **unsigned** yang artinya tidak bertanda. Tipe-tipe data unsigned tidak dapat menampung bilangan negatif. Kebalikannya adalah **signed** yang dapat menampung bilangan negatif. Secara default, tipe data tanpa awalan unsigned merupakan tipe data signed. 
+
+Dalam memprogram, yang umum digunakan adalah int dan long long.
+
+## Tipe Bilangan Real
+
+Bilangan Real atau floating-point adalah bilangan yang mempunyai nilai pecahan (real). Tipe data bilangan real pada bahasa C++ di antaranya adalah sebagai berikut.
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Tipe Data</th>
+            <th align="center">Memori (Byte)</th>
+            <th align="center">Jangkauan Nilai</th>
+            <th align="center">Format Specifier</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>float</td>
+            <td align="center">4</td>
+            <td align="center">&plusmn;3.4 x 10<sup>&plusmn;38</sup> (estimasi)</td>
+            <td align="center">%f</td>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td align="center">8</td>
+            <td align="center">&plusmn;1.7 x 10<sup>&plusmn;308</sup> (estimasi)</td>
+            <td align="center">%lf</td>
+        </tr>
+    </tbody>
+</table>
+
+Tipe-tipe data di atas digunakan untuk menyimpan data berupa bilangan real (floating-point) atau bilangan berkoma. Misalnya, `2.35, -12.246, 0.005` dsb.
+
+Tipe yang umum digunakan adalah double.
+
+## Tipe Karakter
+
+Tipe data karakter biasanya digunakan untuk merepresentasikan satu karakter. Karakter mencakup huruf dan tanda baca, seperti `'A'`, `'c'`, `‘-‘`, dan sebagainya. 
+
+Sebenarnya karakter-karakter dalam bahasa C++ adalah bilangan bulat. Bahasa C++ menggunakan sistem pengkodean ASCII yang mengkonversikan bilangan-bilangan tersebut menjadi karakter. Sebagai contoh, 32 adalah kode ASCII untuk karakter spasi (’ ’), 65 adalah kode ASCII untuk huruf ’A’, dan 98 adalah kode ASCII untuk huruf ’b’.
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Tipe Data</th>
+            <th align="center">Memori (Byte)</th>
+            <th align="center">Jangkauan Nilai</th>
+            <th align="center">Format Specifier</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>char</td>
+            <td align="center">1</td>
+            <td align="center">-2<sup>7</sup> s.d 2<sup>7</sup> - 1</td>
+            <td align="center">%c</td>
+        </tr>
+        <tr>
+            <td>unsigned char</td>
+            <td align="center">1</td>
+            <td align="center">0 s.d 2<sup>8</sup> - 1</td>
+            <td align="center">%c</td>
+        </tr>
+    </tbody>
+</table>
+
+## Tipe Boolean
+Tipe data boolean digunakan untuk menyimpan nilai kebenaran, yaitu hanya TRUE atau FALSE. Nilai kebenaran ini dapat pula direpresentasikan oleh bilangan 1 untuk nilai TRUE dan 0 untuk nilai FALSE. Tipe data boolean akan lebih terasa kebermanfaatannya ketika kita sudah mempelajari struktur percabangan dan array.
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Tipe Data</th>
+            <th align="center">Memori (Byte)</th>
+            <th align="center">Jangkauan Nilai</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bool</td>
+            <td align="center">1</td>
+            <td align="center">true (1) / false (0)</td>
+        </tr>
+    </tbody>
+</table>
