@@ -870,3 +870,247 @@ int main()
 2
 ```
 
+## Input Dasar
+
+Pada program-program di atas, jika kita ingin mengubah atau memasukkan nilai ke variabel, kita perlu mengedit kode programnya dan mengkompilasi ulang. Nah, bagaimana jika kita ingin langsung memberi nilai pada variabel melalui programnya, tanpa harus mengedit kode? Hal ini bisa kita lakukan dengan input. 
+
+Input bisa berasal dari berbagai sumber, seperti keyboard dan file. Di sini, kita akan berfokus pada cara menerima input dari keyboard. Umumnya, user akan mengetikkan data/nilai yang kemudian dimasukkan pada variabel. 
+
+### Fungsi `cin`
+
+Fungsi pertama yang dapat kita gunakan adalah `cin` dari header file `<iostream>`. `cin` biasanya digunakan dengan tanda `>>` yang disebut extraction operator. Extraction operator akan mengekstrak nilai dari input dan memasukkannya ke dalam variabel. 
+
+Sebagai contoh, program di bawah menerima input berupa integer yang kemudian dimasukkan ke variabel a. Nilai variabel a lalu dicetak dengan format _“a mempunyai nilai = ”_.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    cin >> a;
+    cout << "a mempunyai nilai = " << a;
+    return 0;
+}
+```
+
+Input
+
+```
+5
+```
+
+Output
+
+```
+a mempunyai nilai = 5
+```
+`cin` bisa juga digunakan untuk variabel bertipe data lain, seperti String, char, dan double:
+
+```c++
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    // String
+    string s;
+    cin >> s;
+    cout << "s berisi = " << s << endl;
+
+    // Char
+    char c;
+    cin >> c;
+    cout << "c berisi = " << c << endl;
+
+    // Double
+    double d;
+    cin >> d;
+    cout << "d bernilai = " << d << endl;
+
+    return 0;
+}
+```
+
+Input
+
+```
+Halo
+E 
+0.56
+```
+
+Output
+
+```
+s berisi = Halo
+c berisi = E
+d bernilai = 0.56
+```
+
+Untuk memberitahu user data apa yang perlu dia inputkan, kita bisa memberikan prompt sebelum `cin`
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i;
+    cout << "Masukkan int : ";
+    cin >> i;
+    cout << "i bernilai = " << i << endl;
+    return 0;
+}
+```
+
+```
+Masukkan int : 10
+i bernilai = 10
+```
+
+`cin` memiliki beberapa fungsi turunan seperti `cin.get`, `cin.getline()`, `cin.read()`, dan `cin.ignore()`. Namun, fungsi-fungsi ini jarang digunakan. Jika kalian hendak mengetahui lebih lanjut, bisa mengunjungi link https://www.geeksforgeeks.org/cin-in-c/.
+
+### Fungsi `scanf()`
+
+Fungsi kedua yang dapat kita gunakan adalah `scanf()` dari header file `<cstdio>`. Cara kerja `scanf()` adalah dengan mencari token yang dapat dibaca berikutnya, lalu mengambil nilainya. Token adalah adalah serangkaian karakter non-spasi, misalnya huruf atau angka. Pada contoh di bawah, token yang dimaksud adalah bilangan yang akan menjadi nilai variabel n.
+
+Parameter dari fungsi `scanf()` sama persis dengan fungsi `printf()`. Kita menggunakan format specifier untuk menentukan jenis tipe data yang kita input, kemudian nilai input tersebut akan di-assign pada variabel.
+
+Sebagai contoh, program di bawah menerima input berupa bilangan bulat yang disimpan pada variabel n, kemudian mencetak nilai variabel n dengan format _“n mempunyai nilai = n”_.
+
+```c
+#include <stdio.h>  
+  
+int main()   
+{  
+    int n;  
+    scanf("%d", &n);  
+    printf("n mempunyai nilai = %d", n);  
+    return 0;  
+} 
+```
+
+Input
+
+```
+3
+```
+
+Output
+
+```
+n mempunyai nilai = 3
+```
+
+Jika kita perhatikan, ada sedikit perbedaan antara scanf dan printf, yakni adanya karakter `'&'` sebelum nama variabel. 
+
+```
+scanf(“<format string>”, &var1, &var2, &var3, ... dst);
+```
+
+Misalnya, kita mempunyai tiga variabel bertipe int, char, dan double, yakni a, b, dan c. Kita hendak menerima input dan memasukannya ke dalam ketiga variabel ini. Maka, programnya seperti: 
+
+```c++
+#include <cstdio>  
+  
+int main()   
+{  
+    int  a; 
+    char b;
+    double c;
+    scanf("%d %c %lf", &a, &b, &c);  
+    printf("a bernilai = %d\n", a); 
+    printf("b bernilai = %c\n", b); 
+    printf("c bernilai = %lf\n", c);
+    return 0;  
+}
+```
+
+Input
+
+```
+5 K 0.3
+```
+
+Output
+
+```
+a bernilai = 5
+b bernilai = K
+c bernilai = 0.300000
+```
+
+Khusus untuk tipe data char, scanf akan membaca 1 karakter selanjutnya, baik itu spasi, angka, ataupun baris baru. Hal ini dapat menyebabkan nilai variabel tidak sesuai dengan yang kita inginkan. Perhatikan program berikut:
+
+``` c++
+#include <cstdio>  
+  
+int main()   
+{  
+    char c1, c2;
+    int b;
+
+    scanf("%c", &c1);
+    scanf("%d", &b);
+    scanf("%c", &c2);  
+    printf("c1 bernilai = %c\n", c1); 
+    printf("b bernilai = %d\n", b);
+    printf("c2 bernilai = %c\n", c2); 
+    return 0;  
+}
+```
+
+Input
+
+```
+m
+4
+t
+```
+
+Output
+
+```
+c1 bernilai = m
+b bernilai = 4
+c2 bernilai = 
+```
+
+Pada input, kita ingin memasukkan `'m'` ke variabel c1, 4 ke variabel b, dan `'t'` ke variabel c2. Akan tetapi, variabel c2 justru memiliki nilai berupa karakter enter. Hal ini karena kita menekan enter setelah mengetikkan 4. Masalah ini dapat kita selesaikan dengan menambahkan `'\n'` sebelum melakukan `scanf` untuk variabel c2. 
+
+``` c++
+#include <cstdio>  
+  
+int main()   
+{  
+    char c1, c2;
+    int b;
+
+    scanf("%c", &c1);
+    scanf("%d\n", &b);
+    scanf("%c", &c2);  
+    printf("c1 bernilai = %c\n", c1); 
+    printf("b bernilai = %d\n", b);
+    printf("c2 bernilai = %c\n", c2); 
+    return 0;  
+}
+```
+
+Input
+
+```
+m
+4
+t
+```
+
+Output
+
+```
+c1 bernilai = m
+b bernilai = 4
+c2 bernilai = t
+```
