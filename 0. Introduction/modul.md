@@ -906,7 +906,8 @@ Output
 ```
 a mempunyai nilai = 5
 ```
-`cin` bisa juga digunakan untuk variabel bertipe data lain, seperti String, char, dan double:
+
+Tidak hanya int, `cin` bisa juga digunakan untuk variabel bertipe data lain, seperti String, char, dan double:
 
 ```c++
 #include <iostream>
@@ -950,7 +951,41 @@ c berisi = E
 d bernilai = 0.56
 ```
 
-Untuk memberitahu user data apa yang perlu dia inputkan, kita bisa memberikan prompt sebelum `cin`
+Satu baris `cin` bisa kita gunakan untuk menerima input beberapa variabel sekaligus, seperti pada program berikut:
+
+```c++
+#include <iostream>
+using namespace std;
+  
+int main()   
+{  
+    int a;
+    char b;
+    double c;
+
+    cin >> a >> b >> c;
+    cout << "a mempunyai nilai = " << a << endl;
+    cout << "b mempunyai nilai = " << b << endl;
+    cout << "c mempunyai nilai = " << c << endl;
+    return 0;  
+}
+```
+
+Input
+
+```
+5 Y 0.2
+```
+
+Output
+
+```
+a mempunyai nilai = 5
+b mempunyai nilai = Y
+c mempunyai nilai = 0.2
+```
+
+Untuk memberitahu user data apa yang perlu dia inputkan, kita bisa memberikan prompt dengan `cout` sebelum `cin`. Ini bukan sesuatu yang wajib dilakukan, melainkan hanya bantuan bagi user untuk memahami program. 
 
 ```C++
 #include <iostream>
@@ -977,12 +1012,12 @@ i bernilai = 10
 
 Fungsi kedua yang dapat kita gunakan adalah `scanf()` dari header file `<cstdio>`. Cara kerja `scanf()` adalah dengan mencari token yang dapat dibaca berikutnya, lalu mengambil nilainya. Token adalah adalah serangkaian karakter non-spasi, misalnya huruf atau angka. Pada contoh di bawah, token yang dimaksud adalah bilangan yang akan menjadi nilai variabel n.
 
-Parameter dari fungsi `scanf()` sama persis dengan fungsi `printf()`. Kita menggunakan format specifier untuk menentukan jenis tipe data yang kita input, kemudian nilai input tersebut akan di-assign pada variabel.
+Parameter dari fungsi `scanf()` sama persis dengan fungsi `printf()`. Kita menggunakan format specifier untuk menentukan jenis tipe data yang kita input, kemudian nilai input tersebut akan di-assign ke variabel.
 
 Sebagai contoh, program di bawah menerima input berupa bilangan bulat yang disimpan pada variabel n, kemudian mencetak nilai variabel n dengan format _“n mempunyai nilai = n”_.
 
-```c
-#include <stdio.h>  
+```c++
+#include <cstdio>  
   
 int main()   
 {  
@@ -1043,7 +1078,7 @@ b bernilai = K
 c bernilai = 0.300000
 ```
 
-Khusus untuk tipe data char, scanf akan membaca 1 karakter selanjutnya, baik itu spasi, angka, ataupun baris baru. Hal ini dapat menyebabkan nilai variabel tidak sesuai dengan yang kita inginkan. Perhatikan program berikut:
+Khusus untuk tipe data char, scanf akan membaca 1 karakter selanjutnya, baik itu spasi, angka, ataupun baris baru. Hal ini dapat menyebabkan nilai variabel menjadi tidak sesuai dengan yang kita inginkan. Perhatikan program berikut:
 
 ``` c++
 #include <cstdio>  
