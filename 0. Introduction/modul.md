@@ -152,7 +152,7 @@ cout << "Hello world!" << endl;
 return 0;
 ```
 
-Statement pada baris 7 menginstruksikan program untuk memanggil fungsi `cout`. `cout` adalah singkatan dari console out. Dia disediakan oleh `<iostream>` dan digunakan untuk mencetak output pada konsol (layar). Kode `cout << "Hello world!"` berarti `"Hello world!"` dimasukkan ke dalam cout untuk ditampilkan pada konsol. Kemudian, terdapat pula `endl` atau end line yang menandakan akhir dari aliran I/O. 
+Statement baris 7 diawali dengan `cout`. `cout` adalah singkatan dari console out. `cout` adalah fungsi yang disediakan oleh `<iostream>` untuk mencetak output pada konsol (layar). Kemudian, ada `<<` yang merupakan operator insertion. Kode `cout << "Hello world!"` berarti teks `"Hello world!"` dimasukkan ke dalam cout untuk ditampilkan pada konsol. Dari sini kita juga tahu bahwa teks atau string dalam C++ diapit oleh tanda `" "`. Terakhir, ada `endl`, singkatan dari endline, yang menandakan akhir dari suatu baris. 
 
 Statement pada baris 8 disebut dengan return statement. Perintah `return 0` pada fungsi `main()` digunakan untuk mengakhiri program dan menandakan program tersebut berhasil dieksekusi.
 
@@ -326,6 +326,8 @@ Literal karakter dituliskan dengan mengapitnya menggunakan tanda petik satu (`' 
 | `\"`            | Tanda petik dua     |
 | `\?`            | Tanda tanya         |
 | `\0`            | Karakter null       |
+
+Escape sequence yang paling sering digunakan adalah '\n' atau Newline. Sesuai namanya, dia akan menambahkan baris baru. 
 
 ### String
 
@@ -566,7 +568,7 @@ Sebenarnya karakter-karakter dalam bahasa C++ adalah bilangan bulat. Bahasa C++ 
 </table>
 
 ## Tipe Boolean
-Tipe data boolean digunakan untuk menyimpan nilai kebenaran, yaitu hanya TRUE atau FALSE. Nilai kebenaran ini dapat pula direpresentasikan oleh bilangan 1 untuk nilai TRUE dan 0 untuk nilai FALSE. Tipe data boolean akan lebih terasa kebermanfaatannya ketika kita sudah mempelajari struktur percabangan dan array.
+Tipe data boolean digunakan untuk menyimpan nilai kebenaran, yaitu hanya TRUE atau FALSE. Nilai kebenaran ini direpresentasikan oleh bilangan 1 untuk nilai TRUE dan 0 untuk nilai FALSE. Tipe data boolean akan lebih terasa kebermanfaatannya ketika kita sudah mempelajari struktur percabangan dan array.
 
 <table>
     <thead>
@@ -574,13 +576,297 @@ Tipe data boolean digunakan untuk menyimpan nilai kebenaran, yaitu hanya TRUE at
             <th align="center">Tipe Data</th>
             <th align="center">Memori (Byte)</th>
             <th align="center">Jangkauan Nilai</th>
+            <th align="center">Format Specifier</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>bool</td>
             <td align="center">1</td>
-            <td align="center">true (1) / false (0)</td>
+            <td align="center">1 (true) / 0 (false)</td>
+            <td align="center">%d</td>
         </tr>
     </tbody>
 </table>
+
+# Input dan Output Dasar
+
+Program yang kita buat dapat dijadikan program interaktif. Kita dapat memintanya untuk menerima input (dari keyboard) lalu menampilkan hasil output (pada konsol layar). Fungsi-fungsi yang berkaitan dengan input/output ada di dalam library `<iostream>` (input output stream).
+
+## Output Dasar
+
+### Fungsi `cout`
+
+Fungsi pertama yang dapat digunakan untuk mencetak output pada konsol, adalah `cout` yang berasal dari header file `<iostream>`. Data yang ingin kita output-kan bisa dimasukkan ke dalam `cout` dengan operator insertion `<<`. Data tersebut dapat berupa nilai atau variabel. Sebagai contoh, perhatikan kode berikut:
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Nilai langsung
+
+    // String
+    cout << "Ini langsung string" << endl;
+
+    // Integer
+    cout << 420 << endl;
+
+    // Float
+    cout << 0.609 << endl;
+
+    // Char
+    cout << 'a' << endl;
+
+    // Boolean
+    cout << true << endl;
+
+    return 0;
+}
+```
+
+Kode di atas akan menghasilkan output:
+
+```
+Ini langsung string
+420
+0.609
+a
+1
+```
+
+Untuk penggunaan cout dengan variabel:
+
+```c++
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    // Variable
+
+    // String
+    string text = "Ini lewat variable";
+    cout << text << endl;
+
+    // Integer
+    int a = 420;
+    cout << a << endl;
+
+    // Float
+    float b = 0.609;
+    cout << b << endl;
+
+    // Char
+    char huruf = 'a';
+    cout << huruf << endl;
+
+    // Boolean
+    bool booly = true;
+    cout << booly << endl;
+
+    return 0;
+}
+```
+
+Akan dihasilkan output:
+
+```
+Ini lewat variable
+420
+0.609
+a
+1
+```
+
+Selain itu, kita dapat pula memasukkan operasi:
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Aritmatika
+    cout << 10 + 2 << endl;
+
+    float a = 0.5;
+    int b = 2;
+    cout << a * b << endl;
+
+    // Perbandingan
+    cout << (a < b) << endl;
+
+    // Unary
+    cout << b++ << endl;
+
+    return 0;
+}
+```
+
+Akan dihasilkan output:
+
+```
+12
+1
+1
+2
+```
+
+Jika belum paham perihal operasi dan operator, jangan khawatir karena akan dibahas setelah materi input output. 
+
+Perlu diperhatikan bahwa dua statement `cout` yang berbeda baris, tidak selalu menghasilkan output yang berbeda baris pula. Tanpa `endl` atau `\n` (newline), output akan tetap pada baris yang sama.
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Dengan Endl
+    cout << "Beda" << endl;
+    cout << "Baris" << endl;
+
+    // Dengan \n
+    cout << "Beda\n";
+    cout << "Baris Juga\n";
+
+    // Tanpa Endl
+    cout << "Masih";
+    cout << "Sebaris";
+    return 0;
+}
+```
+
+```
+Beda
+Baris
+Beda
+Baris Juga
+MasihSebaris
+```
+
+### Fungsi `printf()`
+
+Fungsi kedua yang dapat digunakan untuk mencetak output pada konsol, adalah `printf()` yang berasal dari header file `<cstdio>`. Fungsi `printf()` menerima string sebagai argumen.
+
+```c++
+#include <cstdio>  
+  
+int main()   
+{  
+    printf("Ini adalah sebuah string\n");  
+    return 0;  
+} 
+```
+
+Output
+
+```
+Ini adalah sebuah string
+```
+
+Kita juga dapat menambahkan escape sequence pada string. Misalkan, kita ubah statement `printf()` di atas menjadi:
+
+```c++
+printf("Ini adalah sebuah string\nAku adalah newline\n\tAku adalah karakter \\tab");
+```  
+ 
+```
+Ini adalah sebuah string
+Aku adalah newline
+    Aku adalah karakter \tab
+```
+
+Memisahkan dua statement `printf()` pada baris berbeda bukan berarti mencetak pada baris berbeda juga. Untuk berpindah baris kita perlu menambahkan newline (`\n`) seperti pada program di atas.
+
+```c++
+#include <cstdio>  
+  
+int main()   
+{  
+    printf("Kau kira aku akan");  
+    printf("Berpindah baris?");  
+    return 0;  
+}  
+```
+
+Output
+
+```
+Kau kira aku akanBerpindah baris?
+```
+
+Potongan-potongan kode di atas adalah contoh untuk mencetak string tetap. Lalu bagaimana jika kita ingin mencetak string bersama dengan nilai suatu variabel?
+
+### Output Dengan Format Specifier
+
+Untuk mencetak nilai dari suatu variabel, kita perlu menambahkan argumen pada fungsi `printf()`. Argumen pertama pada fungsi `printf()` selalu berupa string. Kita dapat memasukkan variabel/nilai pada argumen ke-2, 3, 4 dan seterusnya sesuai kebutuhan.
+Ingat, pada chapter [Tipe Data Dasar](#tipe-data-dasar), **setiap tipe data mempunyai format specifier masing-masing**. Nah, format specifier inilah yang akan kita gunakan untuk mencetak nilai dari suatu variabel.
+ 
+```
+printf(“<format string>”, var1, var2, var3, ... dst);
+```
+
+Misalnya, kita mempunyai dua variabel bertipe int dan char yakni `a = 2` dan `b = ‘X’`. Kita hendak mencetak nilai dari a dan b dipisahkan oleh spasi, maka programnya seperti:   
+
+```c++
+#include <cstdio>  
+  
+int main()   
+{  
+    int  a = 2;  
+    char b = 'X';  
+    printf("%d %c", a, b);  
+    return 0;  
+}
+```
+
+Output
+
+```
+2 X
+```
+ 
+Perhatikan ilustrasi di bawah.
+ 
+IMG
+
+Dengan menyertakan format specifier dari tipe data yang bersesuaian, kita dapat mencetak nilai dari variabel tersebut. 
++ Fungsi `printf()` di atas mencetak string dengan nilai dua variabel (dua format specifier yang dipisahkan spasi).
++ Format specifier pertama adalah format specifier tipe data int dan akan merujuk pada variabel pertama yang dimasukkan, yakni a.
++ Format specifier kedua adalah format specifier tipe data char dan akan merujuk pada variabel kedua, yakni b.
++ Dan begitu seterusnya, satu format specifier untuk satu variabel berurutan.
+Dengan begitu, kita dapat menyertakan format specifier bersamaan dengan string.
+
+```c++
+printf("Nilai dari a = %d, dan b = '%c'", a, b);    
+```
+
+```
+Nilai dari a = 2, dan b = ‘X’
+```
+
+Format specifier dapat pula kita gunakan untuk mencetak hasil dari operasi antar nilai atau variabel.
+
+```c++
+#include <cstdio>
+
+int main()
+{
+    int  a = 2;
+    char b = 3;
+    printf("%d\n", a+b);
+    printf("%d\n", 5-3);
+    return 0;
+}
+```
+
+```
+5
+2
+```
+
