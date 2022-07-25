@@ -833,7 +833,7 @@ Output
  
 Perhatikan ilustrasi di bawah.
  
-IMG
+![pict_printf](https://user-images.githubusercontent.com/70790033/180680150-9436793d-3388-419e-a2c6-8e107fe24f87.png)
 
 Dengan menyertakan format specifier dari tipe data yang bersesuaian, kita dapat mencetak nilai dari variabel tersebut. 
 + Fungsi `printf()` di atas mencetak string dengan nilai dua variabel (dua format specifier yang dipisahkan spasi).
