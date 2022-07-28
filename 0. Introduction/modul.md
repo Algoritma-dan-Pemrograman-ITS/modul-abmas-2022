@@ -811,7 +811,7 @@ Ingat, pada chapter [Tipe Data Dasar](#tipe-data-dasar), **setiap tipe data memp
 printf(“<format string>”, var1, var2, var3, ... dst);
 ```
 
-Misalnya, kita mempunyai dua variabel bertipe int dan char yakni `a = 2` dan `b = ‘X’`. Kita hendak mencetak nilai dari a dan b dipisahkan oleh spasi, maka programnya seperti:   
+Misalnya, kita mempunyai dua variabel bertipe int dan char yakni `a = 2` dan `b = ‘X’`. Kita hendak mencetak nilai dari `a` dan `b` dipisahkan oleh spasi, maka programnya seperti:   
 
 ```c++
 #include <cstdio>  
@@ -837,8 +837,8 @@ Perhatikan ilustrasi di bawah.
 
 Dengan menyertakan format specifier dari tipe data yang bersesuaian, kita dapat mencetak nilai dari variabel tersebut. 
 + Fungsi `printf()` di atas mencetak string dengan nilai dua variabel (dua format specifier yang dipisahkan spasi).
-+ Format specifier pertama adalah format specifier tipe data int dan akan merujuk pada variabel pertama yang dimasukkan, yakni a.
-+ Format specifier kedua adalah format specifier tipe data char dan akan merujuk pada variabel kedua, yakni b.
++ Format specifier pertama adalah format specifier tipe data int dan akan merujuk pada variabel pertama yang dimasukkan, yakni `a`.
++ Format specifier kedua adalah format specifier tipe data char dan akan merujuk pada variabel kedua, yakni `b`.
 + Dan begitu seterusnya, satu format specifier untuk satu variabel berurutan.
 Dengan begitu, kita dapat menyertakan format specifier bersamaan dengan string.
 
@@ -880,7 +880,7 @@ Input bisa berasal dari berbagai sumber, seperti keyboard dan file. Di sini, kit
 
 Fungsi pertama yang dapat kita gunakan adalah `cin` dari header file `<iostream>`. `cin` biasanya digunakan dengan tanda `>>` yang disebut extraction operator. Extraction operator akan mengekstrak nilai dari input dan memasukkannya ke dalam variabel. 
 
-Sebagai contoh, program di bawah menerima input berupa integer yang kemudian dimasukkan ke variabel a. Nilai variabel a lalu dicetak dengan format _“a mempunyai nilai = ”_.
+Sebagai contoh, program di bawah menerima input berupa integer yang kemudian dimasukkan ke variabel `a`. Nilai variabel `a` lalu dicetak dengan format _“a mempunyai nilai = ”_.
 
 ```c++
 #include <iostream>
@@ -1010,11 +1010,11 @@ i bernilai = 10
 
 ### Fungsi `scanf()`
 
-Fungsi kedua yang dapat kita gunakan adalah `scanf()` dari header file `<cstdio>`. Cara kerja `scanf()` adalah dengan mencari token yang dapat dibaca berikutnya, lalu mengambil nilainya. Token adalah adalah serangkaian karakter non-spasi, misalnya huruf atau angka. Pada contoh di bawah, token yang dimaksud adalah bilangan yang akan menjadi nilai variabel n.
+Fungsi kedua yang dapat kita gunakan adalah `scanf()` dari header file `<cstdio>`. Cara kerja `scanf()` adalah dengan mencari token yang dapat dibaca berikutnya, lalu mengambil nilainya. Token adalah adalah serangkaian karakter non-spasi, misalnya huruf atau angka. Pada contoh di bawah, token yang dimaksud adalah bilangan yang akan menjadi nilai variabel `n`.
 
 Parameter dari fungsi `scanf()` sama persis dengan fungsi `printf()`. Kita menggunakan format specifier untuk menentukan jenis tipe data yang kita input, kemudian nilai input tersebut akan di-assign ke variabel.
 
-Sebagai contoh, program di bawah menerima input berupa bilangan bulat yang disimpan pada variabel n, kemudian mencetak nilai variabel n dengan format _“n mempunyai nilai = n”_.
+Sebagai contoh, program di bawah menerima input berupa bilangan bulat yang disimpan pada variabel `n`, kemudian mencetak nilai variabel n dengan format _“n mempunyai nilai = n”_.
 
 ```c++
 #include <cstdio>  
@@ -1046,7 +1046,7 @@ Jika kita perhatikan, ada sedikit perbedaan antara scanf dan printf, yakni adany
 scanf(“<format string>”, &var1, &var2, &var3, ... dst);
 ```
 
-Misalnya, kita mempunyai tiga variabel bertipe int, char, dan double, yakni a, b, dan c. Kita hendak menerima input dan memasukannya ke dalam ketiga variabel ini. Maka, programnya seperti: 
+Misalnya, kita mempunyai tiga variabel bertipe int, char, dan double, yakni `a`, `b`, dan `c`. Kita hendak menerima input dan memasukannya ke dalam ketiga variabel ini. Maka, programnya seperti: 
 
 ```c++
 #include <cstdio>  
@@ -1114,7 +1114,7 @@ b bernilai = 4
 c2 bernilai = 
 ```
 
-Pada input, kita ingin memasukkan `'m'` ke variabel c1, 4 ke variabel b, dan `'t'` ke variabel c2. Akan tetapi, variabel c2 justru memiliki nilai berupa karakter enter. Hal ini karena kita menekan enter setelah mengetikkan 4. Masalah ini dapat kita selesaikan dengan menambahkan `'\n'` sebelum melakukan `scanf` untuk variabel c2. 
+Pada input, kita ingin memasukkan `'m'` ke variabel `c1`, 4 ke variabel `b`, dan `'t'` ke variabel `c2`. Akan tetapi, variabel `c2` justru memiliki nilai berupa karakter enter. Hal ini karena kita menekan enter setelah mengetikkan 4. Masalah ini dapat kita selesaikan dengan menambahkan `'\n'` sebelum melakukan `scanf` untuk variabel `c2`. 
 
 ``` c++
 #include <cstdio>  
@@ -1149,3 +1149,281 @@ c1 bernilai = m
 b bernilai = 4
 c2 bernilai = t
 ```
+
+# Operator
+
+**Operator** dapat dipahami sebagai sesuatu yang dapat melakukan operasi pada operan (variabel/nilai). Contohnya, operator + digunakan untuk operasi penjumlahan.
+
+Dilihat dari jumlah operannya, operator dibagi menjadi tiga jenis, yaitu:
+
++ **Unary** – yakni operator yang bekerja pada satu operan, misalnya -5.
++ **Binary** – yakni operator yang bekerja pada dua operan, misalnya 2 + 3.
++ **Ternary** – yakni operator yang bekerja pada tiga operan. (Akan dibahas pada bagian selanjutnya).
+
+Dilihat dari kegunaannya, berikut adalah jenis-jenis operator pada bahasa C++.
+
+## Operator Assignment
+
+**Operator Assignment** digunakan untuk mengisikan (assign) sebuah nilai ke variabel. Simbol yang biasa digunakan adalah tanda sama dengan  `=`. Contohnya:
+
+```c++
+int x, y;  
+x = 4;  
+y = 3;  
+x = x + y; // x = 7  
+y = x + x; // y = 14 
+```
+
+## Operator Aritmatika
+
+Seperti namanya, **operator aritmatika** melakukan operasi matematika seperti penjumlahan, pengurangan, pembagian dsb. Operator-operator aritmatika pada bahasa C++ adalah sebagai berikut.
+
+| Simbol | Operasi                                               | Contoh   |
+|:------:| ----------------------------------------------------- | :------: |
+| +      | Penjumlahan pada dua operan                           | `a + b`  |
+| -      | Pengurangan pada dua operan                           | `a - b`  |
+| *      | Perkalian pada dua operan                             | `a * b`  |
+| /      | Pembagian pada dua operan                             | `a / b`  |
+| %      | Menghitung sisa pembagian dua operan (operasi modulo) | `a % b`  |
+
+Sebagai contoh perhatikan program berikut:
+
+```c++
+#include <iostream>
+using namespace std;
+  
+int main()   
+{  
+    int a = 6;
+    int b = 4;
+    int hasil;
+
+    // Penjumlahan
+    hasil = a+b; 
+    cout << a << " + " << b << " = " << hasil << endl; 
+
+    // Pengurangan
+    hasil = a-b; 
+    cout << a << " - " << b << " = " << hasil << endl; 
+
+    // Perkalian
+    hasil = a*b; 
+    cout << a << " * " << b << " = " << hasil << endl; 
+
+    // Pembagian
+    hasil = a/b; 
+    cout << a << " / " << b << " = " << hasil << endl; 
+
+    // Modulo
+    hasil = a%b; 
+    cout << a << " % " << b << " = " << hasil << endl; 
+
+    return 0;
+}
+```
+
+Output
+```
+6 + 4 = 10
+6 - 4 = 2
+6 * 4 = 24
+6 / 4 = 1
+6 % 4 = 2
+```
+
+Dalam program di atas, kita mempunya tiga variabel integer: variabel `a` dengan nilai 6, variabel `b` dengan nilai 4, dan variabel hasil. Kemudian, dilakukan operasi penjumlahan, pengurangan, perkalian, pembagian, dan modulo dengan operan `a` dan `b`. 
+
+Pada output, hasil dari 6 / 4 adalah 1, bukan 1.5. Hal ini karena variabel `a`,`b`, dan `hasil`, semuanya bertipe integer. Jika ingin mendapatkan hasil pecahan, kita perlu mengubah tipe data salah satu variabel operan, dan variabel hasil menjadi float.
+
+```c++
+#include <iostream>
+using namespace std;
+  
+int main()   
+{  
+    float a = 6;
+    int b = 4;
+    float hasil;
+
+    hasil = a/b; 
+    cout << a << " / " << b << " = " << hasil << endl; 
+    return 0;
+}
+```
+
+Output
+```
+6 / 4 = 1.5
+```
+
+Sebagaimana dalam matematika, operator-operator ini juga mempunyai precedence atau urutan eksekusi. Operator pembagian, perkalian, dan modulo akan dieksekusi terlebih dahulu sebelum penjumlahan dan pengurangan. 
+
+```c++
+#include <iostream>
+using namespace std;
+  
+int main()   
+{  
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int hasil;
+
+    hasil = a + b * c;
+    cout << hasil << endl;
+}
+```
+
+Output
+```
+7
+```
+
+Terlihat bahwa 2 dikalikan 3 dulu, baru ditambahkan 1. Jika kita ingin melakukan operasi penjumlahan/pengurangan sebelum perkalian/pembagian, kita bisa memakai tanda kurung `'()'`:
+
+```c++
+#include <iostream>
+using namespace std;
+  
+int main()   
+{  
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int hasil;
+
+    hasil = (a + b) * c;
+    cout << hasil << endl;
+}
+```
+
+Output
+```
+9
+```
+
+## Operator Increment dan Decrement
+
+Operator `++` disebut dengan operator **increment**, sedangkan operator `--` merupakan operator **decrement*. Kedua operator ini digunakan untuk menambah (increment) atau mengurangi (decrement) nilai suatu variabel dengan nilai 1. Selain itu, kedua operator ini juga termasuk ke dalam operator unary, yang berarti dia hanya bekerja pada satu operan. 
+
+Terdapat dua cara untuk menggunakan operator ini.
+
++ **Prefix** - yakni dengan meletakkan operator increment/decrement sebelum nama variabel. 
+
+    ```c++
+    int a, b;  
+    a = b = 5;  
+    ++a; // Nilai a sekarang adalah 6  
+    --b; // Nilai b sekarang adalah 4
+    ```
+
+    Cara kerja dari operator increment/decrement prefix adalah dengan menambahkan/mengurangi nilai variabel sebelum diproses. Untuk lebih jelasnya, perhatikan potongan kode berikut
+
+    ```c++
+    int a, b;  
+    a = 5;  
+    b = ++a;
+    printf("Nilai b = %d\n", b);
+    ```
+
+    Output
+    ```
+    Nilai b = 6
+    ```
+
+    Ketika statement `b = ++a;` dieksekusi, nilai variabel `a` akan ditambah 1 dulu, kemudian baru dimasukkan ke variabel `b`. 
+
++ **Postfix** - yakni dengan meletakkan operator increment/decrement setelah nama variabel. Berkebalikan dengan prefix, operator increment/decrement postfix akan memproses variabel dulu sebelum ditambah satu. Perhatikan potongan kode berikut.
+
+    ```c++
+    int a, b;
+    a = 5;
+    b = a++;
+    printf("Nilai b = %d\n", b);
+    printf("Nilai a = %d\n", a);
+    ```
+
+    Output
+    ```
+    Nilai b = 5
+    Nilai a = 6
+    ```
+
+    Ketika statement `b = a++;` dieksekusi, nilai variabel `a`, yakni 5, akan dimasukkan dulu ke variabel `b`. Kemudian, barulah variabel `a` ditambah 1. Karena itulah variabel `b` mendapat nilai `a` sebelum terjadi penambahan.
+
+## Operator Relasional
+
+**Operator Relasional** digunakan untuk memeriksa relasi dan membandingkan nilai dari dua operan. Jika benar akan menghasilkan nilai **TRUE** (direpresentasikan angka 1), jika salah maka akan menghasilkan nilai **FALSE** (direpresentasikan angka 0).
+
+Berikut adalah operator-operator relasional dalam bahasa C++.
+
+| Operator                | Simbol   | Keterangan                                                                                            | Contoh                                           |
+| ----------------------- | :----:   | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Sama dengan             | ==       | Digunakan untuk memeriksa apakah kedua operan memiliki nilai yang sama.                               | 5 == 2 (FALSE)<br>5 == 5 (TRUE)                  |
+| Tidak Sama dengan       | !=       | Digunakan untuk memeriksa apakah kedua operan memiliki nilai yang tidak sama.                         | 5 != 2 (TRUE)<br>5 != 5 (FALSE)                  |
+| Lebih besar             | >        | Digunakan untuk membandingkan apakah operan pertama lebih besar nilainya dari operan kedua.           | 5 > 2 (TRUE)<br>5 > 5 (FALSE)<br>2 > 4 (FALSE)   |
+| Lebih kecil             | <        | Digunakan untuk membandingkan apakah operan pertama lebih kecil nilainya dari operan kedua.           | 5 < 2 (FALSE)<br>5 < 5 (FALSE)<br>2 < 4 (TRUE)   |
+| Lebih besar sama dengan | >=       | Digunakan untuk membandingkan apakah operan pertama lebih besar atau sama nilainya dari operan kedua. | 5 >= 2 (TRUE)<br>5 >= 5 (TRUE)<br>2 >= 4 (FALSE) |
+| Lebih kecil sama dengan | <=       | Digunakan untuk membandingkan apakah operan pertama lebih kecil atau sama nilainya dari operan kedua. | 5 <= 2 (FALSE)<br>5 <= 5 (TRUE)<br>2 <= 4 (TRUE) |
+
+Sebagai contoh, perhatikan program berikut:
+
+```c++
+int a = 2;
+int b = 3;
+bool hasil;
+hasil = (a < b);
+cout << hasil << endl;
+```
+
+Output
+```
+1
+```
+
+Pada statement `hasil = (a < b);`, nilai `a` (2) akan dibandingkan dengan nilai `b` (3). Jika nilai `a` lebih kecil dari `b`, maka akan bernilai benar. Jika tidak, maka akan bernilai salah. Dalam hal ini, 2 kurang dari 3, maka `(a < b)` bernilai benar atau TRUE. Nilai TRUE direpresentasikan oleh 1. Nilai inilah yang dimasukkan ke dalam variabel hasil. Oleh karena itu, ketika kita mencetak variabel hasil, nilainya 1. 
+
+## Operator Logika
+
+**Operator Logika** digunakan untuk melakukan tes pada kondisi/ekspresi, apakah kondisi tersebut benar atau salah. Operator logika hanya akan menghasilkan nilai **TRUE** (jika benar) atau **FALSE** (jika salah). TRUE direpresentasikan oleh angka 1, sedangkan FALSE oleh angka 0.
+
+Operator-operator logika dalam bahasa C++ adalah sebagai berikut.
+
+| Operator                | Simbol   | Keterangan                                                                                            | Nilai Kebenaran                                              |
+| ----------------------- |:------:  | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Logical NOT             | !        | Operator NOT digunakan untuk membalikkan kondisi, TRUE menjadi FALSE dan FALSE menjadi TRUE.          | `!1 = 0`<br>`!0 = 1`                                         |
+| Logical AND             | &&       | Operator AND akan menghasilkan nilai TRUE jika kedua operan mempunyai nilai TRUE.                     | `1 && 1 = 1`<br>`0 && 1 = 0`<br>`1 && 0 = 0`<br>`0 && 0 = 0` |
+| Logical OR              | \|\|      | Operator OR akan menghasilkan nilai TRUE jika salah satu operan mempunyai nilai TRUE.                | `1 \|\| 1 = 1`<br>`0 \|\| 1 = 1`<br>`1 \|\| 0 = 1`<br>`0 \|\| 0 = 0` |
+
+> Operator Logika **NOT** merupakan operator unary yang artinya hanya pada bekerja pada satu operan
+
+Operator logika pada umumnya digunakan bersamaan dengan operator relasional untuk melakukan tes pada ekspresi yang berhubungan dengan kebenaran suatu kondisi. Penggunaan paling umum adalah untuk melakukan percabangan (akan dipelajari di bagian selanjutnya).
+
+Sebagai contoh, perhatikan program berikut:
+
+```c++
+int a, b, c, d;  
+a = 11;  
+b = 24;  
+c = 11;  
+d = ((a == c) && (b > a));               // 1 (TRUE)  
+d = ((a >= b) || (a < c));               // 0 (FALSE)  
+d = ((b != b) || (b > c)) && (c == a);   // 1 (TRUE) 
+```
+
+Pada statement `d = ((a == c) && (b > a));`
++ `(a == c)` bernilai TRUE, karena `a` dan `c` sama-sama bernilai 11. 
++ `(b > a)` bernilai TRUE, karena 24 kurang dari 11.
++ Karena kedua operan bernilai TRUE, maka nilai dari `((a == c) && (b > a))` juga TRUE.
+
+Pada statement `d = ((a >= b) || (a < c));`
++ `(a >= b)` bernilai FALSE, karena 11 kurang dari 24.
++ `(a < c)` bernilai FALSE, karena `a` dan `c` nilainya sama-sama 11.
++ Karena kedua operan bernilai FALSE, maka nilai dari `((a >= b) || (a < c))` juga FALSE.
+
+Pada statement `d = ((b != b) || (b > c)) && (c == a); `
++ `(b != b)` bernilai FALSE, karena variabel `b` jelas sama dengan dirinya sendiri.
++ `(b > c)` bernilai TRUE, karena 24 kurang dari 11.
++ Karena salah satu operannya bernilai TRUE, `((b != b) || (b > c))` juga bernilai TRUE.
++ `(c == a)` nilai TRUE, karena `a` dan `c` sama-sama bernilai 11. 
++ Karena kedua operannya bernilai TRUE, maka nilai dari `((b != b) || (b > c)) && (c == a)` juga TRUE.
