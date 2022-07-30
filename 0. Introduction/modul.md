@@ -1427,3 +1427,95 @@ Pada statement `d = ((b != b) || (b > c)) && (c == a); `
 + Karena salah satu operannya bernilai TRUE, `((b != b) || (b > c))` juga bernilai TRUE.
 + `(c == a)` nilai TRUE, karena `a` dan `c` sama-sama bernilai 11. 
 + Karena kedua operannya bernilai TRUE, maka nilai dari `((b != b) || (b > c)) && (c == a)` juga TRUE.
+
+## Operator Gabungan
+
+**Operator Gabungan** adalah operator yang terdiri dari gabungan dua operator. Tujuan dari operator gabungan adalah untuk mempersingkat penulisan kode. Berikut adalah operator gabungan dalam bahasa C++.
+
+| Operator | Contoh    | Ekuivalen Dengan        |
+| :------: | :------:  | :---------------------: |
+| +=	   | `a += b`  |	`a = a + b`      |
+| -=	   | `a -= b`  |	`a = a - b`      |
+| *=	   | `a *= b`  |	`a = a * b`      |
+| /=	   | `a /= b`  |	`a = a / b`      |
+| %=	   | `a %= b`  |	`a = a % b`      |
+| &=	   | `a &= b`  |	`a = a & b`      |
+| \|=	   | `a \|= b` |	`a = a \| b`     |
+
+Contoh:
+```c++
+int a = 2;
+int b = 3;
+a *= b; // Sama dengan a = a * b
+cout << a << endl; 
+```
+
+Output:
+```
+6
+```
+
+## Operator Lain
+
+Selain operator-operator yang telah dijelaskan sebelumnya, terdapat beberapa operator lain yang terdapat pada bahasa C++. Berikut penjelasannya.
+
+### Operator `sizeof()`
+
+Walaupun mempunyai bentuk seperti sebuah fungsi, namun dalam standardisasi bahasa C++ menganggap operator `sizeof()` sebagai operator. Kegunaan dari operator ini adalah untuk mengetahui besarnya memori yang digunakan suatu variabel atau tipe data dalam satu byte. 
+
+Contoh:
+
+```c++
+sizeof(int);
+```
+
+### Operator Kondisional (` ? : `)
+
+Operator kondisial merupakan satu-satunya operator ternary (bekerja pada tiga operan) dalam bahasa C++. Fungsi dari operator kondisional layaknya percabangan menggunakan `if - else` (akan dijelaskan pada modul percabangan).
+
+### Operator Koma (`,`)
+
+Tanda koma (`,`) sebagai operator dalam bahasa C++ merupakan binary operator yang akan mengevaluasi operan pertama, kemudian akan membuang hasilnya. Lalu mengevaluasi operan kedua dan akan mengembalikan nilainya.
+
+```c++
+int number = (5, 23);   // number bernilai 23, bukan 5
+```
+
+Selain berfungsi sebagai operator, tanda koma (`,`) juga berfungsi sebagai separator (pemisah) antar statement. Misalkan saat deklarasi lebih dari satu variabel.
+
+```c++
+int var1, var2, var3;   
+// Menggunakan tanda koma untuk memisahkan deklarasi tiap variabel
+```
+
+> Tidak semua statement dapat dipisahkan oleh tanda koma.
+
+### Operator Subscript (`[]`)
+
+Penggunaan paling umum operator ini adalah untuk melakukan pengaksesan terhadap elemen suatu array (akan dibahas pada modul array).
+
+_Operator lain yang belum ter-cover pada modul ini akan dibahas pada modul-modul selanjutnya._
+
+# Pesan Kesalahan (Error)
+
+Secara umum, terdapat dua jenis error, yakni Compilation Error dan Runtime Error.
+
+## Compilation Error
+
+Kesalahan yang terjadi ketika program dikompilasi. Ketika suatu program memiliki compilation error, kompilasi
+akan dibatalkan. Program tidak akan berhasil dikompilasi sampai kesalahannya kita perbaiki. Compilation error dapat disebabkan oleh berbagai hal:
+- Salah mengetik nama variabel.
+- Kurang tanda titik koma (;) di akhir statement.
+- Salah menggunakan tipe data.
+
+## Runtime Error
+
+Kesalahan yang terjadi ketika program dieksekusi. Program dapat mengalami error ketika sedang dieksekusi karena berbagai hal:
+- Melakukan pembagian dengan angka 0.
+- Mengakses memori di luar yang telah dialokasikan.
+- Mengalami stack overflow.
+
+Sebagian besar dari istilah dan masalah yang dijelaskan di atas mungkin kita hadapi ketika sudah mempelajari tentang
+array dan rekursi.
+
+## Tampilan Error dalam Codeblocks
