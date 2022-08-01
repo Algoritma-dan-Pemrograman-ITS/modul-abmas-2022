@@ -1,5 +1,78 @@
 # Daftar Isi
 
+- [Mengenal Program, Pemrograman dan Bahasa Pemrograman](#mengenal-program-pemrograman-dan-bahasa-pemrograman)
+
+	+ [Cara Komputer Menjalankan Program](#cara-komputer-menjalankan-program)
+
+- [Mengenal IDE](#mengenal-ide)
+
+	+ [Instalasi IDE](#instalasi-ide)
+	+ [Membuat Project dan File Baru di IDE](#membuat-project-dan-file-baru-di-ide)
+	+ [Menulis dan Mengedit Kode di IDE](#menulis-dan-mengedit-kode-di-ide)
+	+ [Menjalankan Program di IDE](#menjalankan-program-di-ide)
+
+- [Mengenal Bahasa C++](#mengenal-bahasa-c)
+	
+	+ [Program "Hello world!"](#program-hello-world)
+	+ [Struktur Program](#struktur-program)
+
+- [Komentar](#komentar)
+	
+	+ [Komentar Single-Line](#komentar-single-line)
+	+ [Komentar Multi-Line](#komentar-multi-line)
+
+- [Keyword dan Identifier](#keyword-dan-identifier)
+	
+	+ [Keyword](#keyword)
+	+ [Identifier](#identifier)
+
+- [Variabel](#variabel)
+
+	+ [Pengenalan Variabel](#pengenalan-variabel)
+	+ [Deklarasi dan Definisi Variabel](#deklarasi-dan-definisi-variabel)
+	+ [Pengisian Nilai Pada Variabel](#pengisian-nilai-pada-variabel)
+	+ [Inisialisasi Variabel](#inisialisasi-variabel)
+
+- [Konstanta dan Literal](#konstanta-dan-literal)
+
+	+ [Bilangan Bulat](#bilangan-bulat)
+	+ [Bilangan Real (floating)](#bilangan-real-floating)
+	+ [Karakter](#karakter)
+	+ [String](#string)
+	+ [Mendefinisikan Konstanta](#mendefinisikan-konstanta)
+
+- [Tipe Data Dasar](#tipe-data-dasar)
+	
+	+ [Tipe Bilangan Bulat](#tipe-bilangan-bulat)
+	+ [Tipe Bilangan Real](#tipe-bilangan-real)
+	+ [Tipe Karakter](#tipe-karakter)
+	+ [Tipe Boolean](#tipe-boolean)
+
+- [Input dan Output Dasar](#input-dan-output-dasar)
+
+	+ [Output Dasar](#output-dasar)
+	+ [Input Dasar](#input-dasar)
+
+- [Operator](#operator)
+
+	+ [Operator Assignment](#operator-assignment)
+	+ [Operator Aritmatika](#operator-aritmatika)
+	+ [Operator Increment dan Decrement](#operator-increment-dan-decrement)
+	+ [Operator Relasional](#operator-relasional)
+	+ [Operator Logika](#operator-logika)
+	+ [Operator Gabungan](#operator-gabungan)
+	+ [Operator Lain](#operator-lain)
+
+- [Error dan Warning](#error-dan-warning)
+
+	+ [Pesan Kesalahan (Error)](#pesan-kesalahan-error)
+	+ [Pesan Peringatan (Warning)](#pesan-peringatan-warning)
+	+ [Tampilan Error dan Warning dalam Codeblocks](#tampilan-error-dan-warning-dalam-codeblocks)
+
+- [Referensi](#referensi)
+
+----
+
 # Mengenal Program, Pemrograman dan Bahasa Pemrograman
 
 **Program** adalah **serangkaian instruksi** yang **dieksekusi mesin** untuk mencapai tujuan tertentu. Program biasanya menerima masukan, lalu memprosesnya untuk menghasilkan suatu keluaran. 
@@ -17,6 +90,8 @@ Kemudian, diciptakanlah **bahasa pemrograman tingkat tinggi** yang **lebih mudah
 Untuk bahasa C++, penerjemahan ini disebut sebagai **kompilasi** dan dilakukan oleh **_compiler_**. Setelah diterjemahkan, program dapat dieksekusi oleh komputer. Secara singkat, siklus kerja jika kita menggunakan *compiler* adalah:
 
 > tulis program → kompilasi → eksekusi
+
+----
 
 # Mengenal IDE
 **IDE** atau **Integrated Development Environment** adalah ***software*** yang **menyediakan fitur-fitur** yang diperlukan untuk **menulis** dan **menjalankan program**. Termasuk di antaranya *text editor* untuk menulis dan mengedit kode program, dan juga *compiler*. 
@@ -69,6 +144,8 @@ https://user-images.githubusercontent.com/70790033/179146060-8c110019-1c73-4635-
 1. Klik tombol ***Build and run*** berwarna kuning dan hijau yang ada di bar atas
 
 https://user-images.githubusercontent.com/70790033/179146386-5c6270ab-6300-4f29-be76-fad252c0cb5b.mp4
+
+----
 
 # Mengenal Bahasa C++
 
@@ -158,6 +235,8 @@ return 0;
 
 Statement pada baris 8 disebut dengan **return statement**. Perintah `return 0` pada fungsi `main()` digunakan untuk **mengakhiri program** dan **menandakan program tersebut berhasil dieksekusi**.
 
+----
+
 # Komentar
 
 **Komentar** (_comment_) adalah bagian dari program yang **tidak akan dieksekusi**. Komentar sangat berguna **untuk mendeskripsikan program** yang dibuat, misalnya saja untuk menjelaskan bagian dari kode agar mudah dipahami oleh programmer lainnya. Terdapat dua jenis komentar dalam bahasa C++.
@@ -185,6 +264,9 @@ Semua yang berada di sini akan
 diabaikan 
 */  
 ```
+
+----
+
 # Keyword dan Identifier
 ## Keyword
 
@@ -216,6 +298,8 @@ Aturan penamaan identifier:
 + Identifier tidak boleh mengandung whitespace.
 + Identifier harus dimulai dengan huruf atau simbol underscore. Tidak boleh dimulai dengan digit/angka.
 + Bersifat case-sensitive, artinya identifier `variable` berbeda dengan `vAriaBle`.
+
+----
 
 # Variabel
 
@@ -280,6 +364,8 @@ Contoh:
 ```c++
 int x = 6;
 ```
+
+----
 
 # Konstanta dan Literal
 
@@ -382,6 +468,8 @@ int main()
     double b = konstDouble;  
 }  
 ```
+
+----
 
 # Tipe Data Dasar
 
@@ -591,6 +679,8 @@ Tipe data boolean digunakan untuk menyimpan **nilai kebenaran**, yaitu hanya **T
         </tr>
     </tbody>
 </table>
+
+----
 
 # Input dan Output Dasar
 
@@ -1175,6 +1265,8 @@ b bernilai = 4
 c2 bernilai = t
 ```
 
+----
+
 # Operator
 
 **Operator** dapat dipahami sebagai sesuatu yang dapat **melakukan operasi pada operan** (variabel/nilai). Contohnya, operator + digunakan untuk operasi penjumlahan.
@@ -1530,11 +1622,15 @@ Penggunaan paling umum operator ini adalah untuk melakukan **pengaksesan** terha
 
 _Operator lain yang belum ter-cover pada modul ini akan dibahas pada modul-modul selanjutnya._
 
-# Pesan Kesalahan (Error)
+----
+
+# Error dan Warning
+
+## Pesan Kesalahan (Error)
 
 Secara umum, terdapat dua jenis error, yakni Compilation Error dan Runtime Error.
 
-## Compilation Error
+### Compilation Error
 
 Kesalahan yang terjadi **ketika program dikompilasi**. Ketika suatu program memiliki compilation error, kompilasi akan dibatalkan. Program tidak akan berhasil dikompilasi sampai kesalahannya kita perbaiki. Compilation error dapat disebabkan oleh berbagai hal:
 
@@ -1542,7 +1638,7 @@ Kesalahan yang terjadi **ketika program dikompilasi**. Ketika suatu program memi
 - Kurang tanda titik koma (;) di akhir statement.
 - Salah menggunakan tipe data.
 
-## Runtime Error
+### Runtime Error
 
 Kesalahan yang terjadi **ketika program dieksekusi**. Program dapat mengalami error ketika sedang dieksekusi karena berbagai hal:
 - Melakukan pembagian dengan angka 0.
@@ -1551,10 +1647,10 @@ Kesalahan yang terjadi **ketika program dieksekusi**. Program dapat mengalami er
 
 Sebagian besar dari istilah dan masalah yang dijelaskan di atas mungkin kita hadapi ketika sudah mempelajari tentang array dan rekursi.
 
-# Pesan Peringatan (Warning)
+## Pesan Peringatan (Warning)
 Warning **memperingatkan** kita bahwa **ada sesuatu yang berpotensi membuat program tidak berjalan sesuai ekspektasi**. Berbeda dengan error, warning **tidak** akan **menghentikan** proses **kompilasi** dan **eksekusi**. 
 
-# Tampilan Error dan Warning dalam Codeblocks 
+## Tampilan Error dan Warning dalam Codeblocks 
 Pesan error dan warning dalam Codeblocks akan muncul di bagian bawah, di bagian **Logs & others**, di **Build messages**. 
 
 Misal kita menjalankan program berikut
@@ -1576,6 +1672,8 @@ Akan muncul
 
 - Tulisan yang berwarna merah adalah error. Dalam hal ini, terjadi compilation error karena kita salah menulis nama variabel `var` menjadi `val`.
 - Tulisan yang berwarna biru adalah warning. Dalam hal ini, kita diperingatkan bahwa ada variabel yang tidak terpakai, yakni `var`
+
+----
 
 # Referensi
 - [Modul 0: Pengenalan Pemrograman · AlproITS/DasarPemrograman Wiki (github.com)](https://github.com/AlproITS/DasarPemrograman/wiki/Modul-0:-Pengenalan-Pemrograman)
