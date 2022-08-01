@@ -1571,6 +1571,9 @@ int main()
 }
 ```
 Akan muncul
+
+![compilationerror](https://user-images.githubusercontent.com/70790033/182176232-ee75b5e4-aeea-4924-aba2-ae436f8631f4.png)
+
 - Tulisan yang berwarna merah adalah error. Dalam hal ini, terjadi compilation error karena kita salah menulis nama variabel `var` menjadi `val`.
 - Tulisan yang berwarna biru adalah warning. Dalam hal ini, kita diperingatkan bahwa ada variabel yang tidak terpakai, yakni `var`
 
