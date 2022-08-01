@@ -2,71 +2,71 @@
 
 # Mengenal Program, Pemrograman dan Bahasa Pemrograman
 
-Program adalah serangkaian instruksi yang dieksekusi oleh mesin untuk mencapai tujuan tertentu. Program biasanya menerima masukan, lalu memprosesnya untuk menghasilkan suatu keluaran. 
+**Program** adalah **serangkaian instruksi** yang **dieksekusi mesin** untuk mencapai tujuan tertentu. Program biasanya menerima masukan, lalu memprosesnya untuk menghasilkan suatu keluaran. 
 
 Misal ada program penerjemah bahasa Inggris ke Bahasa Indonesia. Program tersebut menerima masukan berupa teks dalam bahasa Inggris, lalu menerjemahkannya untuk menghasilkan keluaran berupa teks dalam bahasa Indonesia. 
 
-Pemrograman adalah aktivitas menulis program. Program ditulis dengan bahasa pemrograman, sehingga mesin atau komputer dapat mengerti apa yang yang diinstruksikan. Bahasa yang akan kita gunakan dalam pembelajaran kali ini adalah C++. 
+**Pemrograman** adalah aktivitas **menulis program**. Program ditulis dengan **bahasa pemrograman**, sehingga mesin atau komputer dapat mengerti apa yang yang diinstruksikan. Bahasa yang akan kita gunakan dalam pembelajaran kali ini adalah C++. 
 
 ## Cara Komputer Menjalankan Program
-Awalnya pemrograman dilakukan dengan Bahasa Assembly atau bahasa mesin yang disebut sebagai bahasa pemrograman tingkat rendah. Bahasa tingkat rendah mudah dipahami oleh mesin, tapi sulit dibaca dan dimengerti oleh manusia. 
 
-Kemudian, diciptakanlah bahasa pemrograman tingkat tinggi yang lebih mudah dipahami manusia karena menggunakan frase bahasa sehari-hari. Akan tetapi, bahasa pemrograman tingkat tinggi tidak bisa langsung dimengerti oleh mesin, harus diterjemahkan dulu menjadi bahasa tingkat rendah. 
+Awalnya pemrograman dilakukan dengan **Bahasa *Assembly*** atau bahasa mesin yang disebut sebagai **bahasa pemrograman tingkat rendah**. Bahasa tingkat rendah **mudah dipahami mesin**, tapi **sulit dibaca dan dimengerti manusia.** 
+
+Kemudian, diciptakanlah **bahasa pemrograman tingkat tinggi** yang **lebih mudah dipahami manusia** karena menggunakan frase bahasa sehari-hari. Akan tetapi, bahasa pemrograman tingkat tinggi tidak bisa langsung dimengerti oleh mesin, **harus diterjemahkan dulu** menjadi bahasa tingkat rendah. 
 
 Untuk bahasa C++, penerjemahan ini disebut sebagai **kompilasi** dan dilakukan oleh **_compiler_**. Setelah diterjemahkan, program dapat dieksekusi oleh komputer. Secara singkat, siklus kerja jika kita menggunakan *compiler* adalah:
 
 > tulis program → kompilasi → eksekusi
 
 # Mengenal IDE
-**IDE** atau **Integrated Development Environment** adalah *software* yang menyediakan fitur-fitur yang diperlukan untuk menulis dan menjalankan program. Termasuk di antaranya *text editor* untuk menulis dan mengedit kode program, dan juga *compiler*. 
+**IDE** atau **Integrated Development Environment** adalah ***software*** yang **menyediakan fitur-fitur** yang diperlukan untuk **menulis** dan **menjalankan program**. Termasuk di antaranya *text editor* untuk menulis dan mengedit kode program, dan juga *compiler*. 
 
 ## Instalasi IDE
 IDE yang akan kita gunakan adalah Codeblocks yang bisa di-*download* di [sini](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download).
 
 | <img src="https://user-images.githubusercontent.com/70790033/178111655-bdde4218-6f85-477c-8381-0701795e0861.png" width="400"> | 
 |:--:| 
-| Setelah *download* selesai, langsung jalankan saja *installer*-nya. Waktu meng-*install*, biarkan semua kotak tercentang.  |
+| Setelah *download* selesai, langsung jalankan saja *installer*-nya. Waktu meng-*install*, **biarkan semua kotak tercentang.**  |
 
 | <img src="https://user-images.githubusercontent.com/70790033/178111678-333017a5-0eda-4b3e-9bcf-88c7258fd2a3.png" width="400"> | 
 |:--:| 
-| Di saat membuka Codeblocks pertama kali, pastikan GNU GCC Compiler sudah terdeteksi. |
+| Di saat membuka Codeblocks pertama kali, pastikan **GNU GCC Compiler** sudah terdeteksi. |
 
 | <img src="https://user-images.githubusercontent.com/70790033/178111798-fae47fe1-0c99-4563-9329-0cc3f5e75dfd.png" width="650"> | 
 |:--:| 
 | Tampilan Codeblocks saat sudah terbuka |
 
-## Membuat Project dan File Baru
-Sebelum menulis kode, kita perlu membuat project terlebih dahulu
-1. Pilih Create a new project
-2. Pilih Console application, lalu klik Next 
-3. Pilih C++, lalu klik Next
-4. Tuliskan project title, pilih folder tempat project, lalu klik Next
-5. Pastikan bahwa compiler yang digunakan adalah GNU GCC Compiler, lalu klik Finish
+## Membuat Project dan File Baru di IDE
+Sebelum menulis kode, kita perlu membuat *project* terlebih dahulu
+1. Pilih ***Create a new project***
+2. Pilih ***Console application***, lalu klik *Next* 
+3. Pilih **C++,** lalu klik *Next*
+4. Tuliskan ***project title***, pilih ***folder*** tempat project, lalu klik *Next*
+5. Pastikan bahwa compiler yang digunakan adalah **GNU GCC Compiler**, lalu klik *Finish*
 
 https://user-images.githubusercontent.com/70790033/179145236-7e407e8b-3ab2-4da4-93f9-424b4abf38b4.mp4
 
 Cara alternatifnya
-1. Pilih File di bar atas
-2. Pilih New, lalu pilih Project
-3. Pilih Console application, lalu klik Next 
-4. Pilih C++, lalu klik Next
-5. Tuliskan project title, pilih folder tempat project, lalu klik Next
-6. Pastikan bahwa compiler yang digunakan adalah GNU GCC Compiler, lalu klik Finish
+1. Pilih ***File*** di bar atas
+2. Pilih ***New***, lalu pilih ***Project***
+3. Pilih ***Console application***, lalu klik *Next* 
+4. Pilih **C++**, lalu klik *Next*
+5. Tuliskan ***project title***, pilih ***folder*** tempat project, lalu klik *Next*
+6. Pastikan bahwa compiler yang digunakan adalah **GNU GCC Compiler**, lalu klik *Finish*
 
 https://user-images.githubusercontent.com/70790033/179145477-f9c8b62e-e9e6-45fc-bb1d-2ec0586eb67f.mp4
 
-## Menulis dan Mengedit Kode
-Setelah project sudah dibuat
-1. Di sidebar kiri, double-click project yang sudah kita buat
-2. Double-click Sources
-3. Akan muncul file main.cpp, double-click lagi untuk memunculkannya dalam text editor
-4. Setelah text editor muncul, akan langsung tertulis kode program untuk Hello World, kita bisa mulai mengedit kode ini sesuai keinginan
+## Menulis dan Mengedit Kode di IDE
+Setelah *project* sudah dibuat
+1. Di sidebar kiri, *double-click* **project** yang sudah kita buat
+2. *Double-click* ***Sources***
+3. Akan muncul file **main.cpp**, *double-click* lagi untuk memunculkannya dalam *text editor*
+4. Setelah ***text editor*** muncul, akan langsung tertulis kode program untuk Hello World, kita bisa mulai mengedit kode ini sesuai keinginan
 
 https://user-images.githubusercontent.com/70790033/179146060-8c110019-1c73-4635-95a0-2f1dc116f209.mp4
 
-## Menjalankan Program
-1. Klik tombol run berwarna hijau yang ada di bar atas
-2. Jika muncul pop up pertanyaan "Do you want to build it now?", tekan yes 
+## Menjalankan Program di IDE
+1. Klik tombol ***Build and run*** berwarna kuning dan hijau yang ada di bar atas
 
 https://user-images.githubusercontent.com/70790033/179146386-5c6270ab-6300-4f29-be76-fad252c0cb5b.mp4
 
@@ -100,13 +100,13 @@ Untuk menjelaskan cara kerja program di atas, mari kita pisahkan bagian-bagian k
 
 ### Preprocessor Directive dan Header File
 
-Baris 1 pada kode di atas disebut dengan **preprocessor directive**. Preprocessor directive adalah perintah awal kepada komputer sebelum menjalankan program kita. Preprocessor yang digunakan dalam hal ini adalah `#include`. 
+Baris 1 pada kode di atas disebut dengan **preprocessor directive**. Preprocessor directive adalah **perintah awal** kepada komputer **sebelum menjalankan program** kita. Preprocessor yang digunakan dalam hal ini adalah `#include`. 
 
-Preprocessor `#include` menjelaskan bahwa program menyertakan suatu file. Dalam program "Hello world!" di atas, file yang disertakan adalah **header file** `<iostream>`. Header file merupakan library bawaan C++ yang berisi deklarasi variabel, fungsi, dan tipe data yang diperlukan program. Dengan menyertakan header file, kita bisa menggunakan isi-isinya. 
+Preprocessor **`#include`** menjelaskan bahwa program **menyertakan suatu file**. Dalam program "Hello world!" di atas, file yang disertakan adalah header file `<iostream>`. **Header file** merupakan **library bawaan** C++ yang **berisi deklarasi variabel, fungsi, dan tipe data** yang diperlukan program. Dengan menyertakan header file, kita bisa menggunakan isi-isinya. 
 
-`<iostream>` adalah singkatan dari input-output stream, atau aliran input-output. Sesuai namanya, `<iostream>` adalah header file yang menyediakan cara melakukan input dan output dengan fungsi-fungsi seperti cin dan cout. 
+**`<iostream>`** adalah singkatan dari **input-output stream**, atau aliran input-output. Sesuai namanya, `<iostream>` adalah header file yang **menyediakan cara** melakukan **input** dan **output** dengan fungsi-fungsi seperti cin dan cout. 
 
-Sederhananya `using namespace std` digunakan untuk mempersingkat penulisan kode. std adalah standard library yang berasal dari `<iostream>`. Tanpa barisan kode ini, kita perlu menuliskan `std::` di awal cout, endl, cin. Seperti ini:
+Sederhananya `using namespace std` digunakan untuk mempersingkat penulisan kode. std adalah standard library yang berasal dari `<iostream>`. Tanpa barisan kode ini, kita perlu menuliskan `std::` setiap kali kita hendak memakai cout, endl, cin. Seperti ini:
 
 ```C++
 #include <iostream>
@@ -120,9 +120,9 @@ int main()
 
 ### Whitespace
 
-Dapat diperhatikan pada kode bahwa baris 2 dan 4 kosong (tidak terdapat karakter apapun). Ini disebut dengan **whitespace**. Whitespace adalah area kosong pada kode, dan biasanya dtujukan agar kode mudah dibaca.
+Dapat diperhatikan pada kode bahwa baris 2 dan 4 kosong (tidak terdapat karakter apapun). Ini disebut dengan **whitespace**. Whitespace adalah area kosong pada kode, dan biasanya **ditujukan agar kode mudah dibaca**.
 
-Terdapat tiga jenis whitespace, yakni **space**, **tab**, dan **new line**. Baris 2 dan 4 adalah contoh dari new line.
+Terdapat tiga jenis whitespace, yakni **space**, **tab**, dan **newline**. Baris 2 dan 4 adalah contoh dari new line.
 
 ### Fungsi `main()`
 
@@ -136,33 +136,35 @@ int main()
 }
 ```
 
-Dalam bahasa C, fungsi `main()` adalah fungsi utama yang harus ada. Jika program kita ibaratkan sebuah rumah, fungsi `main()` adalah pintu masuknya. Dia menandakan tempat dimulainya eksekusi kode. 
+Dalam bahasa C++, fungsi **`main()`** adalah **fungsi utama** yang **harus ada**. Jika program kita ibaratkan sebuah rumah, fungsi `main()` adalah pintu masuknya. Dia **menandakan tempat dimulainya eksekusi kode**. 
 
-+ Baris 5 menunjukkan nama dari fungsi dan tipe return dari fungsi tersebut. int merupakan tipe return dari fungsi yang bernama `main()`. 
-+ Baris 6 terdapat tanda  `{` yang menandakan pembuka dari fungsi `main()`.
-+ Baris 7 s.d 8 merupakan tubuh dari fungsi `main()`.
-+ Baris 9 terdapat tanda `}` yang menandakan penutup dari fungsi `main()`. Pada dasarnya, tubuh dari sebuah fungsi berada di antara tanda `{ }`.
++ **Baris 5** menunjukkan **nama** dari fungsi dan **tipe return** dari **fungsi** tersebut. int merupakan tipe return dari fungsi yang bernama `main()`. 
++ **Baris 6** terdapat **tanda  `{`** yang menandakan **pembuka** dari fungsi `main()`.
++ **Baris 7 s.d 8** merupakan **tubuh** dari fungsi `main()`. Pada dasarnya, tubuh dari sebuah fungsi berada di antara tanda `{ }`.
++ **Baris 9** terdapat **tanda **`}`**** yang menandakan **penutup** dari fungsi `main()`. 
 
 ### Statement
 
-Di dalam fungsi `main()`, terdapat dua **statement** yang ditunjukkan pada baris 7 dan 8. Sebagian besar statement diakhiri oleh tanda titik-koma (`;`).
+Di dalam fungsi `main()`, terdapat dua **statement** yang ditunjukkan pada baris 7 dan 8. Sebagian besar statement **diakhiri** oleh **tanda titik-koma (`;`)**.
 
 ```c++
 cout << "Hello world!" << endl;
 return 0;
 ```
 
-Statement baris 7 diawali dengan `cout`. `cout` adalah singkatan dari console out. `cout` adalah fungsi yang disediakan oleh `<iostream>` untuk mencetak output pada konsol (layar). Kemudian, ada `<<` yang merupakan operator insertion. Kode `cout << "Hello world!"` berarti teks `"Hello world!"` dimasukkan ke dalam cout untuk ditampilkan pada konsol. Dari sini kita juga tahu bahwa teks atau string dalam C++ diapit oleh tanda `" "`. Terakhir, ada `endl`, singkatan dari endline, yang menandakan akhir dari suatu baris. 
++ Statement baris 7 diawali dengan **`cout`**. `cout` adalah singkatan dari **console out**. `cout` adalah fungsi yang disediakan oleh `<iostream>` untuk **mencetak output pada konsol (layar)**. 
++ Kemudian, ada `<<` yang merupakan **operator insertion**. Kode `cout << "Hello world!"` berarti teks `"Hello world!"` dimasukkan (di-*insert*) ke dalam cout untuk ditampilkan pada konsol. 
++ Terakhir, ada `endl`, singkatan dari **endline**, yang **menandakan akhir dari suatu baris**. 
 
-Statement pada baris 8 disebut dengan return statement. Perintah `return 0` pada fungsi `main()` digunakan untuk mengakhiri program dan menandakan program tersebut berhasil dieksekusi.
+Statement pada baris 8 disebut dengan **return statement**. Perintah `return 0` pada fungsi `main()` digunakan untuk **mengakhiri program** dan **menandakan program tersebut berhasil dieksekusi**.
 
-## Komentar
+# Komentar
 
-**Komentar** (_comment_) adalah bagian dari program yang tidak akan dieksekusi. Komentar sangat berguna untuk mendeskripsikan program yang dibuat, misalnya saja untuk menjelaskan bagian dari kode agar mudah dipahami oleh programmer lainnya. Terdapat dua jenis komentar dalam bahasa C++.
+**Komentar** (_comment_) adalah bagian dari program yang **tidak akan dieksekusi**. Komentar sangat berguna **untuk mendeskripsikan program** yang dibuat, misalnya saja untuk menjelaskan bagian dari kode agar mudah dipahami oleh programmer lainnya. Terdapat dua jenis komentar dalam bahasa C++.
 
-### Komentar Single-Line
+## Komentar Single-Line
 
-Seperti namanya, komentar single-line hanya bekerja pada satu baris. Komentar single-line diawali dengan simbol `//` . Semua karakter (pada satu baris) dibelakang simbol `//` akan diabaikan.
+Seperti namanya, komentar single-line hanya bekerja pada **satu baris**. Komentar single-line **diawali** dengan **simbol `//`** . Semua karakter (pada satu baris) dibelakang simbol `//` akan diabaikan.
 
 ```c++
 // Ini adalah komentar single-line  
@@ -172,9 +174,9 @@ cout << "Hello world!" << endl;
 
 ```
 
-### Komentar Multi-Line
+## Komentar Multi-Line
 
-Sedangkan komentar multi-line dapat bekerja pada lebih dari satu baris. Pasangan simbol `/*` dan `*/` digunakan untuk membuat komentar multi-line. Semua karakter yang berada di antara dua simbol tersebut akan diabaikan.
+Sedangkan komentar multi-line dapat bekerja pada **lebih dari satu baris**. Pasangan **simbol `/*` dan `*/`** digunakan untuk membuat komentar multi-line. Semua karakter yang berada di antara dua simbol tersebut akan diabaikan.
 
 ```c++
 /* 
@@ -183,9 +185,10 @@ Semua yang berada di sini akan
 diabaikan 
 */  
 ```
+# Keyword dan Identifier
 ## Keyword
 
-**Keyword** merupakan kata-kata khusus yang digunakan bahasa C++ untuk tujuan tertentu, misalnya void, int, public, dsb. Kata-kata ini tidak bisa digunakan untuk nama variabel atau fungsi. Berikut adalah daftar keyword pada bahasa C++.
+**Keyword** merupakan **kata-kata khusus** yang digunakan bahasa C++ untuk **tujuan tertentu**, misalnya void, int, public, dsb. Kata-kata ini **tidak bisa digunakan** untuk **nama variabel atau fungsi**. Berikut adalah daftar keyword pada bahasa C++.
 
 |            |          |             |             |
 |------------|----------|-------------|-------------|
@@ -204,7 +207,7 @@ diabaikan
 
 ## Identifier
 
-**Identifier** merujuk pada penamaan sebuah entitas, seperti pada [variabel](#variabel), fungsi, structures dan lain-lain. Karena identifier menamai sebuah entitas, maka nama dari identifier harus unik (dua entitas tidak boleh mempunyai nama identifier yang sama).
+**Identifier** merujuk pada **penamaan sebuah entitas**, seperti pada **[variabel](#variabel), fungsi, structures** dan lain-lain. Karena identifier menamai sebuah entitas, maka nama dari identifier harus unik (dua entitas tidak boleh mempunyai nama identifier yang sama).
 
 Aturan penamaan identifier:
 
@@ -214,15 +217,15 @@ Aturan penamaan identifier:
 + Identifier harus dimulai dengan huruf atau simbol underscore. Tidak boleh dimulai dengan digit/angka.
 + Bersifat case-sensitive, artinya identifier `variable` berbeda dengan `vAriaBle`.
 
-## Variabel
+# Variabel
 
-### Pengenalan Variabel
+## Pengenalan Variabel
 
-Pada dasarnya program bekerja dengan mengolah data. Nah, data ini bisa kita simpan dalam suatu wadah yang disebut **variabel**. Nilai data dari variabel dapat berubah-ubah selama proses program. Dalam bahasa C++, variabel menyimpan data dengan tipe data tertentu. Jika variabel kita ibaratkan sebuah gelas, maka tipe data adalah jenis cairan yang kita tuangkan ke dalamnya. 
+Pada dasarnya program bekerja dengan mengolah data. Nah, **data** ini bisa kita simpan dalam suatu **wadah** yang disebut **variabel**. **Nilai data** dari variabel **dapat berubah-ubah** selama proses program. Dalam bahasa C++, variabel menyimpan data dengan **tipe data** tertentu. Jika variabel kita ibaratkan sebuah gelas, maka tipe data adalah jenis cairan yang kita tuangkan ke dalamnya. 
 
-### Deklarasi dan Definisi Variabel
+## Deklarasi dan Definisi Variabel
 
-Pada bahasa C++, variabel harus dideklarasikan dulu sebelum digunakan. Seperti halnya gelas tadi, gelas tersebut harus ada terlebih dahulu sebelum bisa digunakan.
+Pada bahasa C++, variabel harus dideklarasikan dulu sebelum digunakan. Seperti halnya gelas tadi, gelas tersebut harus disediakan terlebih dahulu sebelum bisa digunakan.
 
 Untuk mendeklarasikan sebuah variabel, sintaksnya adalah sebagai berikut.
 
@@ -230,7 +233,7 @@ Untuk mendeklarasikan sebuah variabel, sintaksnya adalah sebagai berikut.
 <tipe_data> <identifier>
 ```
 
-Misalkan, potongan kode berikut mendeklarasikan variabel `x` yang bertipe `int`.
+Contohnya potongan kode berikut mendeklarasikan variabel `x` yang bertipe `int`.
 
 ```c++
 int x
@@ -246,9 +249,9 @@ Jika ingin mendeklarasikan lebih dari satu variabel dengan tipe data yang sama, 
 int x, y;
 ```
 
-### Pengisian Nilai Pada Variabel
+## Pengisian Nilai Pada Variabel
 
-Setelah mendeklarasikan variabel, kita bisa mengisinya dengan sebuah nilai. Pengisian ini kita lakukan dengan operator assignment (simbol `=`).
+Setelah mendeklarasikan variabel, kita bisa mengisinya dengan sebuah nilai. Pengisian ini kita lakukan dengan **operator assignment** (simbol `=`).
 
 ```
 identifier_variabel = <nilai yang bersesuaian>
@@ -264,9 +267,9 @@ y = -4;
 
 Dalam hal ini, variabel `x` dan `y` akan mempunyai nilai masing-masing `40` dan `-4`. 
 
-### Inisialisasi Variabel
+## Inisialisasi Variabel
 
-Deklarasi dan pengisian nilai pada variabel dapat dilakukan dalam satu instruksi sekaligus. Hal ini disebut dengan **inisialisasi**. Dengan melakukan inisialisasi variabel, berarti kita memberikan nilai awal pada variabel tersebut.
+**Deklarasi** dan **pengisian nilai** pada variabel dapat dilakukan dalam satu instruksi **sekaligus**. Hal ini disebut dengan **inisialisasi**. Dengan melakukan inisialisasi variabel, berarti kita memberikan nilai awal pada variabel tersebut.
 
 ```
 tipe_data identifier_variabel = <nilai yang bersesuaian>;
@@ -278,9 +281,9 @@ Contoh:
 int x = 6;
 ```
 
-## Konstanta dan Literal
+# Konstanta dan Literal
 
-Konstanta mirip seperti variabel. Keduanya sama-sama bisa kita gunakan untuk menyimpan data. Bedanya, isi data dalam konstanta tidak bisa diubah. Literal adalah nilai data yang kita masukkan dalam konstanta. Contohnya:
+**Konstanta** mirip seperti variabel. Keduanya sama-sama bisa kita gunakan **untuk menyimpan data**. Bedanya, **isi data** dalam konstanta **tidak bisa diubah**. **Literal** adalah **nilai data yang kita masukkan** dalam konstanta. Contohnya:
 
 ```c++
 5       // Literal bilangan bulat  
@@ -298,20 +301,20 @@ Berikut adalah jenis-jenis literal dalam bahasa C++.
 | Karakter                  | `‘A’, ‘1’, ‘#’`               | char          |
 | String                    | `“Hai”`                       | const char[4] |
 
-### Bilangan Bulat
+## Bilangan Bulat
 
 Terdapat tiga cara untuk menuliskan literal bilangan bulat. Yakni menggunakan basis 10 (desimal), basis 8 (oktal) dan basis 16 (heksadesimal).
 + **Desimal** - ditulis seperti bilangan pada umumnya. Contohnya `100, -22`.
 + **Oktal** - diawali dengan angka “0”, kemudian diikuti bilangan oktal. Contohnya `077, 033`.
 + **Heksadesimal** - diawali dengan “0x”, kemudian diikuti bilangan heksadesimal. Contohnya `0x7f, 0x521`.
 
-### Bilangan Real (floating)
+## Bilangan Real (floating)
 
-Bilangan real (floating) dituliskan dengan menggunakan pemisah tanda titik (.) antara bilangan bulat dan bilangan pecahannya. Contohnya `2.321, -11.22, 0.00012`.
+Bilangan real (floating) dituliskan dengan menggunakan **pemisah tanda titik (.)** antara bilangan bulat dan bilangan pecahannya. Contohnya `2.321, -11.22, 0.00012`.
 
-### Karakter
+## Karakter
 
-Literal karakter dituliskan dengan mengapitnya menggunakan tanda petik satu (`' '`). Misalnya karakter A ditulis `'A'`. Selain karakter normal, terdapat beberapa karakter dengan fungsi-fungsi khusus yang disebut escape sequence. Berikut adalah escape sequence yang terdapat dalam bahasa C++:
+Literal karakter dituliskan dengan diapit **tanda petik satu (`' '`)**. Misalnya karakter A ditulis `'A'`. Selain karakter normal, terdapat beberapa **karakter** dengan **fungsi-fungsi khusus** yang disebut **escape sequence**. Berikut adalah escape sequence yang terdapat dalam bahasa C++:
 
 | Escape Sequence | Karakter            |
 |-----------------|:--------------------|
@@ -327,11 +330,11 @@ Literal karakter dituliskan dengan mengapitnya menggunakan tanda petik satu (`' 
 | `\?`            | Tanda tanya         |
 | `\0`            | Karakter null       |
 
-Escape sequence yang paling sering digunakan adalah '\n' atau Newline. Sesuai namanya, dia akan menambahkan baris baru. 
+Escape sequence yang paling sering digunakan adalah '\n' atau newline. Sesuai namanya, dia akan menambahkan baris baru. 
 
-### String
+## String
 
-String adalah kumpulan dari satu karakter atau lebih. Literal string diapit oleh tanda petik dua (`" "`). Misalnya, `"Hello world!"`. Representasi string dalam bahasa C menggunakan array bertipe `char`. Kita akan mempelajarinya di bagian selanjutnya.
+String adalah **kumpulan** dari satu **karakter** atau lebih. Literal string **diapit tanda petik dua (`" "`)**. Misalnya, `"Hello world!"`. Representasi string dalam bahasa C menggunakan array bertipe `char`. Kita akan mempelajarinya di bagian selanjutnya.
 
 ## Mendefinisikan Konstanta
 
@@ -339,15 +342,15 @@ Untuk mendefinisikan konstanta, dapat dilakukan dengan cara-cara seperti berikut
 
 ### Mendefinisikan Variabel Konstan
 
-Variabel juga dapat dibuat konstan nilainya agar tidak berubah selama program berjalan. Variabel konstan dibuat dengan menambahkan keyword `const` saat pendefinisian variabel.
+Variabel juga dapat dibuat konstan nilainya agar tidak berubah selama program berjalan. Variabel konstan dibuat dengan **menambahkan keyword `const`** saat pendefinisian variabel.
  
 ```c++
 const tipe_data nama_var = <nilai yang bersesuaian>
 ```
 
-Perlu diperhatikan bahwa ketika mendefinisikan variabel konstan, kita harus langsung mengisinya dengan nilai. 
-Contoh:
+Perlu diperhatikan bahwa ketika mendefinisikan variabel konstan, kita **harus langsung mengisinya dengan nilai**. 
 
+Contoh:
 ```c++
 const int konstInt = 23;  
 const double konstDouble = 23.12;
@@ -384,7 +387,7 @@ int main()
 
 Tiap data yang disimpan dalam variabel mempunyai tipe. Tipe data ini akan menentukan jangkauan nilai dan memori yang dipakai variabel, serta format penulisan kode. Dalam bahasa C++, terdapat beberapa jenis tipe data: tipe data dasar, tipe data turunan, dan void. Untuk kali ini kita akan berfokus pada tipe data dasar.
 
-Setiap tipe data mempunyai jangkauan nilai. Jika nilai yang dimasukkan ke dalam variabel ada di luar jangkauan nilai tipe datanya, maka nilai yang tersimpan tidak akan sesuai. Sebagai contoh:
+Setiap tipe data mempunyai **jangkauan nilai**. Jika nilai yang dimasukkan ke dalam variabel ada di luar jangkauan nilai tipe datanya, maka nilai yang tersimpan tidak akan sesuai. Sebagai contoh:
 
 ```C++
 #include <iostream>
@@ -393,8 +396,8 @@ using namespace std;
 
 int main()
 {
-    int a = 2147483650;
-    int b = -2147483650;
+    int a = 3000000000;
+    int b = -3000000000;
     cout << a << endl;
     cout << b << endl;
     return 0;
@@ -402,18 +405,18 @@ int main()
 
 ```
 
-Jangkauan nilai dari variable bertipe int adalah antara -2.147.483.648 sampai 2.147.483.647. Namun, dalam kode di atas, kita memasukkan -2.147.483.650 dan 2.147.483.650 ke dalam variabel a dan b yang bertipe int. Jika kita jalankan kode tersebut, outputnya:
+Jangkauan nilai dari variable bertipe int adalah antara -2.147.483.648 sampai 2.147.483.647. Namun, dalam kode di atas, kita memasukkan -3.000.000.000 dan 3.000.000.000 ke dalam variabel a dan b yang bertipe int. Jika kita jalankan kode tersebut, outputnya:
 
 ```
 -2147483646
 2147483646
 ```
 
-Terlihat bahwa nilai yang tersimpan dalam variabel a dan b tidak sesuai dengan yang kita masukkan. 
+Terlihat bahwa nilai yang tersimpan dalam variabel a dan b tidak sesuai dengan yang kita masukkan. Ibaratnya jika  kita mengisi gelas 100ml dengan air 200ml, pasti ada air yang tumpah, tidak semua air bisa tersimpan dalam gelas. 
 
 ## Tipe Bilangan Bulat
 
-Bilangan Bulat adalah bilangan yang tidak mempunyai nilai pecahan. Tipe data bilangan bulat pada bahasa C++ diantaranya sebagai berikut.
+Bilangan Bulat adalah bilangan yang **tidak mempunyai nilai pecahan**. Tipe data bilangan bulat pada bahasa C++ diantaranya sebagai berikut.
 
 <table>
     <thead>
@@ -497,15 +500,15 @@ Bilangan Bulat adalah bilangan yang tidak mempunyai nilai pecahan. Tipe data bil
     </tbody>
 </table>
 
-Seperti namanya, tipe-tipe data di atas digunakan untuk merepresentasikan bilangan bulat (positif dan negatif) dan nol. Misalnya, 0, -5, 12, -1, 200 dsb. Perlu ditekankan bahwa tipe-tipe data di atas tidak bisa digunakan untuk merepresentasikan bilangan berkoma, seperti 0.5, 0.25, -0.42, dsb. 
+Seperti namanya, tipe-tipe data di atas digunakan untuk merepresentasikan bilangan bulat (positif dan negatif) dan nol. Misalnya, 0, -5, 12, -1, 200 dsb. Perlu ditekankan bahwa tipe-tipe data di atas **tidak bisa** digunakan untuk merepresentasikan bilangan **berkoma**, seperti 0.5, 0.25, -0.42, dsb. 
 
-Jika diperhatikan, beberapa tipe data di atas mempunyai awalan **unsigned** yang artinya tidak bertanda. Tipe-tipe data unsigned tidak dapat menampung bilangan negatif. Kebalikannya adalah **signed** yang dapat menampung bilangan negatif. Secara default, tipe data tanpa awalan unsigned merupakan tipe data signed. 
+Jika diperhatikan, beberapa tipe data di atas mempunyai awalan **unsigned** yang artinya tidak bertanda. Tipe-tipe data unsigned **tidak dapat menampung bilangan negatif**. Kebalikannya adalah **signed** yang **dapat menampung bilangan negatif**. Secara default, tipe data tanpa awalan unsigned merupakan tipe data signed. 
 
-Dalam memprogram, yang umum digunakan adalah int dan long long.
+Dalam memprogram, yang umum digunakan adalah **int** dan **long long**. 
 
 ## Tipe Bilangan Real
 
-Bilangan Real atau floating-point adalah bilangan yang mempunyai nilai pecahan (real). Tipe data bilangan real pada bahasa C++ di antaranya adalah sebagai berikut.
+Bilangan Real atau floating-point adalah bilangan yang **mempunyai nilai pecahan** (real). Tipe data bilangan real pada bahasa C++ di antaranya adalah sebagai berikut.
 
 <table>
     <thead>
@@ -534,11 +537,11 @@ Bilangan Real atau floating-point adalah bilangan yang mempunyai nilai pecahan (
 
 Tipe-tipe data di atas digunakan untuk menyimpan data berupa bilangan real (floating-point) atau bilangan berkoma. Misalnya, `2.35, -12.246, 0.005` dsb.
 
-Tipe yang umum digunakan adalah double.
+Tipe yang umum digunakan adalah **double**.
 
 ## Tipe Karakter
 
-Tipe data karakter biasanya digunakan untuk merepresentasikan satu karakter. Karakter mencakup huruf dan tanda baca, seperti `'A'`, `'c'`, `‘-‘`, dan sebagainya. 
+Tipe data karakter biasanya digunakan untuk merepresentasikan **satu karakter**. Karakter mencakup **huruf** dan **tanda baca**, seperti `'A'`, `'c'`, `‘-‘`, dan sebagainya. 
 
 Sebenarnya karakter-karakter dalam bahasa C++ adalah bilangan bulat. Bahasa C++ menggunakan sistem pengkodean ASCII yang mengkonversikan bilangan-bilangan tersebut menjadi karakter. Sebagai contoh, 32 adalah kode ASCII untuk karakter spasi (’ ’), 65 adalah kode ASCII untuk huruf ’A’, dan 98 adalah kode ASCII untuk huruf ’b’.
 
@@ -568,7 +571,7 @@ Sebenarnya karakter-karakter dalam bahasa C++ adalah bilangan bulat. Bahasa C++ 
 </table>
 
 ## Tipe Boolean
-Tipe data boolean digunakan untuk menyimpan nilai kebenaran, yaitu hanya TRUE atau FALSE. Nilai kebenaran ini direpresentasikan oleh bilangan 1 untuk nilai TRUE dan 0 untuk nilai FALSE. Tipe data boolean akan lebih terasa kebermanfaatannya ketika kita sudah mempelajari struktur percabangan dan array.
+Tipe data boolean digunakan untuk menyimpan **nilai kebenaran**, yaitu hanya **TRUE** atau **FALSE**. Nilai kebenaran ini direpresentasikan oleh bilangan **1** untuk nilai **TRUE** dan **0** untuk nilai **FALSE**. Tipe data boolean akan lebih terasa kebermanfaatannya ketika kita sudah mempelajari struktur percabangan dan array.
 
 <table>
     <thead>
@@ -591,13 +594,13 @@ Tipe data boolean digunakan untuk menyimpan nilai kebenaran, yaitu hanya TRUE at
 
 # Input dan Output Dasar
 
-Program yang kita buat dapat dijadikan program interaktif. Kita dapat memintanya untuk menerima input (dari keyboard) lalu menampilkan hasil output (pada konsol layar). Fungsi-fungsi yang berkaitan dengan input/output ada di dalam library `<iostream>` (input output stream).
+Program yang kita buat dapat dijadikan program interaktif. Kita dapat memintanya untuk menerima input (dari keyboard) lalu menampilkan hasil output (pada konsol layar). Fungsi-fungsi yang berkaitan dengan input/output ada di dalam library `<iostream>` (input output stream) dan `<cstdio>`.
 
 ## Output Dasar
 
 ### Fungsi `cout`
 
-Fungsi pertama yang dapat digunakan untuk mencetak output pada konsol, adalah `cout` yang berasal dari header file `<iostream>`. Data yang ingin kita output-kan bisa dimasukkan ke dalam `cout` dengan operator insertion `<<`. Data tersebut dapat berupa nilai atau variabel. Sebagai contoh, perhatikan kode berikut:
+Fungsi pertama yang dapat digunakan untuk mencetak output pada konsol, adalah `cout` yang berasal dari header file `<iostream>`. **Data** yang ingin kita output-kan bisa **dimasukkan** ke dalam `cout` **dengan operator insertion `<<`**. Data tersebut dapat berupa nilai atau variabel. Sebagai contoh, perhatikan kode berikut:
 
 ```c++
 #include <iostream>
@@ -664,8 +667,8 @@ int main()
     cout << huruf << endl;
 
     // Boolean
-    bool booly = true;
-    cout << booly << endl;
+    bool broly = true;
+    cout << broly << endl;
 
     return 0;
 }
@@ -679,6 +682,23 @@ Ini lewat variable
 0.609
 a
 1
+```
+Kita dapat mencetak beberapa nilai atau variabel sekaligus dalam satu statement cout:
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 2;
+    cout << a << " " << 3 << endl;
+}
+```
+
+Output:
+```
+2 3
 ```
 
 Selain itu, kita dapat pula memasukkan operasi:
@@ -717,7 +737,7 @@ Akan dihasilkan output:
 
 Jika belum paham perihal operasi dan operator, jangan khawatir karena akan dibahas setelah materi input output. 
 
-Perlu diperhatikan bahwa dua statement `cout` yang berbeda baris, tidak selalu menghasilkan output yang berbeda baris pula. Tanpa `endl` atau `\n` (newline), output akan tetap pada baris yang sama.
+Perlu diperhatikan bahwa dua statement `cout` yang berbeda baris, tidak selalu menghasilkan output yang berbeda baris pula. **Tanpa `endl` atau `\n` (newline)**, output akan tetap pada **baris yang sama**.
 
 ```C++
 #include <iostream>
@@ -763,7 +783,7 @@ int main()
 } 
 ```
 
-Output
+Output:
 
 ```
 Ini adalah sebuah string
@@ -781,7 +801,7 @@ Aku adalah newline
     Aku adalah karakter \tab
 ```
 
-Memisahkan dua statement `printf()` pada baris berbeda bukan berarti mencetak pada baris berbeda juga. Untuk berpindah baris kita perlu menambahkan newline (`\n`) seperti pada program di atas.
+Memisahkan dua statement `printf()` pada baris berbeda bukan berarti mencetak pada baris berbeda juga. Untuk **berpindah baris** kita perlu menambahkan **newline** (`\n`) seperti pada program di atas.
 
 ```c++
 #include <cstdio>  
@@ -805,7 +825,8 @@ Potongan-potongan kode di atas adalah contoh untuk mencetak string tetap. Lalu b
 ### Output Dengan Format Specifier
 
 Untuk mencetak nilai dari suatu variabel, kita perlu menambahkan argumen pada fungsi `printf()`. Argumen pertama pada fungsi `printf()` selalu berupa string. Kita dapat memasukkan variabel/nilai pada argumen ke-2, 3, 4 dan seterusnya sesuai kebutuhan.
-Ingat, pada chapter [Tipe Data Dasar](#tipe-data-dasar), **setiap tipe data mempunyai format specifier masing-masing**. Nah, format specifier inilah yang akan kita gunakan untuk mencetak nilai dari suatu variabel.
+
+Ingat, pada chapter [Tipe Data Dasar](#tipe-data-dasar), setiap tipe data mempunyai **format specifier** masing-masing. Nah, format specifier inilah yang akan kita gunakan untuk mencetak nilai dari suatu variabel.
  
 ```
 printf(“<format string>”, var1, var2, var3, ... dst);
@@ -878,7 +899,7 @@ Input bisa berasal dari berbagai sumber, seperti keyboard dan file. Di sini, kit
 
 ### Fungsi `cin`
 
-Fungsi pertama yang dapat kita gunakan adalah `cin` dari header file `<iostream>`. `cin` biasanya digunakan dengan tanda `>>` yang disebut extraction operator. Extraction operator akan mengekstrak nilai dari input dan memasukkannya ke dalam variabel. 
+Fungsi pertama yang dapat kita gunakan adalah `cin` dari header file `<iostream>`. `cin` biasanya digunakan dengan **tanda `>>`** yang disebut **extraction operator**. Extraction operator akan **mengekstrak nilai** dari **input** dan **memasukkannya ke** dalam **variabel**. 
 
 Sebagai contoh, program di bawah menerima input berupa integer yang kemudian dimasukkan ke variabel `a`. Nilai variabel `a` lalu dicetak dengan format _“a mempunyai nilai = ”_.
 
@@ -1010,7 +1031,7 @@ i bernilai = 10
 
 ### Fungsi `scanf()`
 
-Fungsi kedua yang dapat kita gunakan adalah `scanf()` dari header file `<cstdio>`. Cara kerja `scanf()` adalah dengan mencari token yang dapat dibaca berikutnya, lalu mengambil nilainya. Token adalah adalah serangkaian karakter non-spasi, misalnya huruf atau angka. Pada contoh di bawah, token yang dimaksud adalah bilangan yang akan menjadi nilai variabel `n`.
+Fungsi kedua yang dapat kita gunakan adalah `scanf()` dari header file `<cstdio>`. Cara kerja `scanf()` adalah dengan **mencari token** yang dapat dibaca berikutnya, lalu **mengambil nilainya**. Token adalah adalah **serangkaian karakter non-spasi**, misalnya huruf atau angka. Pada contoh di bawah, token yang dimaksud adalah bilangan yang akan menjadi nilai variabel `n`.
 
 Parameter dari fungsi `scanf()` sama persis dengan fungsi `printf()`. Kita menggunakan format specifier untuk menentukan jenis tipe data yang kita input, kemudian nilai input tersebut akan di-assign ke variabel.
 
@@ -1040,7 +1061,7 @@ Output
 n mempunyai nilai = 3
 ```
 
-Jika kita perhatikan, ada sedikit perbedaan antara scanf dan printf, yakni adanya karakter `'&'` sebelum nama variabel. 
+Jika kita perhatikan, ada sedikit perbedaan antara scanf dan printf, yakni adanya **karakter `'&'` sebelum nama variabel**. 
 
 ```
 scanf(“<format string>”, &var1, &var2, &var3, ... dst);
@@ -1077,6 +1098,10 @@ a bernilai = 5
 b bernilai = K
 c bernilai = 0.300000
 ```
+Ilustrasi
+
+![pict_scanf](https://i.ibb.co/Xyw1yLz/scanf.png)
+
 
 Khusus untuk tipe data char, scanf akan membaca 1 karakter selanjutnya, baik itu spasi, angka, ataupun baris baru. Hal ini dapat menyebabkan nilai variabel menjadi tidak sesuai dengan yang kita inginkan. Perhatikan program berikut:
 
@@ -1152,19 +1177,19 @@ c2 bernilai = t
 
 # Operator
 
-**Operator** dapat dipahami sebagai sesuatu yang dapat melakukan operasi pada operan (variabel/nilai). Contohnya, operator + digunakan untuk operasi penjumlahan.
+**Operator** dapat dipahami sebagai sesuatu yang dapat **melakukan operasi pada operan** (variabel/nilai). Contohnya, operator + digunakan untuk operasi penjumlahan.
 
 Dilihat dari jumlah operannya, operator dibagi menjadi tiga jenis, yaitu:
 
-+ **Unary** – yakni operator yang bekerja pada satu operan, misalnya -5.
-+ **Binary** – yakni operator yang bekerja pada dua operan, misalnya 2 + 3.
-+ **Ternary** – yakni operator yang bekerja pada tiga operan. (Akan dibahas pada bagian selanjutnya).
++ **Unary** – yakni operator yang bekerja pada **satu operan**, misalnya --5.
++ **Binary** – yakni operator yang bekerja pada **dua operan**, misalnya 2 + 3.
++ **Ternary** – yakni operator yang bekerja pada **tiga operan**. (Akan dibahas pada bagian selanjutnya).
 
 Dilihat dari kegunaannya, berikut adalah jenis-jenis operator pada bahasa C++.
 
 ## Operator Assignment
 
-**Operator Assignment** digunakan untuk mengisikan (assign) sebuah nilai ke variabel. Simbol yang biasa digunakan adalah tanda sama dengan  `=`. Contohnya:
+**Operator Assignment** digunakan untuk **mengisikan (assign) sebuah nilai ke variabel**. Simbol yang biasa digunakan adalah tanda sama dengan  `=`. Contohnya:
 
 ```c++
 int x, y;  
@@ -1176,7 +1201,7 @@ y = x + x; // y = 14
 
 ## Operator Aritmatika
 
-Seperti namanya, **operator aritmatika** melakukan operasi matematika seperti penjumlahan, pengurangan, pembagian dsb. Operator-operator aritmatika pada bahasa C++ adalah sebagai berikut.
+Seperti namanya, **operator aritmatika** melakukan **operasi matematika** seperti penjumlahan, pengurangan, pembagian dsb. Operator-operator aritmatika pada bahasa C++ adalah sebagai berikut.
 
 | Simbol | Operasi                                               | Contoh   |
 |:------:| ----------------------------------------------------- | :------: |
@@ -1244,6 +1269,11 @@ int main()
     float a = 6;
     int b = 4;
     float hasil;
+	
+	/* Bisa juga
+	int a = 6;
+	float b = 4;
+	float hasil; */
 
     hasil = a/b; 
     cout << a << " / " << b << " = " << hasil << endl; 
@@ -1256,7 +1286,7 @@ Output
 6 / 4 = 1.5
 ```
 
-Sebagaimana dalam matematika, operator-operator ini juga mempunyai precedence atau urutan eksekusi. Operator pembagian, perkalian, dan modulo akan dieksekusi terlebih dahulu sebelum penjumlahan dan pengurangan. 
+Sebagaimana dalam matematika, operator-operator ini juga mempunyai ***precedence*** atau **urutan eksekusi**. Operator **pembagian, perkalian,** dan **modulo** akan **dieksekusi sebelum penjumlahan** dan **pengurangan**. 
 
 ```c++
 #include <iostream>
@@ -1279,7 +1309,7 @@ Output
 7
 ```
 
-Terlihat bahwa 2 dikalikan 3 dulu, baru ditambahkan 1. Jika kita ingin melakukan operasi penjumlahan/pengurangan sebelum perkalian/pembagian, kita bisa memakai tanda kurung `'()'`:
+Terlihat bahwa 2 dikalikan 3 dulu, baru ditambahkan 1. Jika kita ingin melakukan operasi penjumlahan/pengurangan sebelum perkalian/pembagian, kita bisa memakai **tanda kurung `'()'`**:
 
 ```c++
 #include <iostream>
@@ -1304,11 +1334,11 @@ Output
 
 ## Operator Increment dan Decrement
 
-Operator `++` disebut dengan operator **increment**, sedangkan operator `--` merupakan operator **decrement*. Kedua operator ini digunakan untuk menambah (increment) atau mengurangi (decrement) nilai suatu variabel dengan nilai 1. Selain itu, kedua operator ini juga termasuk ke dalam operator unary, yang berarti dia hanya bekerja pada satu operan. 
+**Operator `++`** disebut dengan operator **increment**, sedangkan **operator `--`** merupakan operator **decrement**. Kedua operator ini digunakan untuk **menambah** (increment) atau **mengurangi** (decrement) **nilai suatu variabel dengan nilai 1**. Selain itu, kedua operator ini juga termasuk ke dalam operator unary, yang berarti dia hanya bekerja pada satu operan. 
 
 Terdapat dua cara untuk menggunakan operator ini.
 
-+ **Prefix** - yakni dengan meletakkan operator increment/decrement sebelum nama variabel. 
++ **Prefix** - yakni dengan meletakkan operator increment/decrement **sebelum nama variabel**. 
 
     ```c++
     int a, b;  
@@ -1317,7 +1347,7 @@ Terdapat dua cara untuk menggunakan operator ini.
     --b; // Nilai b sekarang adalah 4
     ```
 
-    Cara kerja dari operator increment/decrement prefix adalah dengan menambahkan/mengurangi nilai variabel sebelum diproses. Untuk lebih jelasnya, perhatikan potongan kode berikut
+    Cara kerja dari operator increment/decrement prefix adalah dengan **menambahkan/mengurangi nilai variabel sebelum diproses**. Untuk lebih jelasnya, perhatikan potongan kode berikut
 
     ```c++
     int a, b;  
@@ -1333,7 +1363,7 @@ Terdapat dua cara untuk menggunakan operator ini.
 
     Ketika statement `b = ++a;` dieksekusi, nilai variabel `a` akan ditambah 1 dulu, kemudian baru dimasukkan ke variabel `b`. 
 
-+ **Postfix** - yakni dengan meletakkan operator increment/decrement setelah nama variabel. Berkebalikan dengan prefix, operator increment/decrement postfix akan memproses variabel dulu sebelum ditambah satu. Perhatikan potongan kode berikut.
++ **Postfix** - yakni dengan meletakkan operator increment/decrement **setelah nama variabel**. Berkebalikan dengan prefix, operator increment/decrement postfix akan **memproses variabel dulu sebelum ditambah satu**. Perhatikan potongan kode berikut.
 
     ```c++
     int a, b;
@@ -1353,7 +1383,7 @@ Terdapat dua cara untuk menggunakan operator ini.
 
 ## Operator Relasional
 
-**Operator Relasional** digunakan untuk memeriksa relasi dan membandingkan nilai dari dua operan. Jika benar akan menghasilkan nilai **TRUE** (direpresentasikan angka 1), jika salah maka akan menghasilkan nilai **FALSE** (direpresentasikan angka 0).
+**Operator Relasional** digunakan untuk **memeriksa relasi** dan **membandingkan nilai** dari **dua operan**. **Jika benar** akan menghasilkan nilai **TRUE** (direpresentasikan angka **1**), **jika salah** maka akan menghasilkan nilai **FALSE** (direpresentasikan angka **0**).
 
 Berikut adalah operator-operator relasional dalam bahasa C++.
 
@@ -1381,11 +1411,15 @@ Output
 1
 ```
 
-Pada statement `hasil = (a < b);`, nilai `a` (2) akan dibandingkan dengan nilai `b` (3). Jika nilai `a` lebih kecil dari `b`, maka akan bernilai benar. Jika tidak, maka akan bernilai salah. Dalam hal ini, 2 kurang dari 3, maka `(a < b)` bernilai benar atau TRUE. Nilai TRUE direpresentasikan oleh 1. Nilai inilah yang dimasukkan ke dalam variabel hasil. Oleh karena itu, ketika kita mencetak variabel hasil, nilainya 1. 
+- Pada statement `hasil = (a < b);`, nilai `a` (2) akan dibandingkan dengan nilai `b` (3). 
+- Jika nilai `a` lebih kecil dari `b`, maka akan bernilai benar. 
+- Jika tidak, maka akan bernilai salah. 
+- Dalam hal ini, 2 kurang dari 3, maka `(a < b)` bernilai benar atau TRUE. 
+- Nilai TRUE direpresentasikan oleh 1. Nilai inilah yang dimasukkan ke dalam variabel hasil. Oleh karena itu, ketika kita mencetak variabel hasil, nilainya 1. 
 
 ## Operator Logika
 
-**Operator Logika** digunakan untuk melakukan tes pada kondisi/ekspresi, apakah kondisi tersebut benar atau salah. Operator logika hanya akan menghasilkan nilai **TRUE** (jika benar) atau **FALSE** (jika salah). TRUE direpresentasikan oleh angka 1, sedangkan FALSE oleh angka 0.
+**Operator Logika** digunakan untuk **menguji kebenaran kondisi/ekspresi**. Operator logika hanya akan menghasilkan nilai **TRUE** (jika benar) atau **FALSE** (jika salah). TRUE direpresentasikan oleh angka 1, sedangkan FALSE oleh angka 0.
 
 Operator-operator logika dalam bahasa C++ adalah sebagai berikut.
 
@@ -1397,7 +1431,7 @@ Operator-operator logika dalam bahasa C++ adalah sebagai berikut.
 
 > Operator Logika **NOT** merupakan operator unary yang artinya hanya pada bekerja pada satu operan
 
-Operator logika pada umumnya digunakan bersamaan dengan operator relasional untuk melakukan tes pada ekspresi yang berhubungan dengan kebenaran suatu kondisi. Penggunaan paling umum adalah untuk melakukan percabangan (akan dipelajari di bagian selanjutnya).
+Operator logika pada umumnya digunakan bersamaan dengan operator relasional untuk menguji ekspresi yang berhubungan dengan kebenaran suatu kondisi. Penggunaan paling umum adalah untuk melakukan percabangan (akan dipelajari di bagian selanjutnya).
 
 Sebagai contoh, perhatikan program berikut:
 
@@ -1430,7 +1464,7 @@ Pada statement `d = ((b != b) || (b > c)) && (c == a); `
 
 ## Operator Gabungan
 
-**Operator Gabungan** adalah operator yang terdiri dari gabungan dua operator. Tujuan dari operator gabungan adalah untuk mempersingkat penulisan kode. Berikut adalah operator gabungan dalam bahasa C++.
+**Operator Gabungan** adalah operator yang terdiri dari **gabungan dua operator**. Tujuan dari operator gabungan adalah untuk mempersingkat penulisan kode. Berikut adalah operator gabungan dalam bahasa C++.
 
 | Operator | Contoh    | Ekuivalen Dengan        |
 | :------: | :------:  | :---------------------: |
@@ -1461,7 +1495,7 @@ Selain operator-operator yang telah dijelaskan sebelumnya, terdapat beberapa ope
 
 ### Operator `sizeof()`
 
-Walaupun mempunyai bentuk seperti sebuah fungsi, namun dalam standardisasi bahasa C++ menganggap operator `sizeof()` sebagai operator. Kegunaan dari operator ini adalah untuk mengetahui besarnya memori yang digunakan suatu variabel atau tipe data dalam satu byte. 
+Walaupun mempunyai bentuk seperti sebuah fungsi, namun dalam standardisasi bahasa C++ menganggap operator `sizeof()` sebagai operator. Kegunaan dari operator ini adalah untuk **mengetahui besarnya memori** yang digunakan **suatu variabel** atau **tipe data** dalam satuan byte. 
 
 Contoh:
 
@@ -1471,17 +1505,17 @@ sizeof(int);
 
 ### Operator Kondisional (` ? : `)
 
-Operator kondisial merupakan satu-satunya operator ternary (bekerja pada tiga operan) dalam bahasa C++. Fungsi dari operator kondisional layaknya percabangan menggunakan `if - else` (akan dijelaskan pada modul percabangan).
+Operator kondisial merupakan satu-satunya **operator ternary** (bekerja pada tiga operan) dalam bahasa C++. Fungsi dari operator kondisional **layaknya percabangan** menggunakan `if - else` (akan dijelaskan pada modul percabangan).
 
 ### Operator Koma (`,`)
 
-Tanda koma (`,`) sebagai operator dalam bahasa C++ merupakan binary operator yang akan mengevaluasi operan pertama, kemudian akan membuang hasilnya. Lalu mengevaluasi operan kedua dan akan mengembalikan nilainya.
+Tanda koma (`,`) sebagai operator dalam bahasa C++ merupakan **binary operator** yang akan **mengevaluasi operan pertama**, kemudian akan **membuang hasilnya**. Lalu **mengevaluasi operan kedua** dan akan **mengembalikan nilainya**.
 
 ```c++
 int number = (5, 23);   // number bernilai 23, bukan 5
 ```
 
-Selain berfungsi sebagai operator, tanda koma (`,`) juga berfungsi sebagai separator (pemisah) antar statement. Misalkan saat deklarasi lebih dari satu variabel.
+Selain berfungsi sebagai operator, tanda koma (`,`) juga berfungsi sebagai **separator (pemisah)** antar statement. Misalkan saat deklarasi lebih dari satu variabel.
 
 ```c++
 int var1, var2, var3;   
@@ -1492,7 +1526,7 @@ int var1, var2, var3;
 
 ### Operator Subscript (`[]`)
 
-Penggunaan paling umum operator ini adalah untuk melakukan pengaksesan terhadap elemen suatu array (akan dibahas pada modul array).
+Penggunaan paling umum operator ini adalah untuk melakukan **pengaksesan** terhadap **elemen** suatu **array** (akan dibahas pada modul array).
 
 _Operator lain yang belum ter-cover pada modul ini akan dibahas pada modul-modul selanjutnya._
 
@@ -1502,20 +1536,46 @@ Secara umum, terdapat dua jenis error, yakni Compilation Error dan Runtime Error
 
 ## Compilation Error
 
-Kesalahan yang terjadi ketika program dikompilasi. Ketika suatu program memiliki compilation error, kompilasi
-akan dibatalkan. Program tidak akan berhasil dikompilasi sampai kesalahannya kita perbaiki. Compilation error dapat disebabkan oleh berbagai hal:
+Kesalahan yang terjadi **ketika program dikompilasi**. Ketika suatu program memiliki compilation error, kompilasi akan dibatalkan. Program tidak akan berhasil dikompilasi sampai kesalahannya kita perbaiki. Compilation error dapat disebabkan oleh berbagai hal:
+
 - Salah mengetik nama variabel.
 - Kurang tanda titik koma (;) di akhir statement.
 - Salah menggunakan tipe data.
 
 ## Runtime Error
 
-Kesalahan yang terjadi ketika program dieksekusi. Program dapat mengalami error ketika sedang dieksekusi karena berbagai hal:
+Kesalahan yang terjadi **ketika program dieksekusi**. Program dapat mengalami error ketika sedang dieksekusi karena berbagai hal:
 - Melakukan pembagian dengan angka 0.
 - Mengakses memori di luar yang telah dialokasikan.
 - Mengalami stack overflow.
 
-Sebagian besar dari istilah dan masalah yang dijelaskan di atas mungkin kita hadapi ketika sudah mempelajari tentang
-array dan rekursi.
+Sebagian besar dari istilah dan masalah yang dijelaskan di atas mungkin kita hadapi ketika sudah mempelajari tentang array dan rekursi.
 
-## Tampilan Error dalam Codeblocks
+# Pesan Peringatan (Warning)
+Warning **memperingatkan** kita bahwa **ada sesuatu yang berpotensi membuat program tidak berjalan sesuai ekspektasi**. Berbeda dengan error, warning **tidak** akan **menghentikan** proses **kompilasi** dan **eksekusi**. 
+
+# Tampilan Error dan Warning dalam Codeblocks 
+Pesan error dan warning dalam Codeblocks akan muncul di bagian bawah, di bagian **Logs & others**, di **Build messages**. 
+
+Misal kita menjalankan program berikut
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int var = 2;
+    cout << val << endl;
+    return 0;
+}
+```
+Akan muncul
+- Tulisan yang berwarna merah adalah error. Dalam hal ini, terjadi compilation error karena kita salah menulis nama variabel `var` menjadi `val`.
+- Tulisan yang berwarna biru adalah warning. Dalam hal ini, kita diperingatkan bahwa ada variabel yang tidak terpakai, yakni `var`
+
+# Referensi
+- [Modul 0: Pengenalan Pemrograman · AlproITS/DasarPemrograman Wiki (github.com)](https://github.com/AlproITS/DasarPemrograman/wiki/Modul-0:-Pengenalan-Pemrograman)
+- [Pemrograman Dasar | TLX (toki.id)](https://tlx.toki.id/courses/basic/)
+- [Kelas Terbuka - Belajar Dasar C++ ](https://www.youtube.com/watch?v=WtBF_-pLrjE&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI)
+
