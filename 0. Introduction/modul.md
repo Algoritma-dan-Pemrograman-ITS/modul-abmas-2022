@@ -119,7 +119,7 @@ Sebelum menulis kode, kita perlu membuat *project* terlebih dahulu
 4. Tuliskan ***project title***, pilih ***folder*** tempat project, lalu klik *Next*
 5. Pastikan bahwa compiler yang digunakan adalah **GNU GCC Compiler**, lalu klik *Finish*
 
-https://user-images.githubusercontent.com/70790033/179145236-7e407e8b-3ab2-4da4-93f9-424b4abf38b4.mp4
+https://user-images.githubusercontent.com/70790033/182285615-03ad483c-1497-4a86-9567-0a133ac67191.mp4
 
 Cara alternatifnya
 1. Pilih ***File*** di bar atas
@@ -129,7 +129,7 @@ Cara alternatifnya
 5. Tuliskan ***project title***, pilih ***folder*** tempat project, lalu klik *Next*
 6. Pastikan bahwa compiler yang digunakan adalah **GNU GCC Compiler**, lalu klik *Finish*
 
-https://user-images.githubusercontent.com/70790033/179145477-f9c8b62e-e9e6-45fc-bb1d-2ec0586eb67f.mp4
+https://user-images.githubusercontent.com/70790033/182285644-c2adb0f6-6731-4bc3-aebc-ca84665e5128.mp4
 
 ## Menulis dan Mengedit Kode di IDE
 Setelah *project* sudah dibuat
@@ -138,12 +138,12 @@ Setelah *project* sudah dibuat
 3. Akan muncul file **main.cpp**, *double-click* lagi untuk memunculkannya dalam *text editor*
 4. Setelah ***text editor*** muncul, akan langsung tertulis kode program untuk Hello World, kita bisa mulai mengedit kode ini sesuai keinginan
 
-https://user-images.githubusercontent.com/70790033/179146060-8c110019-1c73-4635-95a0-2f1dc116f209.mp4
+https://user-images.githubusercontent.com/70790033/182285854-a32181d9-94e3-4b6c-8611-96317738b298.mp4
 
 ## Menjalankan Program di IDE
 1. Klik tombol ***Build and run*** berwarna kuning dan hijau yang ada di bar atas
 
-https://user-images.githubusercontent.com/70790033/179146386-5c6270ab-6300-4f29-be76-fad252c0cb5b.mp4
+https://user-images.githubusercontent.com/70790033/182285702-9738bd22-7220-4cc8-b6ff-bdd09e26a8fb.mp4
 
 ----
 
