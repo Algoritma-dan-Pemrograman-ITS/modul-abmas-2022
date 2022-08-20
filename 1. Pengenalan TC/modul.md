@@ -32,8 +32,7 @@ Pada Departemen Teknik Informatika ITS, terdapat 3 program studi, yaitu Sarjana 
   <img src="https://user-images.githubusercontent.com/87473932/185525124-62f0f93b-2632-4dcb-9363-54cfc051876a.png" width="75%">
 </p>
 
-
-
+RMK di atas memiliki mata kuliahnya masing-masing. Mata kuliah di Teknik Informatika sendiri biasanya tak luput dari **programming**. Maka dari itu, mari kita coba mengenal terlebih dahulu mengenai **programming** ini.
 
 ### Apa sih Programming itu?
 Programming adalah sebuah proses untuk membuat program di komputer. Program yang dibuat bisa berupa software, website, aplikasi android, dsb.
