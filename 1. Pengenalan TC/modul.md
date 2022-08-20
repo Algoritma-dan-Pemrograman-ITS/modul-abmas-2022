@@ -52,6 +52,12 @@ Saat ini banyak bermunculan bahasa pemrograman yang baru. Hal ini terjadi karena
 # Apa sih contoh-contoh hasil programming?
 ## Netflix dan Spotify
 
+<p align ="center">
+  <img src="https://user-images.githubusercontent.com/73653209/185743698-b7f195d5-f872-4d32-b536-6a73d013aad4.png" width="55%">
+ </p>
+<p align ="center">
+  <img src="https://user-images.githubusercontent.com/73653209/185743701-1ef276e4-e31f-4398-8e90-5933c41a7ae3.png" width="55%">
+ </p>
 
 
 
@@ -63,6 +69,9 @@ Sistem rekomendasi Spotify dan Netflix adalah sistem yang sangat kompleks dan ru
 
 
 ## Siri
+<p align ="center">
+  <img src="https://user-images.githubusercontent.com/73653209/185743951-70ff6cbf-32d3-4729-a561-a5994d4754e8.jpg" width="75%">
+ </p>
 
 
 
@@ -73,22 +82,18 @@ Setelah menerima permintaan dari pengguna, Siri merekam frekuensi dan gelombang 
 Setelah Siri menentukan permintaannya, Siri mulai menilai tugas apa yang perlu dilakukan, menentukan apakah informasi yang dibutuhkan dapat diakses dari dalam bank data ponsel atau dari server online. Siri kemudian dapat menyusun kalimat yang lengkap dan kohesif yang relevan dengan jenis pertanyaan atau perintah yang diminta.
 
 
-
-
-
 ## E-commerce
-
-
-
-
-
+<p align ="center">
+  <img src="https://user-images.githubusercontent.com/73653209/185743980-dcffe35f-ac66-4c9a-9f7f-cbbc62f05661.jpg" width="75%">
+ </p>
 
 
 ## Mobile Games
+<p align ="center">
+  <img src="https://user-images.githubusercontent.com/73653209/185743965-11a65083-597f-49d9-bb69-fb68ff920f94.jpg" width="75%">
+ </p>
 
 Game-game tidak dapat dibuat tanpa adanya game progammer/developer! Yang dilakukan untuk pembuatan game ini termasuk membangun mesin dasar, membuat *functions, events, interactions* pada game, mengembangkan dan memodifikasi render grafis 3D, mengembangkan kecerdasan buatan (AI) untuk lawan, membuat asset, menerapkan logika dan mekanika game, menulis kode khusus untuk keyboard, mouse atau joystick, membuat antarmuka pengguna, menerapkan algoritme dan mengidentifikasi bug. Tidak hanya itu, sekarang game banyak dikembangkan menggunakan Augmented Reality ataupun Virtual Reality.
-
-
 
 
 # Manfaat dan Kelebihan Belajar Pemrograman
