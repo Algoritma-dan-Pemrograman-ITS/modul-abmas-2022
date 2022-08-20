@@ -10,6 +10,8 @@
     -   [Panjang string](#panjang-string)
     -   [Mengakses karakter pada string](#mengakses-karakter-pada-string)
 
+# Looping
+
 # Array
 Kita ingin menyimpan nilai 2 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
 
@@ -81,8 +83,9 @@ int main()
 }
 ```
 
+Soal Latihan :
+1. [Balik Daftar - tlx Toki courses Basic](https://tlx.toki.id/courses/basic/chapters/09/problems/B)
 
-# Looping
 
 # String
 
