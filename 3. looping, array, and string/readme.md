@@ -11,6 +11,76 @@
     -   [Mengakses karakter pada string](#mengakses-karakter-pada-string)
 
 # Array
+Kita ingin menyimpan nilai 2 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
+
+```c++
+#include <stdio.h>
+
+int main()
+{   
+    int nilaiSiswa1 = 70;
+    int nilaiSiswa2 = 80;
+    
+    printf("Rata-rata: %f\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] ) / 2.0;
+}
+```
+
+Namun, bagaimana jika siswanya ada 50? Kalau diselesaikan dengan cara diatas, maka kita memerlukan 50 variabel. Maka dari itu, mari mengenal konsep array.
+
+### Apa itu array
+- Array adalah sebuah blok dari ruang yang berdekatan dalam memori 
+- yang telah dipartisi menjadi blok-blok kecil berukuran sama yang disebut element, 
+- yang masing-masing dapat menyimpan sejumlah data dengan tipe yang sama. misalnya int atau char 
+- dan diakses dengan menggunakan indeks.
+cs50x
+
+dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang lokasinya ditempatkan berturut-turut atau berdekatan
+
+array -> variabel dengan satu nama, tetapi mengandung banyak nilai. akses nilainya dilakukan dengan indeks. - modul toki
+
+- pada C++, index element array dimulai dari 0.
+- jika array berisi n elemen, maka elemen ke-1 indeksnya 0, dan elemen terakhir index nya (n-1)
+
+
+### Deklarasi array
+
+`tipe nama[size];`
+
+contoh: 
+`int nilaiSiswa[3]`
+`double harga_buku[5]`
+
+- Contoh program menggunakan array
+```c++
+#include <stdio.h>
+
+int main()
+{
+    int nilaiSiswa[3];
+    
+    nilaiSiswa[0] = 70;
+    nilaiSiswa[1] = 80;
+    nilaiSiswa[2] = 90;
+    
+    printf("Rata-rata: %f\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] + nilaiSiswa[3] ) / 3.0;
+}
+```
+
+```c++
+#include <stdio.h>
+
+int main()
+{
+    int nilaiSiswa[3];
+    
+    nilaiSiswa[0] = 70;
+    nilaiSiswa[1] = 80;
+    nilaiSiswa[2] = 90;
+    
+    printf("Rata-rata: %f\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] + nilaiSiswa[3] ) / 3.0;
+}
+```
+
 
 # Looping
 
