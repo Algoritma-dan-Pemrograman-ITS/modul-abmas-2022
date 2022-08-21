@@ -112,6 +112,7 @@ Untuk dapat menggunakan variabel **String** beserta operasinya pada C++, diperlu
 ```c++
 #include <iostream>
 #include <string>
+#include <cstdio>
 
 using namespace std;
 
