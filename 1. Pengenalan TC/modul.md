@@ -34,7 +34,7 @@ Pada Departemen Teknik Informatika ITS, terdapat 3 program studi, yaitu Sarjana 
 
 RMK di atas memiliki mata kuliahnya masing-masing. Mata kuliah di Teknik Informatika sendiri biasanya tak luput dari **programming**. Maka dari itu, mari kita coba mengenal terlebih dahulu mengenai **programming** ini.
 
-### Apa sih Programming itu?
+## Apa sih Programming itu?
 Programming adalah sebuah proses untuk membuat program di komputer. Program yang dibuat bisa berupa software, website, aplikasi android, dsb.
 
 Lalu, mulai dari manakah agar kamu bisa memulai programming? Untuk membuat program tentunya ada beberapa tahapan. Mulai dari tulis menulis, menguji, merevisi, dan mengevaluasi, serta mengujinya lagi sampai program tersebut benar-benar jadi dan sesuai dengan apa yang diinginkan.
@@ -48,8 +48,8 @@ Itulah mengapa seorang yang ahli programming mesti menguasai bahasa pemrograman.
 Saat ini banyak bermunculan bahasa pemrograman yang baru. Hal ini terjadi karena seseorang berupaya menyederhanakan dan memudahkan bahasa pemrograman yang sudah ada. Tujuannya untuk pembuatan program jauh lebih cepat, efektif, dan sesederhana mungkin. 
 
 
-# Apa sih contoh-contoh hasil programming?
-## Netflix dan Spotify
+## Apa sih contoh-contoh hasil programming?
+### Netflix dan Spotify
 
 <p align ="center">
   <img src="https://user-images.githubusercontent.com/73653209/185743698-b7f195d5-f872-4d32-b536-6a73d013aad4.png" width="55%">
@@ -67,7 +67,7 @@ Sistem rekomendasi Spotify dan Netflix adalah sistem yang sangat kompleks dan ru
 
 
 
-## Siri
+### Siri
 <p align ="center">
   <img src="https://user-images.githubusercontent.com/73653209/185743951-70ff6cbf-32d3-4729-a561-a5994d4754e8.jpg" width="75%">
  </p>
@@ -81,13 +81,13 @@ Setelah menerima permintaan dari pengguna, Siri merekam frekuensi dan gelombang 
 Setelah Siri menentukan permintaannya, Siri mulai menilai tugas apa yang perlu dilakukan, menentukan apakah informasi yang dibutuhkan dapat diakses dari dalam bank data ponsel atau dari server online. Siri kemudian dapat menyusun kalimat yang lengkap dan kohesif yang relevan dengan jenis pertanyaan atau perintah yang diminta.
 
 
-## E-commerce
+### E-commerce
 <p align ="center">
   <img src="https://user-images.githubusercontent.com/73653209/185743980-dcffe35f-ac66-4c9a-9f7f-cbbc62f05661.jpg" width="75%">
  </p>
 
 
-## Mobile Games
+### Mobile Games
 <p align ="center">
   <img src="https://user-images.githubusercontent.com/73653209/185743965-11a65083-597f-49d9-bb69-fb68ff920f94.jpg" width="75%">
  </p>
@@ -95,32 +95,32 @@ Setelah Siri menentukan permintaannya, Siri mulai menilai tugas apa yang perlu d
 Game-game tidak dapat dibuat tanpa adanya game progammer/developer! Yang dilakukan untuk pembuatan game ini termasuk membangun mesin dasar, membuat *functions, events, interactions* pada game, mengembangkan dan memodifikasi render grafis 3D, mengembangkan kecerdasan buatan (AI) untuk lawan, membuat asset, menerapkan logika dan mekanika game, menulis kode khusus untuk keyboard, mouse atau joystick, membuat antarmuka pengguna, menerapkan algoritme dan mengidentifikasi bug. Tidak hanya itu, sekarang game banyak dikembangkan menggunakan Augmented Reality ataupun Virtual Reality.
 
 
-# Manfaat dan Kelebihan Belajar Pemrograman
-## Semua dapat belajar
+## Manfaat dan Kelebihan Belajar Pemrograman
+### Semua dapat belajar
 Salah satu hal terbaik tentang pemrograman adalah siapa pun dapat mempelajari cara melakukannya. Tidak peduli usia, jenis kelamin, atau latar belakang Anda, pemrograman adalah keterampilan yang dapat diambil siapa saja.
 
 Untuk waktu yang lama, orang memandang pemrograman sebagai keterampilan bagi para orang tertentu saja. Tapi itu tidak lagi terjadi. Meskipun membantu menjadi ahli matematika dan memiliki pola pikir analitis, kalian tidak perlu menjadi jenius untuk belajar coding. Selama Anda bersedia meluangkan waktu dan tenaga, siapa pun dapat belajar coding.
 
 Selain itu, banyak sekali cara dan sumber yang tersedia di Internet untuk dapat mengembangkan skill dan belajar ilmu-ilmu baru, seperti mengikuti course gratis, belajar melalui _open source_ dan juga mengikuti komunitas-komunitas pemrograman yang dapat mendukung pembelajaran kalian. 
 
-## Meningkatkan Kreativitas!
+### Meningkatkan Kreativitas!
 Banyak orang menganggap pemrograman sebagai keterampilan technical murni. Akan tetapi sebenarnya pemrograman juga merupakan cara yang bagus untuk mengekspresikan kreativitas Anda. Coding memungkinkan kita untuk membangun apa pun yang dapat dibayangkan. Dan dengan kekuatan teknologi, hanya ada sediikit batasan untuk apa yang dapat kita buat.
 
 Jika kalian ingin membuat situs web, aplikasi, atau game, coding memberi kalian kekuatan untuk mewujudkan ide tersebut. 
 
-## Meningkatkan Kemampuan Memecahkan Masalah
+### Meningkatkan Kemampuan Memecahkan Masalah
 Coding bukan hanya tentang menulis kode. Ini juga tentang memecahkan masalah. Saat kita membuat kode, kita terus-menerus memecah masalah menjadi bagian-bagian yang lebih kecil dan kemudian mencari cara untuk menyelesaikannya. Proses pemecahan masalah untuk menemukan solusi ini dapat diterapkan pada masalah apa pun dalam hidup — bukan hanya masalah pemrograman saja. 
 
 Seperti banyak startup di Indonesia dengan aplikasi atau program-program yang mereka buat akhirnya memberikan solusi dari masalah-masalah yang ada di sekitar kita.
 
-## Meningkatkan Kemampuan Berpikir Logis, Sistematis dan Teliti
+### Meningkatkan Kemampuan Berpikir Logis, Sistematis dan Teliti
 Ketika kita menyusun kode untuk membangun suatu aplikasi atau website kita sedang belajar cara berpikir logis. Hal ini dikarenakan kita pasti akan menggunakan logika kita untuk membuat kode itu terstruktur dengan baik sesuai dengan tujuan website kita. 
 
 Selain dituntut untuk berpikir logis, kode yang kita susun juga dituntut untuk dituliskannya secara sistematis. Jika tidak, pasti output dari program itu akan salah bahkan error.
 
 Dengan belajar programming kita akan belajar lebih dari sekedar bagaimana menulis kode program sesuai dengan urutannya, melainkan juga akan belajar tentang bagaimana cara berpikir secara sistematis dan terorganisasi, dan juga teliti agar program tidak error. 
 
-## Prospek Masa Depan
+### Prospek Masa Depan
 Memiliki keterampilan programming maupun coding dapat menjanjikan masa depan yang cerah, terlebih jika kamu tertarik dengan bidang IT. Pertumbuhan bidang IT dari tahun ke tahun selalu mengalami kenaikan yang signifikan. Dengan demikian, maka akan semakin terbuka dan luas lapangan kerja yang tercipta. Apalagi membuat startup bagi orang yang berkompeten di bidang IT.
 
 Kalau misal tidak ada minat untuk bekerja di bidang IT, memiliki kemampuan untuk melakukan programming pun masih bermanfaat. Mempelajari programming ataupun memiliki kemampuan untuk beradaptasi dengan perkembangan teknologi dapat membuat kalian menjadi individu yang mudah dipekerjakan dan memberi Anda kemampuan untuk berkembang di lingkungan apa pun.
