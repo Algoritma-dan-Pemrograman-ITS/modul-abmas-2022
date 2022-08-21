@@ -70,7 +70,6 @@
 	+ [Tampilan Error dan Warning dalam Codeblocks](#tampilan-error-dan-warning-dalam-codeblocks)
 
 - [Branching](#branching)
-- 
 	+ [Percabangan If](#percabangan-if)
 	+ [Percabangan If-Else](#percabangan-ifelse)
 	+ [Percabangan If-Else If](#percabangan-ifelse-if)
