@@ -1,7 +1,7 @@
 # Daftar Isi
 
--   [Array](#array)
 -   [Looping](#looping)
+-   [Array](#array)
 -   [String](#string)
 
     -   [String di CPP](#string-di-cpp)
@@ -12,8 +12,54 @@
 
 # Looping
 
+# Perulangan (Loop)
+Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berulang-ulang hingga mencapai suatu kondisi. Ada 3 jenis perulangan dalam bahasa C, yaitu ```while```, ```do - while```, dan ```for```.
+
+## Perulangan While
+Perulangan while adalah bentuk perulangan yang paling sederhana. Sintaksnya adalah sebagai berikut.
+```c++
+//initial value misal, i = 0
+while (<Ekspresi/Kondisi>) {
+    // Potongan kode yang ingin dieksekusi
+    .
+    .
+    .
+    // increment/decrement misalnya, i++
+}
+```
+
+Cara kerja perulangan while mirip dengan if. Jika pada if potongan kode akan dieksekusi sekali saja apabila ekspresi/kondisi bernilai TRUE, pada while potongan kode akan terus dieksekusi hingga ekspresi/kondisi menghasilkan FALSE.
+
+### Contoh
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    while (i < 10)
+    {
+        printf("Test Loop ke-%d \n",i);
+        i++;
+    }
+
+    return 0;
+}
+```
+
+Sehingga pada contoh di atas:
+<ul>
+<li> Pada awalnya, variabel i bernilai 0. </li>
+<li> Sequence selanjutnya adalah while, dan i bernilai kurang dari 10 (TRUE), maka kode didalam while akan dijalankan, yakni print Test Loop ke-i. </li>
+<li>Setelah melakukan print, variabel i akan di-increment, dan kembali ke statement while untuk memeriksa apakah i masih kurang dari 10 setelah di-increment.</li>
+<li> Karena setelah i di-increment nilainya masih 1 dan kurang dari 10, maka while akan dijalankan lagi hingga i bernilai 10 yang berarti tidak memenuhi kondisi while.</li>
+</ul>
+
 # Array
-Kita ingin menyimpan nilai 2 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
+
+## Motivasi
+Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
 
 ```c++
 #include <stdio.h>
@@ -22,70 +68,143 @@ int main()
 {   
     int nilaiSiswa1 = 70;
     int nilaiSiswa2 = 80;
+    int nilaiSiswa3 = 90;
     
-    printf("Rata-rata: %f\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] ) / 2.0;
+    printf("Rata-rata: %f\n", ( nilaiSiswa1 + nilaiSiswa2 + nilaiSiswa3 ) / 3.0;
 }
 ```
 
 Namun, bagaimana jika siswanya ada 50? Kalau diselesaikan dengan cara diatas, maka kita memerlukan 50 variabel. Maka dari itu, mari mengenal konsep array.
 
-### Apa itu array
-- Array adalah sebuah blok dari ruang yang berdekatan dalam memori 
-- yang telah dipartisi menjadi blok-blok kecil berukuran sama yang disebut element, 
-- yang masing-masing dapat menyimpan sejumlah data dengan tipe yang sama. misalnya int atau char 
-- dan diakses dengan menggunakan indeks.
-cs50x
+## Apa itu array?
 
-dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang lokasinya ditempatkan berturut-turut atau berdekatan
+ada berbagai kalimat yang mendefinisikan array, diantaranya:
 
-array -> variabel dengan satu nama, tetapi mengandung banyak nilai. akses nilainya dilakukan dengan indeks. - modul toki
+> Array ialah variabel dengan satu nama, tetapi mengandung banyak nilai. akses nilainya dilakukan dengan indeks.- modul tlx toki
+
+
+> Array adalah sebuah blok dari ruang yang berdekatan dalam memori yang telah dipartisi menjadi blok-blok kecil berukuran sama yang disebut element, yang masing-masing dapat menyimpan sejumlah data dengan tipe yang sama. misalnya int atau char dan diakses dengan menggunakan indeks. - cs50x
+> 
+
+Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang lokasinya ditempatkan berturut-turut atau berdekatan.
 
 - pada C++, index element array dimulai dari 0.
 - jika array berisi n elemen, maka elemen ke-1 indeksnya 0, dan elemen terakhir index nya (n-1)
 
 
-### Deklarasi array
+Misalnya, kita mempunyai array bernama `nilaiMahasiswa` yang menampung 4 elemen
+![Frame 25](https://user-images.githubusercontent.com/79054230/185802517-c609fbba-3ddc-4d2b-b53f-913947464670.png)
+- nilaiMahasiswa[0] = 80
+- nilaiMahasiswa[1] = 90
+- nilaiMahasiswa[2] = 85
+- nilaiMahasiswa[3] = 70
 
-`tipe nama[size];`
 
-contoh: 
+## Deklarasi Array
+
+`tipe nama[ukuran];`
+
+- tipe → tipe data dari array. Dapat berupa int, double, bool, dll
+- nama → nama dari Array. Aturan penamaannya sama seperti variabel biasa
+- ukuran → ukuran dari array. Yang terdefinisi ialah 0 sampai (ukuran-1)
+
+contoh:
 `int nilaiSiswa[3]`
+
+- yang terdefinisi hanya index nilaiSiswa[0] sampai nilaiSiswa[2]
+
 `double harga_buku[5]`
 
-- Contoh program menggunakan array
-```c++
+- yang terdefinisi hanya index harga_buku[0] sampai harga_buku[4]
+- mengakses harga_buku[-1], harga_buku[-2], harga_buku[5] dapat menyebabkan runtime error
+
+## Inisialisasi Array (Deklarasi + Assign nilai)
+
+contoh 1
+
+```cpp
+int nilaiSiswa[3] = {70, 80, 90};
+//artinya,
+// nilaiSiswa[0] -> 70
+// nilaiSiswa[1] -> 80
+// nilaiSiswa[2] -> 90
+```
+
+contoh 2
+
+```cpp
+int harga_buku[] = {2000, 3000}
+// harga_buku[0] -> 2000
+// harga_buku[1] -> 3000
+```
+
+## Assign nilai Array
+
+Kita dapat meng-assign nilai array per-elemennya, seperti berikut
+
+```cpp
+int nilaiSiswa[3];
+
+nilaiSiswa[0] = 70;
+nilaiSiswa[1] = 80;
+nilaiSiswa[2] = 90;
+```
+
+Kita pun dapat mengganti nilai array per-elemen
+
+```cpp
+int nilaiSiswa[3] = {70, 80, 90);
+
+nilaiSiswa[0] = 60;
+```
+
+Kita juga dapat menginput nilai dari user menggunakan scanf
+
+```cpp
+scanf("%d", &nilaiSiswa[0]);
+```
+
+---
+
+Contoh program menggunakan array
+
+```cpp
 #include <stdio.h>
 
 int main()
 {
     int nilaiSiswa[3];
-    
-    nilaiSiswa[0] = 70;
-    nilaiSiswa[1] = 80;
-    nilaiSiswa[2] = 90;
-    
-    printf("Rata-rata: %f\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] + nilaiSiswa[3] ) / 3.0;
+
+		scanf("%d", &nilaiSiswa[0]);
+		scanf("%d", &nilaiSiswa[1]);
+		scanf("%d", &nilaiSiswa[2]);
+
+    printf("Rata-rata: %f\\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] ) / 3.0);
+		return 0;
 }
 ```
 
-```c++
+Kita dapat menggunakan looping pada array kita. Looping mungkin terasa berguna apabila jumlah elemen dari array itu banyak.
+
+```cpp
 #include <stdio.h>
 
 int main()
 {
-    int nilaiSiswa[3];
-    
-    nilaiSiswa[0] = 70;
-    nilaiSiswa[1] = 80;
-    nilaiSiswa[2] = 90;
-    
-    printf("Rata-rata: %f\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] + nilaiSiswa[3] ) / 3.0;
+    for(int i=0; i<3; i++){
+				scanf("%d", &nilaiSiswa[i]);
+		}
+		
+    printf("Rata-rata: %f\\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] ) / 3.0);
+		return 0;
 }
+
 ```
 
 Soal Latihan :
-1. [Balik Daftar - tlx Toki courses Basic](https://tlx.toki.id/courses/basic/chapters/09/problems/B)
 
+1. [Balik Daftar - tlx Toki courses Basic](https://tlx.toki.id/courses/basic/chapters/09/problems/B)
+2. [Modus Terbesar - tlx Toki courses Basic](https://tlx.toki.id/courses/basic/chapters/09/problems/C)
 
 # String
 
