@@ -47,7 +47,6 @@ Itulah mengapa seorang yang ahli programming mesti menguasai bahasa pemrograman.
 
 Saat ini banyak bermunculan bahasa pemrograman yang baru. Hal ini terjadi karena seseorang berupaya menyederhanakan dan memudahkan bahasa pemrograman yang sudah ada. Tujuannya untuk pembuatan program jauh lebih cepat, efektif, dan sesederhana mungkin. 
 
-
 ## Apa sih contoh-contoh hasil programming?
 ### Netflix dan Spotify
 
@@ -58,13 +57,9 @@ Saat ini banyak bermunculan bahasa pemrograman yang baru. Hal ini terjadi karena
   <img src="https://user-images.githubusercontent.com/73653209/185743701-1ef276e4-e31f-4398-8e90-5933c41a7ae3.png" width="55%">
  </p>
 
-
-
-
 Tidak hanya Netflix dan Spotify saja, tapi banyak sekali website yang kita konsumsi sekarang menampilkan konten yang telah di-personalized sesuai dengan konten yang kita lihat. Hal ini memanfaatkan yang namanya Sistem Rekomendasi! Dengan sistem rekomendasi berupa model-model Machine Learning menggunakan data-data yang Netflix dan Spotify miliki dari kita dan konten yang kita konsumsi, mereka dapat menampilkan konten rekomendasi yang mirip dan sesuai dengan preferensi kita!
 
 Sistem rekomendasi Spotify dan Netflix adalah sistem yang sangat kompleks dan rumit, dengan lusinan (jika bukan ratusan) algoritme dan model ML yang digunakan di berbagai level, semuanya bekerja sama untuk menciptakan salah satu pengalaman rekomendasi paling canggih di pasar streaming musik dan film. Sistem ini telah dikembangkan dan diulang selama hampir 12 tahun sekarang — tumbuh dalam ukuran, kemampuan, dan kompleksitas. 
-
 
 
 ### Siri
@@ -72,20 +67,16 @@ Sistem rekomendasi Spotify dan Netflix adalah sistem yang sangat kompleks dan ru
   <img src="https://user-images.githubusercontent.com/73653209/185743951-70ff6cbf-32d3-4729-a561-a5994d4754e8.jpg" width="75%">
  </p>
 
-
-
 Detektor "Hey Siri" menggunakan Deep Neural Network (DNN) untuk mengubah pola akustik suara pengguna setiap saat menjadi distribusi probabilitas melalui suara ucapan. Kemudian menggunakan proses integrasi temporal untuk menghitung skor kepercayaan bahwa frasa yang Anda ucapkan adalah "Hey Siri".
 
 Setelah menerima permintaan dari pengguna, Siri merekam frekuensi dan gelombang suara dari suara pengguna dan menerjemahkannya ke dalam kode. Siri kemudian memecah kode untuk mengidentifikasi pola, frasa, dan kata kunci tertentu. Data ini dimasukkan ke dalam algoritme yang menyaring ribuan kombinasi kalimat untuk menentukan apa arti frasa yang dimasukkan. Algoritma ini cukup kompleks sehingga mampu bekerja di sekitar idiom, homofon dan ekspresi sastra lainnya untuk menentukan konteks kalimat.
 
 Setelah Siri menentukan permintaannya, Siri mulai menilai tugas apa yang perlu dilakukan, menentukan apakah informasi yang dibutuhkan dapat diakses dari dalam bank data ponsel atau dari server online. Siri kemudian dapat menyusun kalimat yang lengkap dan kohesif yang relevan dengan jenis pertanyaan atau perintah yang diminta.
 
-
 ### E-commerce
 <p align ="center">
   <img src="https://user-images.githubusercontent.com/73653209/185743980-dcffe35f-ac66-4c9a-9f7f-cbbc62f05661.jpg" width="75%">
  </p>
-
 
 ### Mobile Games
 <p align ="center">
@@ -93,7 +84,6 @@ Setelah Siri menentukan permintaannya, Siri mulai menilai tugas apa yang perlu d
  </p>
 
 Game-game tidak dapat dibuat tanpa adanya game progammer/developer! Yang dilakukan untuk pembuatan game ini termasuk membangun mesin dasar, membuat *functions, events, interactions* pada game, mengembangkan dan memodifikasi render grafis 3D, mengembangkan kecerdasan buatan (AI) untuk lawan, membuat asset, menerapkan logika dan mekanika game, menulis kode khusus untuk keyboard, mouse atau joystick, membuat antarmuka pengguna, menerapkan algoritme dan mengidentifikasi bug. Tidak hanya itu, sekarang game banyak dikembangkan menggunakan Augmented Reality ataupun Virtual Reality.
-
 
 ## Manfaat dan Kelebihan Belajar Pemrograman
 ### Semua dapat belajar
