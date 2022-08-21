@@ -201,6 +201,20 @@ int main()
 
 ```
 
+## Secara Alokasi Memori
+Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang **lokasinya ditempatkan berturut-turut atau berdekatan**.
+
+Maksudnya bagaimana? Perhatikan 
+Visualisasi memori ketika menyimpan 3 nilai menggunakan variabel biasa
+![Group 18](https://user-images.githubusercontent.com/79054230/185803103-8b0a139a-0709-4894-ac1c-2e77fd247236.png)
+
+Visualisasi memori ketika menyimpan 3 nilai menggunakan array
+![Group 19](https://user-images.githubusercontent.com/79054230/185803105-56c05ad1-2dd7-4788-99a8-c99d8a66c97c.png)
+
+*Gambar diatas ialah gambar dari alokasi memori
+
+
+
 Soal Latihan :
 
 1. [Balik Daftar - tlx Toki courses Basic](https://tlx.toki.id/courses/basic/chapters/09/problems/B)
