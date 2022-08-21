@@ -1,3 +1,11 @@
+# Daftar Isi
+
+- [Sorting](#sorting-pengurutan)
+
+- [Searching](#searching-pencarian)
+    - [Linear Search](#linear-search)
+    - [Binary Search](#binary-search)
+
 # Sorting dan Searching
 
 ## **Sorting (Pengurutan)**
@@ -7,22 +15,14 @@ Sorting atau pengurutan adalah suatu proses untuk mengurutkan beberapa data menj
 Pada Bahasa Pemrograman C++, proses sorting dapat dilakukan dengan menggunakan fungsi `sort` yang terdapat pada header file **`<algorithm>`**. Berikut adalah contoh penggunaannya:
 
 ```C++
-#include <iostream>
-#include <algorithm>
-using namespace std;
+int arr[] = {5, 2, 4, 3, 1};
+int n = sizeof(arr)/sizeof(arr[0]);
 
-int main(){
-    int arr[] = {5, 2, 4, 3, 1};
-    int n = sizeof(arr)/sizeof(arr[0]);
+sort(arr, arr + n);
 
-    sort(arr, arr + n);
-
-    for(int i=0; i<n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-    
-    return 0;
-}
+for(int i=0; i<n; i++)
+    cout << arr[i] << " ";
+cout << endl;
 ```
 
 Dan ini adalah hasil dari menjalankan program diatas:
@@ -34,22 +34,14 @@ Dan ini adalah hasil dari menjalankan program diatas:
 Bagaimana jika kita ingin mengurutkan secara decending(dari besar ke kecil)? Kita dapat memanggil fungsi **`greater<tipe data>()`**. Berikut adalah contoh penggunaannya:
 
 ```C++
-#include <iostream>
-#include <algorithm>
-using namespace std;
+int arr[] = {5, 2, 4, 3, 1};
+int n = sizeof(arr)/sizeof(arr[0]);
 
-int main(){
-    int arr[] = {5, 2, 4, 3, 1};
-    int n = sizeof(arr)/sizeof(arr[0]);
+sort(arr, arr + n, greater<int>());
 
-    sort(arr, arr + n, greater<int>());
-
-    for(int i=0; i<n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-    
-    return 0;
-}
+for(int i=0; i<n; i++)
+    cout << arr[i] << " ";
+cout << endl;
 ```
 
 Dan ini adalah hasil dari menjalankan program diatas:
@@ -61,20 +53,14 @@ Dan ini adalah hasil dari menjalankan program diatas:
 Contoh diatas adalah sorting pada kumpulan tipe data integer. Bagaimana dengan tipe data lainnya?
 
 ```C++
-#include <iostream>
-#include <algorithm>
-using namespace std;
+double arr[] = {5.2, 2.3, 4.4, 3.1, 1.7};
+int n = sizeof(arr)/sizeof(arr[0]);
 
-int main(){
-    double arr[] = {5.2, 2.3, 4.4, 3.1, 1.7};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    sort(arr, arr + n);
-    for(int i=0; i<n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+sort(arr, arr + n);
 
-    return 0;
-}
+for(int i=0; i<n; i++)
+    cout << arr[i] << " ";
+cout << endl;
 ```
 
 ```
@@ -82,20 +68,14 @@ int main(){
 ```
 
 ```C++
-#include <iostream>
-#include <algorithm>
-using namespace std;
+double arr[] = {5.2, 2.3, 4.4, 3.1, 1.7};
+int n = sizeof(arr)/sizeof(arr[0]);
 
-int main(){
-    double arr[] = {5.2, 2.3, 4.4, 3.1, 1.7};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    sort(arr, arr + n, greater<double>());
-    for(int i=0; i<n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+sort(arr, arr + n, greater<double>());
 
-    return 0;
-}
+for(int i=0; i<n; i++)
+    cout << arr[i] << " ";
+cout << endl;
 ```
 
 ```
@@ -105,56 +85,39 @@ int main(){
 Tidak jauh berbeda bukan? Sekarang, lihatlah ketika kita menggunakan fungsi sort pada sekumpulan string.
 
 ```C++
-#include <iostream>
-#include <algorithm>
-using namespace std;
+string arr[] = {"aaa",
+                "aa",
+                "b",
+                "ab",
+                "aab"};
+int n = sizeof(arr)/sizeof(arr[0]);
 
-int main(){
-    string arr[] = {"aaa",
-                    "aa",
-                    "b",
-                    "ab",
-                    "aab"};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    sort(arr, arr + n);
-    for(int i=0; i<n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+sort(arr, arr + n);
 
-    return 0;
-}
+for(int i=0; i<n; i++)
+    cout << arr[i] << " ";
+cout << endl;
 ```
 
 ```
 aa aaa aab ab b 
 ```
 
-Secara default, fungsi sort akan mengurutkan beberapa string secara leksikografis seperti yang ada pada contoh. Ketika teman-teman ingin mengurutkan string tersebut dengan aturan lain, berdasarkan ukuran string misalnya, teman-teman dapat melakukan ini:
+Secara default, fungsi sort akan mengurutkan beberapa string secara leksikografis seperti yang ada pada contoh. Ketika teman-teman ingin mengurutkan string tersebut dengan aturan lain, berdasarkan ukuran string misalnya, teman-teman dapat menambahkan potongan kode ini setelah **preprocessor directive** dan sebelum fungsi `main()`:
 
 ```C++
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
 bool compare (string s1, string s2){
     return s1.size() < s2.size();
 }
-
-int main(){
-    string arr[] = {"aaa",
-                    "aa",
-                    "b",
-                    "ab",
-                    "aab"};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    sort(arr, arr + n, compare);
-    for(int i=0; i<n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-
-    return 0;
-}
 ```
+
+Kemudian, lakukan pemanggilan fungsi sort seperti ini:
+
+```C++
+sort(arr, arr + n, compare);
+```
+
+Maka akan didapat hasil pengurutan seperti ini:
 
 ```
 b aa ab aaa aab 
@@ -171,25 +134,18 @@ Searching atau pencarian adalah proses untuk mencari keberadaan suatu nilai pada
 Linear search adalah proses pencarian nilai secara linear. Proses pencarian ini biasanya mencari nilai dari bagian depan atau belakang suatu sekuens, dan mengecek satu-persatu nilai yang didapat apakah sama dengan nilai yang dicari atau tidak.
 
 ```C++
-#include <iostream>
-using namespace std;
+int arr[] = {4, 3, 6, 7, 2, 5, 2, 1, 9};
+int search = 5, flag = 0, n = sizeof(arr)/sizeof(arr[0]);
 
-int main(){
-    int arr[] = {4, 3, 6, 7, 2, 5, 2, 1, 9};
-    int search = 5, flag = 0, n = sizeof(arr)/sizeof(arr[0]);
-    
-    for(int i=0; i<n; i++){
-        if(arr[i] == search)
-            flag = 1;
-    }
-
-    if(flag == 0)
-        printf("Tidak ditemukan angka %d pada sekuens", search);
-    else if(flag == 1)
-        printf("Ditemukan angka %d pada sekuens", search);
-
-    return 0;
+for(int i=0; i<n; i++){
+    if(arr[i] == search)
+        flag = 1;
 }
+
+if(flag == 0)
+    printf("Tidak ditemukan angka %d pada sekuens", search);
+else if(flag == 1)
+    printf("Ditemukan angka %d pada sekuens", search);
 ```
 
 ```
@@ -206,27 +162,20 @@ Binary search adalah metode pencarian dengan melakukan pengecekan pada bagian te
 
 
 ```C++
-#include <iostream>
-using namespace std;
+int checkCount = 0, search = 200;
 
-int main(){
-    int checkCount = 0, search = 200;
+int top = 1000, bottom = 1, mid;
 
-    int top = 1000, bottom = 1, mid;
-
-    while(top >= bottom){
-        mid = (top + bottom)/2;
-        printf("Nilai variabel mid: %d\n", mid);
-        checkCount++;
-        if(mid == search) break;
-        else if(mid > search) top = mid - 1;
-        else bottom = mid;
-    }
-
-    printf("Ditemukan angka %d pada sekuens dengan %d pengecekan", mid, checkCount);
-
-    return 0;
+while(top >= bottom){
+    mid = (top + bottom)/2;
+    printf("Nilai variabel mid: %d\n", mid);
+    checkCount++;
+    if(mid == search) break;
+    else if(mid > search) top = mid - 1;
+    else bottom = mid;
 }
+
+printf("Ditemukan angka %d pada sekuens dengan %d pengecekan", mid, checkCount);
 ```
 
 Program diatas mencari keberadaan angka 200 pada sekuens bilangan 1, 2, 3, ..., 999, 1000 dengan metode pencarian binary search. Output dari program ketika dijalankan akan menjadi seperti ini:
