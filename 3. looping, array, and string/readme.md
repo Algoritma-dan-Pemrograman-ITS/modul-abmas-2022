@@ -1,5 +1,6 @@
 # Daftar Isi
 
+
 -   [Looping](#looping)
 -   [Array](#array)
 -   [String](#string)
@@ -59,7 +60,8 @@ Sehingga pada contoh di atas:
 # Array
 
 ## Motivasi
-Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
+Kenapa kita harus menggunakan array?
+gini... Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
 
 ```c++
 #include <stdio.h>
@@ -91,7 +93,8 @@ Catatan:
 
 
 Misalnya, kita mempunyai array bernama `nilaiMahasiswa` yang menampung 4 elemen
-![Frame 25](https://user-images.githubusercontent.com/79054230/185802517-c609fbba-3ddc-4d2b-b53f-913947464670.png)
+![visualisasi array](https://user-images.githubusercontent.com/79054230/185911950-9be3fa92-c992-4fb2-a48c-7579a5296173.png)
+
 - nilaiMahasiswa[0] = 80
 - nilaiMahasiswa[1] = 90
 - nilaiMahasiswa[2] = 85
