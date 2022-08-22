@@ -84,10 +84,8 @@ ada berbagai kalimat yang mendefinisikan array, diantaranya:
 
 
 > Array adalah sebuah blok dari ruang yang berdekatan dalam memori yang telah dipartisi menjadi blok-blok kecil berukuran sama yang disebut element, yang masing-masing dapat menyimpan sejumlah data dengan tipe yang sama. misalnya int atau char dan diakses dengan menggunakan indeks. - cs50x
-> 
 
-Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang lokasinya ditempatkan berturut-turut atau berdekatan.
-
+Catatan:
 - pada C++, index element array dimulai dari 0.
 - jika array berisi n elemen, maka elemen ke-1 indeksnya 0, dan elemen terakhir index nya (n-1)
 
@@ -204,12 +202,15 @@ int main()
 ## Secara Alokasi Memori
 Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang **lokasinya ditempatkan berturut-turut atau berdekatan**.
 
-Maksudnya bagaimana? Perhatikan 
+Maksudnya bagaimana? Perhatikan,
+
 Visualisasi memori ketika menyimpan 3 nilai menggunakan variabel biasa
-![Group 18](https://user-images.githubusercontent.com/79054230/185803103-8b0a139a-0709-4894-ac1c-2e77fd247236.png)
+![visualisasi memori variabel biasa](https://user-images.githubusercontent.com/79054230/185899917-67bff7f7-d16e-4427-9e9d-fceafc020929.png)
+
 
 Visualisasi memori ketika menyimpan 3 nilai menggunakan array
-![Group 19](https://user-images.githubusercontent.com/79054230/185803105-56c05ad1-2dd7-4788-99a8-c99d8a66c97c.png)
+![visualisasi memori array (2)](https://user-images.githubusercontent.com/79054230/185896928-8f49f9cf-1660-4bee-b7ab-f9695fc53b76.png)
+Terlihat bahwa array mengalokasikan memori elemen-elemennya secara berdekatan atau berurutan.
 
 *Gambar diatas ialah gambar dari alokasi memori
 
