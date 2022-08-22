@@ -1,5 +1,6 @@
 # Daftar Isi
 
+
 -   [Looping](#looping)
     -   [Perulangan While](#perulangan-while)
     -   [Perulangan Do While](#perulangan-do-while)
@@ -188,8 +189,8 @@ Cara kerja pengulangan `for` di atas adalah sebagai berikut
 # Array
 
 ## Motivasi
-
-Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini.
+Kenapa kita harus menggunakan array?
+gini... Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
 
 ```c++
 #include <stdio.h>
@@ -200,7 +201,7 @@ int main()
     int nilaiSiswa2 = 80;
     int nilaiSiswa3 = 90;
 
-    printf("Rata-rata: %f\n", ( nilaiSiswa1 + nilaiSiswa2 + nilaiSiswa3 ) / 3.0;
+    printf("Rata-rata: %f\n", ( nilaiSiswa1 + nilaiSiswa2 + nilaiSiswa3 ) / 3.0);
 }
 ```
 
@@ -220,7 +221,12 @@ Catatan:
 -   jika array berisi n elemen, maka elemen ke-1 indeksnya 0, dan elemen terakhir index nya (n-1)
 
 Misalnya, kita mempunyai array bernama `nilaiMahasiswa` yang menampung 4 elemen
-![Frame 25](https://user-images.githubusercontent.com/79054230/185802517-c609fbba-3ddc-4d2b-b53f-913947464670.png)
+![visualisasi array](https://user-images.githubusercontent.com/79054230/185911950-9be3fa92-c992-4fb2-a48c-7579a5296173.png)
+
+- nilaiMahasiswa[0] = 80
+- nilaiMahasiswa[1] = 90
+- nilaiMahasiswa[2] = 85
+- nilaiMahasiswa[3] = 70
 
 -   nilaiMahasiswa[0] = 80
 -   nilaiMahasiswa[1] = 90
