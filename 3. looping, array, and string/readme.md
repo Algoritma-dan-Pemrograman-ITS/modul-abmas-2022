@@ -1,9 +1,11 @@
 # Daftar Isi
 
 -   [Looping](#looping)
+    -   [Perulangan While](#perulangan-while)
+    -   [Perulangan Do While](#perulangan-do-while)
+    -   [Perulangan For](#perulangan-for)
 -   [Array](#array)
 -   [String](#string)
-
     -   [String di CPP](#string-di-cpp)
     -   [Concatenation pada string](#concatenation-pada-string)
     -   [String dan angka](#string-dan-angka)
@@ -12,64 +14,192 @@
 
 # Looping
 
-# Perulangan (Loop)
-Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berulang-ulang hingga mencapai suatu kondisi. Ada 3 jenis perulangan dalam bahasa C, yaitu ```while```, ```do - while```, dan ```for```.
+Pada dunia pemrograman, sebuah perulangan (loop) merupakan sebuah urutan instruksi yang secara berulang dilakukan hingga sebuah kondisi dipenuhi. Untuk memahami lebih lanjut, perhatikan contoh di bawah ini.
 
-## Perulangan While
-Perulangan while adalah bentuk perulangan yang paling sederhana. Sintaksnya adalah sebagai berikut.
-```c++
-//initial value misal, i = 0
-while (<Ekspresi/Kondisi>) {
-    // Potongan kode yang ingin dieksekusi
-    .
-    .
-    .
-    // increment/decrement misalnya, i++
-}
-```
+Bayangkan kita memiliki situasi dimana diharuskan untuk mencetak sebuah kalimat sebanyak 5 kali. Cara yang dapat dilakukan adalah sebagai berikut
 
-Cara kerja perulangan while mirip dengan if. Jika pada if potongan kode akan dieksekusi sekali saja apabila ekspresi/kondisi bernilai TRUE, pada while potongan kode akan terus dieksekusi hingga ekspresi/kondisi menghasilkan FALSE.
-
-### Contoh
 ```c++
 #include <iostream>
+
 using namespace std;
 
 int main()
 {
-    int i = 0;
-    while (i < 10)
-    {
-        printf("Test Loop ke-%d \n",i);
-        i++;
-    }
-
-    return 0;
+   cout << "Hallo, namaku bukan namamu!" << endl;
+   cout << "Hallo, namaku bukan namamu!" << endl;
+   cout << "Hallo, namaku bukan namamu!" << endl;
+   cout << "Hallo, namaku bukan namamu!" << endl;
+   cout << "Hallo, namaku bukan namamu!" << endl;
 }
 ```
 
-Sehingga pada contoh di atas:
-<ul>
-<li> Pada awalnya, variabel i bernilai 0. </li>
-<li> Sequence selanjutnya adalah while, dan i bernilai kurang dari 10 (TRUE), maka kode didalam while akan dijalankan, yakni print Test Loop ke-i. </li>
-<li>Setelah melakukan print, variabel i akan di-increment, dan kembali ke statement while untuk memeriksa apakah i masih kurang dari 10 setelah di-increment.</li>
-<li> Karena setelah i di-increment nilainya masih 1 dan kurang dari 10, maka while akan dijalankan lagi hingga i bernilai 10 yang berarti tidak memenuhi kondisi while.</li>
-</ul>
+Bayangkan jika kita diharuskan mencetak kalimat tersebut sebanyak 1000 kali. Maka cara tersebut sangat tidak efisien. Karena alasan tersebut, kita akan menggunakan **Loop**.
+
+Secara umum, loop digunakan untuk melakukan sebuah proses, seperti mencari data, mengubah data, dll. Sebuah **Loop** memiliki tiga komponen penting:
+
+1. *Control variable*
+<br> *control variable* merupakan sebuah *counter* dari sebuah **Looping**. Salah satu fungsi dari *Control variable* yaitu sebagai penanda berapa kali sebuah loop telah dilakukan. *Control variable* harus diinisiasi di awal sebagai penentu apakah sebuah **Loop** perlu dilakukan
+
+2. *Loop condition*
+<br> *loop condition* merupakan sebuah kondisi yang akan menentukan apakah sebuah **Looping** akan berlanjut atau berhenti
+
+3. *Update control variable*
+<br>  *Control variable* harus di-update. Jika tidak, maka program akan melakukan *Infinite Loop*
+
+*Infinite loop* adalah sebuah kondisi dimana program berjalan tanpa henti karena sebuah **Loop** tidak memiliki/mencapai kondisi yang diinginkan.
+
+Terdapat 3 jenis pengulangan pada bahasa C++, yaitu `while`, `do-while`, dan `for`. Setiap pengulangan memiliki 3 komponen yang telah disebutkan di atas walaupun memiliki perbedaan dalam cara penulisannya.
+
+## Perulangan While
+
+Perulangan while adalah bentuk perulangan yang paling sederhana. Struktur dari pengulangan ini adalah sebagai berikut
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    int i = 1; // control variable
+    
+    while (i <= 10) { // loop condition
+    
+        // task yang akan dikerjakan
+        cout << "Loop ke-" << i << endl;
+
+        i++; // update control variable
+    }
+}
+```
+Cara kerja pengulangan `while` di atas adalah sebagai berikut
+
+1. Inisiasi awal *control variable* `int i = 1`
+2. Pengecekan apakah *control variable* memenuhi *loop condition*
+3. Jika iya, maka dilakukan instruksi yang ada di dalam **Loop**
+4. Setelah selesai, dilakukan update *control variable* dengan cara menambahkan 1 pada *control variable*
+5. Setelah rangkaian **Loop** pertama selesai, maka dilakukan pengecekan lagi, apakah *control variable* memenuhi *loop condition*. Jika iya, maka kembali lagi ke langkah ke-3. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya 
+
+## Perulangan Do While
+
+Perulangan do-while adalah bentuk selanjutnya dari pengulangan. Pengulangan ini mirip dengan pengulangan `while`, perbedaannya adalah pengulangan `do-while` **Pasti dijalankan minimal 1 kali**, berbeda dengan pengulangan `while` yang dilakukan pengecekan kondisi awal terlebih dahulu. Struktur dari pengulangan ini adalah sebagai berikut
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    int i = 1; // control variable
+    
+    do { // loop condition
+    
+        // task yang akan dikerjakan
+        cout << "Loop ke-" << i << endl;
+
+        i++; // update control variable
+    } while (i <= 10);
+}
+```
+
+Pada program di atas, setelah dilakukan inisialisasi *control variable*, **Loop** akan langsung berjalan tanpa melakukan pengecekan terlebih dahulu. Setelah 1 rangkaian **Loop** selesai, baru dilakukan pengecekan apakah *control variable* memenuhi *loop condition*. Untuk lebih memahami perbedaannya, perhatikan kedua contoh berikut
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    int i = 11; // control variable
+    
+    while (i <= 10) { // loop condition
+    
+        // task yang akan dikerjakan
+        cout << "Loop ke-" << i << endl;
+
+        i++; // update control variable
+    }
+}
+```
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    int i = 11; // control variable
+    
+    do { // loop condition
+    
+        // task yang akan dikerjakan
+        cout << "Loop ke-" << i << endl;
+
+        i++; // update control variable
+    } while (i <= 10);
+}
+```
+
+Jika kedua program di atas di-run, maka pengulangan `while` tidak akan menghasilkan output apapun. Hal ini disebabkan *control variable* tidak memenuhi *loop condition* pada saat pengulangan akan pertama kali dijalankan. 
+
+Berbeda dengan pengulangan `do-while`, pengulangan akan dijalankan sekali sebelum berhenti. Hal ini disebabkan pengulangan `do-while` melakukan pengecekan pemenuhan *loop condition* di akhir pengulangan sehingga program pasti akan dijalankan minimal 1 kali.
+
+Cara kerja pengulangan `do-while` di atas adalah sebagai berikut
+
+1. Inisiasi awal *control variable* `int i = 11`
+2. Melakukan instruksi yang ada di dalam **Loop**
+3. Setelah selesai, dilakukan update *control variable* dengan cara menambahkan 1 pada *control variable*
+4. Pengecekan apakah *control variable* memenuhi *loop condition*
+5. Jika iya, maka kembali ke langkah ke-2. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya
+
+## Perulangan For
+
+Perulangan `for` merupakan jenis perulangan yang paling berbeda dnegan kedua perulangan sebelumnya. Perulangan ini memiliki 3 komponen yang telah disebutkan pada awal perulangan. Struktur dari pengulangan ini adalah sebagai berikut
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    /*
+        for(control variable; loop condition; update control variable){
+
+        }
+    */
+    for(int i=1; i<=10; i++){
+        // task yang akan dikerjakan
+        cout << "Loop ke-" << i << endl;
+    }
+}
+```
+Cara kerja pengulangan `for` di atas adalah sebagai berikut
+
+1. Inisiasi awal *control variable* `int i = 1`
+2. Pengecekan apakah *control variable* memenuhi *loop condition*
+3. Jika iya, maka dilakukan instruksi yang ada di dalam **Loop**
+4. Setelah selesai, dilakukan update *control variable* dengan cara menambahkan 1 pada *control variable*
+5. Setelah rangkaian **Loop** pertama selesai, maka dilakukan pengecekan lagi, apakah *control variable* memenuhi *loop condition*. Jika iya, maka kembali lagi ke langkah ke-3. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya
 
 # Array
 
 ## Motivasi
-Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
+
+Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini.
 
 ```c++
 #include <stdio.h>
 
 int main()
-{   
+{
     int nilaiSiswa1 = 70;
     int nilaiSiswa2 = 80;
     int nilaiSiswa3 = 90;
-    
+
     printf("Rata-rata: %f\n", ( nilaiSiswa1 + nilaiSiswa2 + nilaiSiswa3 ) / 3.0;
 }
 ```
@@ -82,39 +212,38 @@ ada berbagai kalimat yang mendefinisikan array, diantaranya:
 
 > Array ialah variabel dengan satu nama, tetapi mengandung banyak nilai. akses nilainya dilakukan dengan indeks.- modul tlx toki
 
-
 > Array adalah sebuah blok dari ruang yang berdekatan dalam memori yang telah dipartisi menjadi blok-blok kecil berukuran sama yang disebut element, yang masing-masing dapat menyimpan sejumlah data dengan tipe yang sama. misalnya int atau char dan diakses dengan menggunakan indeks. - cs50x
 
 Catatan:
-- pada C++, index element array dimulai dari 0.
-- jika array berisi n elemen, maka elemen ke-1 indeksnya 0, dan elemen terakhir index nya (n-1)
 
+-   pada C++, index element array dimulai dari 0.
+-   jika array berisi n elemen, maka elemen ke-1 indeksnya 0, dan elemen terakhir index nya (n-1)
 
 Misalnya, kita mempunyai array bernama `nilaiMahasiswa` yang menampung 4 elemen
 ![Frame 25](https://user-images.githubusercontent.com/79054230/185802517-c609fbba-3ddc-4d2b-b53f-913947464670.png)
-- nilaiMahasiswa[0] = 80
-- nilaiMahasiswa[1] = 90
-- nilaiMahasiswa[2] = 85
-- nilaiMahasiswa[3] = 70
 
+-   nilaiMahasiswa[0] = 80
+-   nilaiMahasiswa[1] = 90
+-   nilaiMahasiswa[2] = 85
+-   nilaiMahasiswa[3] = 70
 
 ## Deklarasi Array
 
 `tipe nama[ukuran];`
 
-- tipe → tipe data dari array. Dapat berupa int, double, bool, dll
-- nama → nama dari Array. Aturan penamaannya sama seperti variabel biasa
-- ukuran → ukuran dari array. Yang terdefinisi ialah 0 sampai (ukuran-1)
+-   tipe → tipe data dari array. Dapat berupa int, double, bool, dll
+-   nama → nama dari Array. Aturan penamaannya sama seperti variabel biasa
+-   ukuran → ukuran dari array. Yang terdefinisi ialah 0 sampai (ukuran-1)
 
 contoh:
 `int nilaiSiswa[3]`
 
-- yang terdefinisi hanya index nilaiSiswa[0] sampai nilaiSiswa[2]
+-   yang terdefinisi hanya index nilaiSiswa[0] sampai nilaiSiswa[2]
 
 `double harga_buku[5]`
 
-- yang terdefinisi hanya index harga_buku[0] sampai harga_buku[4]
-- mengakses harga_buku[-1], harga_buku[-2], harga_buku[5] dapat menyebabkan runtime error
+-   yang terdefinisi hanya index harga_buku[0] sampai harga_buku[4]
+-   mengakses harga_buku[-1], harga_buku[-2], harga_buku[5] dapat menyebabkan runtime error
 
 ## Inisialisasi Array (Deklarasi + Assign nilai)
 
@@ -192,7 +321,7 @@ int main()
     for(int i=0; i<3; i++){
 				scanf("%d", &nilaiSiswa[i]);
 		}
-		
+
     printf("Rata-rata: %f\\n", ( nilaiSiswa[0] + nilaiSiswa[1] + nilaiSiswa[2] ) / 3.0);
 		return 0;
 }
@@ -200,6 +329,7 @@ int main()
 ```
 
 ## Secara Alokasi Memori
+
 Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang **lokasinya ditempatkan berturut-turut atau berdekatan**.
 
 Maksudnya bagaimana? Perhatikan,
@@ -207,14 +337,11 @@ Maksudnya bagaimana? Perhatikan,
 Visualisasi memori ketika menyimpan 3 nilai menggunakan variabel biasa
 ![visualisasi memori variabel biasa](https://user-images.githubusercontent.com/79054230/185899917-67bff7f7-d16e-4427-9e9d-fceafc020929.png)
 
-
 Visualisasi memori ketika menyimpan 3 nilai menggunakan array
 ![visualisasi memori array (2)](https://user-images.githubusercontent.com/79054230/185896928-8f49f9cf-1660-4bee-b7ab-f9695fc53b76.png)
 Terlihat bahwa array mengalokasikan memori elemen-elemennya secara berdekatan atau berurutan.
 
-*Gambar diatas ialah gambar dari alokasi memori
-
-
+\*Gambar diatas ialah gambar dari alokasi memori
 
 Soal Latihan :
 
@@ -428,7 +555,7 @@ int main()
 }
 ```
 
-Untuk mengubah salah satu karakter pada string, kita cukup melakukan *assignment* kembali nilai pada index yang kita inginkan.
+Untuk mengubah salah satu karakter pada string, kita cukup melakukan _assignment_ kembali nilai pada index yang kita inginkan.
 
 ```c++
 #include <iostream>
