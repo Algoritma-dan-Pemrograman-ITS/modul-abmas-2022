@@ -1,6 +1,5 @@
 # Daftar Isi
 
-
 -   [Looping](#looping)
     -   [Perulangan While](#perulangan-while)
     -   [Perulangan Do While](#perulangan-do-while)
@@ -12,6 +11,7 @@
     -   [String dan angka](#string-dan-angka)
     -   [Panjang string](#panjang-string)
     -   [Mengakses karakter pada string](#mengakses-karakter-pada-string)
+-   [Latihan Soal](#latihan-soal)
 
 # Looping
 
@@ -38,16 +38,16 @@ Bayangkan jika kita diharuskan mencetak kalimat tersebut sebanyak 1000 kali. Mak
 
 Secara umum, loop digunakan untuk melakukan sebuah proses, seperti mencari data, mengubah data, dll. Sebuah **Loop** memiliki tiga komponen penting:
 
-1. *Control variable*
-<br> *control variable* merupakan sebuah *counter* dari sebuah **Looping**. Salah satu fungsi dari *Control variable* yaitu sebagai penanda berapa kali sebuah loop telah dilakukan. *Control variable* harus diinisiasi di awal sebagai penentu apakah sebuah **Loop** perlu dilakukan
+1. _Control variable_
+   <br> _control variable_ merupakan sebuah _counter_ dari sebuah **Looping**. Salah satu fungsi dari _Control variable_ yaitu sebagai penanda berapa kali sebuah loop telah dilakukan. _Control variable_ harus diinisiasi di awal sebagai penentu apakah sebuah **Loop** perlu dilakukan
 
-2. *Loop condition*
-<br> *loop condition* merupakan sebuah kondisi yang akan menentukan apakah sebuah **Looping** akan berlanjut atau berhenti
+2. _Loop condition_
+   <br> _loop condition_ merupakan sebuah kondisi yang akan menentukan apakah sebuah **Looping** akan berlanjut atau berhenti
 
-3. *Update control variable*
-<br>  *Control variable* harus di-update. Jika tidak, maka program akan melakukan *Infinite Loop*
+3. _Update control variable_
+   <br> _Control variable_ harus di-update. Jika tidak, maka program akan melakukan _Infinite Loop_
 
-*Infinite loop* adalah sebuah kondisi dimana program berjalan tanpa henti karena sebuah **Loop** tidak memiliki/mencapai kondisi yang diinginkan.
+_Infinite loop_ adalah sebuah kondisi dimana program berjalan tanpa henti karena sebuah **Loop** tidak memiliki/mencapai kondisi yang diinginkan.
 
 Terdapat 3 jenis pengulangan pada bahasa C++, yaitu `while`, `do-while`, dan `for`. Setiap pengulangan memiliki 3 komponen yang telah disebutkan di atas walaupun memiliki perbedaan dalam cara penulisannya.
 
@@ -61,11 +61,11 @@ Perulangan while adalah bentuk perulangan yang paling sederhana. Struktur dari p
 using namespace std;
 
 int main()
-{   
+{
     int i = 1; // control variable
-    
+
     while (i <= 10) { // loop condition
-    
+
         // task yang akan dikerjakan
         cout << "Loop ke-" << i << endl;
 
@@ -73,13 +73,14 @@ int main()
     }
 }
 ```
+
 Cara kerja pengulangan `while` di atas adalah sebagai berikut
 
-1. Inisiasi awal *control variable* `int i = 1`
-2. Pengecekan apakah *control variable* memenuhi *loop condition*
+1. Inisiasi awal _control variable_ `int i = 1`
+2. Pengecekan apakah _control variable_ memenuhi _loop condition_
 3. Jika iya, maka dilakukan instruksi yang ada di dalam **Loop**
-4. Setelah selesai, dilakukan update *control variable* dengan cara menambahkan 1 pada *control variable*
-5. Setelah rangkaian **Loop** pertama selesai, maka dilakukan pengecekan lagi, apakah *control variable* memenuhi *loop condition*. Jika iya, maka kembali lagi ke langkah ke-3. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya 
+4. Setelah selesai, dilakukan update _control variable_ dengan cara menambahkan 1 pada _control variable_
+5. Setelah rangkaian **Loop** pertama selesai, maka dilakukan pengecekan lagi, apakah _control variable_ memenuhi _loop condition_. Jika iya, maka kembali lagi ke langkah ke-3. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya
 
 ## Perulangan Do While
 
@@ -91,11 +92,11 @@ Perulangan do-while adalah bentuk selanjutnya dari pengulangan. Pengulangan ini 
 using namespace std;
 
 int main()
-{   
+{
     int i = 1; // control variable
-    
+
     do { // loop condition
-    
+
         // task yang akan dikerjakan
         cout << "Loop ke-" << i << endl;
 
@@ -104,7 +105,7 @@ int main()
 }
 ```
 
-Pada program di atas, setelah dilakukan inisialisasi *control variable*, **Loop** akan langsung berjalan tanpa melakukan pengecekan terlebih dahulu. Setelah 1 rangkaian **Loop** selesai, baru dilakukan pengecekan apakah *control variable* memenuhi *loop condition*. Untuk lebih memahami perbedaannya, perhatikan kedua contoh berikut
+Pada program di atas, setelah dilakukan inisialisasi _control variable_, **Loop** akan langsung berjalan tanpa melakukan pengecekan terlebih dahulu. Setelah 1 rangkaian **Loop** selesai, baru dilakukan pengecekan apakah _control variable_ memenuhi _loop condition_. Untuk lebih memahami perbedaannya, perhatikan kedua contoh berikut
 
 ```c++
 #include <iostream>
@@ -112,11 +113,11 @@ Pada program di atas, setelah dilakukan inisialisasi *control variable*, **Loop*
 using namespace std;
 
 int main()
-{   
+{
     int i = 11; // control variable
-    
+
     while (i <= 10) { // loop condition
-    
+
         // task yang akan dikerjakan
         cout << "Loop ke-" << i << endl;
 
@@ -131,11 +132,11 @@ int main()
 using namespace std;
 
 int main()
-{   
+{
     int i = 11; // control variable
-    
+
     do { // loop condition
-    
+
         // task yang akan dikerjakan
         cout << "Loop ke-" << i << endl;
 
@@ -144,16 +145,16 @@ int main()
 }
 ```
 
-Jika kedua program di atas di-run, maka pengulangan `while` tidak akan menghasilkan output apapun. Hal ini disebabkan *control variable* tidak memenuhi *loop condition* pada saat pengulangan akan pertama kali dijalankan. 
+Jika kedua program di atas di-run, maka pengulangan `while` tidak akan menghasilkan output apapun. Hal ini disebabkan _control variable_ tidak memenuhi _loop condition_ pada saat pengulangan akan pertama kali dijalankan.
 
-Berbeda dengan pengulangan `do-while`, pengulangan akan dijalankan sekali sebelum berhenti. Hal ini disebabkan pengulangan `do-while` melakukan pengecekan pemenuhan *loop condition* di akhir pengulangan sehingga program pasti akan dijalankan minimal 1 kali.
+Berbeda dengan pengulangan `do-while`, pengulangan akan dijalankan sekali sebelum berhenti. Hal ini disebabkan pengulangan `do-while` melakukan pengecekan pemenuhan _loop condition_ di akhir pengulangan sehingga program pasti akan dijalankan minimal 1 kali.
 
 Cara kerja pengulangan `do-while` di atas adalah sebagai berikut
 
-1. Inisiasi awal *control variable* `int i = 11`
+1. Inisiasi awal _control variable_ `int i = 11`
 2. Melakukan instruksi yang ada di dalam **Loop**
-3. Setelah selesai, dilakukan update *control variable* dengan cara menambahkan 1 pada *control variable*
-4. Pengecekan apakah *control variable* memenuhi *loop condition*
+3. Setelah selesai, dilakukan update _control variable_ dengan cara menambahkan 1 pada _control variable_
+4. Pengecekan apakah _control variable_ memenuhi _loop condition_
 5. Jika iya, maka kembali ke langkah ke-2. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya
 
 ## Perulangan For
@@ -166,7 +167,7 @@ Perulangan `for` merupakan jenis perulangan yang paling berbeda dnegan kedua per
 using namespace std;
 
 int main()
-{   
+{
     /*
         for(control variable; loop condition; update control variable){
 
@@ -178,19 +179,21 @@ int main()
     }
 }
 ```
+
 Cara kerja pengulangan `for` di atas adalah sebagai berikut
 
-1. Inisiasi awal *control variable* `int i = 1`
-2. Pengecekan apakah *control variable* memenuhi *loop condition*
+1. Inisiasi awal _control variable_ `int i = 1`
+2. Pengecekan apakah _control variable_ memenuhi _loop condition_
 3. Jika iya, maka dilakukan instruksi yang ada di dalam **Loop**
-4. Setelah selesai, dilakukan update *control variable* dengan cara menambahkan 1 pada *control variable*
-5. Setelah rangkaian **Loop** pertama selesai, maka dilakukan pengecekan lagi, apakah *control variable* memenuhi *loop condition*. Jika iya, maka kembali lagi ke langkah ke-3. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya
+4. Setelah selesai, dilakukan update _control variable_ dengan cara menambahkan 1 pada _control variable_
+5. Setelah rangkaian **Loop** pertama selesai, maka dilakukan pengecekan lagi, apakah _control variable_ memenuhi _loop condition_. Jika iya, maka kembali lagi ke langkah ke-3. Jika tidak, maka **Loop** selesai dan berlanjut ke baris program di luar loop selanjutnya
 
 # Array
 
 ## Motivasi
+
 Kenapa kita harus menggunakan array?
-gini... Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini. 
+gini... Misalnya, kita ingin menyimpan nilai 3 Siswa. kemudian, kita ingin mencari rata-ratanya. Kita bisa saja menggunakan program seperti ini.
 
 ```c++
 #include <stdio.h>
@@ -223,10 +226,10 @@ Catatan:
 Misalnya, kita mempunyai array bernama `nilaiMahasiswa` yang menampung 4 elemen
 ![visualisasi array](https://user-images.githubusercontent.com/79054230/185911950-9be3fa92-c992-4fb2-a48c-7579a5296173.png)
 
-- nilaiMahasiswa[0] = 80
-- nilaiMahasiswa[1] = 90
-- nilaiMahasiswa[2] = 85
-- nilaiMahasiswa[3] = 70
+-   nilaiMahasiswa[0] = 80
+-   nilaiMahasiswa[1] = 90
+-   nilaiMahasiswa[2] = 85
+-   nilaiMahasiswa[3] = 70
 
 -   nilaiMahasiswa[0] = 80
 -   nilaiMahasiswa[1] = 90
@@ -578,3 +581,12 @@ int main()
     cout << "Nilai string akhir : "  << myString << "\n";
 }
 ```
+
+# Latihan Soal
+
+Untuk dapat memahami lebih baik mengenai materi ini, kerjakanlah latihan soal berikut
+
+1. Lakukanlah input untuk sebuah **string** (kata) dengan nama `my_string`. Setelah itu, ganti semua huruf vokal `a` atau `o` pada string tersebut dengan karakter `*` dan tampilkan. 
+
+2. Lakukanlah input untuk sebuah **string** (kata) dengan nama `my_string`. Setelah itu, tampilkan secara terbalik nilai dari variabel `my_string`.
+<br>Contoh jika `my_string` bernilai `"Dimas ahoy mabar"`, maka tampikan `"rabam yoha samiD"`
