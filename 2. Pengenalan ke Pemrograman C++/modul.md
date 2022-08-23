@@ -76,6 +76,8 @@
 	+ [Percabangan Switch Case](#percabangan-switch-case)
 	+ [Operator Kondisional (? :)](#operator-kondisional--)
 
+- [Latihan](#latihan)
+
 - [Referensi](#referensi)
 
 ----
@@ -1987,7 +1989,21 @@ int main()
     return 0;
 }
 ```
+
 ----
+
+# Latihan Soal
+1. Nilai total rapot di SMA 2 dihitung dari rata-rata nilai tugas, nilai UTS, dan nilai UAS. Buatlah program yang meminta input dari user berupa ketiga nilai tersebut, lalu menghitung rata-ratanya. (Hint: Gunakan cin, variabel, dan operator aritmatika)
+2. Nilai abjad pada rapot ditentukan dari nilai total yang sudah dihitung sebelumnya, dengan ketentuan:
+    - Nilai A (Lebih dari 85)
+    - Nilai B (75 sampai 84)
+    - Nilai C (65 sampai 74)
+    - Nilai D (55 sampai 64)
+    - Nilai E (Kurang dari 54)
+    Tambahkanlah pemberian nilai abjad ini pada program nomor 1 dengan menggunakan branching. (Hint: Bisa diimplementasikan dengan if, else if, dan else)
+
+---
+
 # Referensi
 - [Modul 0: Pengenalan Pemrograman · AlproITS/DasarPemrograman Wiki (github.com)](https://github.com/AlproITS/DasarPemrograman/wiki/Modul-0:-Pengenalan-Pemrograman)
 - [Modul 1: Percabangan · AlproITS/DasarPemrograman Wiki (github.com)](https://github.com/AlproITS/DasarPemrograman/wiki/Modul-1:-Percabangan)
