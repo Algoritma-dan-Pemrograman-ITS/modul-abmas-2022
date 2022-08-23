@@ -76,7 +76,7 @@
 	+ [Percabangan Switch Case](#percabangan-switch-case)
 	+ [Operator Kondisional (? :)](#operator-kondisional--)
 
-- [Latihan](#latihan)
+- [Latihan Soal](#latihan-soal)
 
 - [Referensi](#referensi)
 
