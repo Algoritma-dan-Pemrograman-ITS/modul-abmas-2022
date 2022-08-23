@@ -5,6 +5,11 @@
     -   [Perulangan Do While](#perulangan-do-while)
     -   [Perulangan For](#perulangan-for)
 -   [Array](#array)
+    -   [Motivasi menggunakan array](#motivasi)
+    -   [Apa itu Array](#apa-itu-array?)
+    -   [Deklarasi Array](#deklarasi-array)
+    -   [Assign nilai Array](#assign-nilai-array)
+    -   [Alokasi Memori untuk Array](#alokasi-memori-untuk-array)
 -   [String](#string)
     -   [String di CPP](#string-di-cpp)
     -   [Concatenation pada string](#concatenation-pada-string)
@@ -294,10 +299,12 @@ int nilaiSiswa[3] = {70, 80, 90);
 nilaiSiswa[0] = 60;
 ```
 
-Kita juga dapat menginput nilai dari user menggunakan scanf
+
+Kita juga dapat menginput nilai dari user menggunakan scanf atau pun cin
 
 ```cpp
 scanf("%d", &nilaiSiswa[0]);
+cin >> nilaiSiswa[1];
 ```
 
 ---
@@ -337,7 +344,7 @@ int main()
 
 ```
 
-## Secara Alokasi Memori
+## Alokasi Memori untuk Array
 
 Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang **lokasinya ditempatkan berturut-turut atau berdekatan**.
 
