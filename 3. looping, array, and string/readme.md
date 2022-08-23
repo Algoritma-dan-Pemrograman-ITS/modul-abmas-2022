@@ -5,6 +5,11 @@
     -   [Perulangan Do While](#perulangan-do-while)
     -   [Perulangan For](#perulangan-for)
 -   [Array](#array)
+    -   [Motivasi menggunakan array](## Motivasi)
+    -   [Apa itu Array](## Apa itu array?)
+    -   [Deklarasi Array](## Deklarasi Array)
+    -   [Assign nilai Array](## Assign nilai Array)
+    -   [Alokasi Memori untuk Array](## Alokasi Memori untuk Array)
 -   [String](#string)
     -   [String di CPP](#string-di-cpp)
     -   [Concatenation pada string](#concatenation-pada-string)
@@ -208,7 +213,7 @@ int main()
 }
 ```
 
-Namun, bagaimana jika siswanya ada 50? Kalau diselesaikan dengan cara diatas, maka kita memerlukan 50 variabel. Maka dari itu, mari mengenal konsep array.
+Namun, bagaimana jika siswanya ada 50? Kalau diselesaikan dengan cara diatas, maka kita memerlukan 50 variabel. Maka dari itu, mari mengenal konsep **array**.
 
 ## Apa itu array?
 
@@ -225,11 +230,6 @@ Catatan:
 
 Misalnya, kita mempunyai array bernama `nilaiMahasiswa` yang menampung 4 elemen
 ![visualisasi array](https://user-images.githubusercontent.com/79054230/185911950-9be3fa92-c992-4fb2-a48c-7579a5296173.png)
-
--   nilaiMahasiswa[0] = 80
--   nilaiMahasiswa[1] = 90
--   nilaiMahasiswa[2] = 85
--   nilaiMahasiswa[3] = 70
 
 -   nilaiMahasiswa[0] = 80
 -   nilaiMahasiswa[1] = 90
@@ -294,10 +294,11 @@ int nilaiSiswa[3] = {70, 80, 90);
 nilaiSiswa[0] = 60;
 ```
 
-Kita juga dapat menginput nilai dari user menggunakan scanf
+Kita juga dapat menginput nilai dari user menggunakan scanf atau pun cin
 
 ```cpp
 scanf("%d", &nilaiSiswa[0]);
+cin >> nilaiSiswa[1];
 ```
 
 ---
@@ -337,7 +338,7 @@ int main()
 
 ```
 
-## Secara Alokasi Memori
+## Alokasi Memori untuk Array
 
 Dengan aray, kita dapat menyimpan nilai dari tipe yang sama, yang **lokasinya ditempatkan berturut-turut atau berdekatan**.
 
