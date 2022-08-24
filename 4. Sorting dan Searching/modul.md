@@ -6,6 +6,8 @@
     - [Linear Search](#linear-search)
     - [Binary Search](#binary-search)
 
+- [Latihan Soal](#latihan-soal)
+
 # Sorting dan Searching
 
 ## **Sorting (Pengurutan)**
@@ -195,3 +197,9 @@ Ditemukan angka 200 pada sekuens dengan 10 pengecekan
 ```
 
 Dengan metode binary search, pencarian dapat dilakukan dalam waktu yang lebih singkat. Namun, pencarian dengan metode binary search hanya dapat dilakukan apabila sekuens yang akan digunakan bersifat monoton naik maupun monoton turun. Atau dalam istilah yang lebih mudah, sekuens tersebut telah terurut.
+
+## Latihan Soal
+
+1. Diberikan sebuah daftar string yang acak. Carilah string dengan urutan ke-n secara leksikografis.
+
+2. Dari sebuah sekuens bilangan bulat yang acak, carilah banyak kemunculan bilangan n.
