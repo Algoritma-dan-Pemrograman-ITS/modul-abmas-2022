@@ -69,6 +69,15 @@
 	+ [Pesan Peringatan (Warning)](#pesan-peringatan-warning)
 	+ [Tampilan Error dan Warning dalam Codeblocks](#tampilan-error-dan-warning-dalam-codeblocks)
 
+- [Branching](#branching)
+	+ [Percabangan If](#percabangan-if)
+	+ [Percabangan If-Else](#percabangan-ifelse)
+	+ [Percabangan If-Else If](#percabangan-ifelse-if)
+	+ [Percabangan Switch Case](#percabangan-switch-case)
+	+ [Operator Kondisional (? :)](#operator-kondisional--)
+
+- [Latihan Soal](#latihan-soal)
+
 - [Referensi](#referensi)
 
 ----
@@ -1675,33 +1684,34 @@ Akan muncul
 
 ----
 
-# Branch
+# Branching
 
-## Control Flow
-Control Flow adalah cara kita mengatur jalan penyataan, instruksi, dan pemanggilan fungsi suatu program. Tanpa control flow, program kita hanya bergerak dari atas ke bawah saja (sequential). Untuk itu, kita akan membahas control flow pada bahasa C++, yaitu Percabangan dan Perulangan, lalu dilengkapi dengan Fungsi.
+Branching atau percabangan memungkinkan kita untuk menentukan **kode manakah** yang akan **dijalankan berdasarkan** suatu **kondisi**. Percabangan di bahasa C++ ada 4, yaitu 
+- If 
+- If-Else
+- If-Else If
+- Switch Case
+- Operator Kondisional (```? :```)
 
-## Percabangan (Branch)
-Percabangan memungkinkan kita untuk menentukan kode manakah yang akan kita eksekusi berdasarkan suatu kondisi. Percabangan di bahasa C++ ada 4, yaitu ```if```, ```if-else```, ```if-else if```, dan ```switch```.
-
-### Percabangan If
-Cara kerja percabangan ```if``` yaitu memeriksa dan mengevaluasi suatu kondisi untuk menentukan apakah instruksi selanjutnya dalam bracket akan dijalankan atau tidak oleh program.
+## Percabangan If
+Percabangan `if` akan memeriksa kebenaran suatu kondisi untuk menentukan apakah kode dalam bracket `{ }` dijalankan atau tidak.
 <ul>
-    <li>Jika kondisi tersebut bernilai TRUE (1), kode yang di dalam bracket akan dieksekusi.
-    <li>Sebaliknya jika kondisi tersebut bernilai FALSE (0), kode yang di dalam bracket tidak akan dieksekusi.
+    <li>Jika kondisi tersebut bernilai TRUE (1), kode dalam bracket akan dijalankan.
+    <li>Sebaliknya jika kondisi tersebut bernilai FALSE (0), kode dalam bracket tidak akan dijalankan.
 </ul>
 
 Syntax percabangan ```if``` dapat ditulis seperti ini:
-```bash
+```c++
 if (<Ekspresi/Kondisi>) {
 
-    // Kode yang akan dieksekusi jika kondisi tersebut benar
+    // Kode yang akan dieksekusi jika kondisi benar
 
 }
 ```
 
-#### Contoh:
-Terdapat pernyataan "Sebuah handphone akan memberikan notifikasi baterai lemah apabila baterainya berada di bawah atau sama dengan 15%."
-Pada kasus ini, dapat kita ambil sebuah kondisi yaitu "Apakah baterai berada di bawah atau sama dengan 15% ?"
+### Contoh:
+Terdapat pernyataan "Sebuah handphone akan memberikan notifikasi baterai lemah jika baterainya kurang dari atau sama dengan 15%."
+Pada kasus ini, dapat kita ambil sebuah kondisi yaitu "Apakah baterai kurang dari atau sama dengan 15% ?"
 Sehingga dapat kita tulis:
 ```cpp
 #include <iostream>
@@ -1711,7 +1721,7 @@ int main()
 {
     int baterai;
     baterai = 10;
-    if (baterai <= 15) // Jika baterai di bawah atau sama dengan 15%
+    if (baterai <= 15) // Jika baterai kurang dari atau sama dengan 15%
     {
         // Apa yang perlu dilakukan ketika kondisi terpenuhi?
         cout << "Notifikasi baterai lemah muncul.\n";
@@ -1726,15 +1736,15 @@ Maka outputnya:
 Notifikasi baterai lemah muncul.
 ```
 
-### Percabangan If-Else
-Cara kerja percabangan ```if-else``` yaitu memeriksa kondisi dalam ```if```.
+## Percabangan If-Else
+Percabangan `if-else` mirip dengan percabangan `if`. Dia juga akan memeriksa kebenaran kondisi dalam `if`. 
 <ul>
-    <li>Jika kondisi tersebut bernilai TRUE (1), Program akan menjalankan kode di dalam bracket if.
-    <li>Sebaliknya jika kondisi tersebut bernilai FALSE (0), kode di bawah else lah yang akan dijalankan.
+    <li>Jika kondisi tersebut bernilai TRUE (1), kode dalam bracket if akan dijalankan.
+    <li>Sebaliknya jika kondisi tersebut bernilai FALSE (0), kode dalam bracket else yang akan dijalankan.
 </ul>
 
 Syntax percabangan ```if-else``` dapat ditulis seperti ini:
-```c
+```c++
 if (<Ekspresi/Kondisi>) {
 
     // Kode yang akan dieksekusi jika kondisi tersebut benar
@@ -1746,11 +1756,11 @@ if (<Ekspresi/Kondisi>) {
 }
 ```
 
-#### Contoh:
+### Contoh:
 Kita akan melakukan pemeriksaan apakah sebuah bilangan merupakan bilangan cacah atau bulat negatif. Maka, dalam kasus ini, kondisi yang dapat diambil:
 <ul>
-    <li> Apbabila sebuah bilangan kurang dari 0, maka bilangan tersebut merupakan bilangan bulat negatif</li>
-    <li> Apabila sebuah bilangan lebih dari sama dengan 0, maka bilangan tersebut merupakan bilangan cacah</li>
+    <li> Jika sebuah bilangan kurang dari 0, maka bilangan tersebut merupakan bilangan bulat negatif</li>
+    <li> Jika sebuah bilangan lebih dari sama dengan 0, maka bilangan tersebut merupakan bilangan cacah</li>
 </ul>
 
 Sehingga dapat kita tulis:
@@ -1762,13 +1772,14 @@ int main()
 {
     int bilangan;
     bilangan = 10;
-    if (bilangan < 0) // Jika bilangan lebih dari 0
+    if (bilangan < 0) // Jika bilangan kurang dari 0
     {
         // Apa yang perlu dilakukan ketika kondisi terpenuhi?
         cout << bilangan << "merupakan bilangan bulat negatif.\n";
     }
     else
     {
+        // Apa yang perlu dilakukan ketika kondisi tidak terpenuhi?
         cout << bilangan << "merupakan bilangan cacah.\n";
     }
 
@@ -1777,58 +1788,103 @@ int main()
 ```
 
 Maka outputnya:
-```c
+```
 10 merupakan bilangan cacah.
 ```
 
-### Percabangan If-Else If
-Cara kerja percabangan ```if-else``` yaitu memeriksa kondisi dalam ```if```.
-<ul>
-<li>Jika kondisi tersebut bernilai TRUE (1), Program akan menjalankan kode di dalam bracket if.</li>
-<li>Apabila kondisi pertama tidak memenuhi, maka ia akan memerika kondisi didalam else-if, apabila bernilai TRUE (1), maka ia akan menjalankan perintah dalam bracket tersebut, apabila tidak maka ia akan menjalankan sequence selanjutnya.</li>
-<li>Apabila kita menyediakan statement else diakhir, maka ketika seluruh kondisi if dan else-if tidak memenuhi atau FALSE (0), maka secara otomatis ia akan menjalankan perintah di dalam else tersebut.</li>
-</ul>
+## Percabangan If-Else If
+Cara kerja percabangan `if-else if` adalah sebagai berikut:
+
+- Kondisi dalam `if` akan diperiksa dulu
+    + Jika kondisi dalam `if` bernilai TRUE (1), program akan menjalankan kode di dalam bracket `if`
+    + Jika kondisi dalam `if` bernilai FALSE (0), program akan berlanjut memeriksa else `if`
+- Kondisi dalam `else if` diperiksa
+    + Jika kondisi dalam `else if` bernilai TRUE (1), Program akan menjalankan kode di dalam bracket `else if`
+    + Jika kondisi dalam `else if` bernilai FALSE (0), Program akan menjalankan sequence selanjutnya
+- Jika kita menambahkan statement `else` di akhir dan seluruh kondisi `if` serta `else if` bernilai FALSE (0), maka program akan menjalankan kode dalam bracket `else`.
 
 Syntax percabangan ```if-else if``` dapat ditulis seperti ini:
-```c
+```c++
 if (<Ekspresi/Kondisi>) {
 
-    // Kode yang akan dieksekusi jika kondisi tersebut benar
+    // Kode yang akan dieksekusi jika kondisi if benar
 
-}else if (<Ekspresi/Kondisi>) {
+} else if (<Ekspresi/Kondisi>) {
 
-    // Kode yang akan dieksekusi jika kondisi tersebut salah
+    // Kode yang akan dieksekusi jika kondisi else if benar
 
 }
 // Boleh menambahkan else{} apabila perlu
 ```
 
-### Percabangan Switch Case
-Selain penggunaan statement if untuk memilih diantara banyak alternatif, terdapat pula statement ```switch``` yang memiliki fungsi yang sama, untuk memilih diantara banyak alternatif berdasarkan sebuah kondisi. Kondisi pada statemen switch berisi ekspresi yang dapat menggunakan sebuah variable tunggal bertipe ```int``` atau ```char``` yang akan diperiksa nilainya di setiap blok case.
+Beberapa catatan tambahan:
+- Statement `if` wajib kita tambahkan dulu sebelum `else if`
+- Setelah statement `if`, kita bisa menambahkan lebih dari satu statement `else if`
+- Statement `else` di akhir tidak wajib kita tambahkan
+- Setelah statement `else` kita tidak bisa menambahkan statement `else if`
+
+### Contoh:
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    
+    cout << "Masukkan bilangan bulat : ";
+    cin >> a;
+
+    if (a == 5) {
+        cout << "Nilai a adalah 5" << endl;
+    }
+    else if (a == 3) {
+        cout << "Nilai a adalah 3" << endl;
+    }
+    else if (a == 1) {
+        cout << "Nilai a adalah 1" << endl;
+    }
+    else {
+        cout << "Nilai a bukan 5, 3, atau 1" << endl;
+    }
+
+    return 0;
+}
+```
+Output:
+```
+Masukkan bilangan bulat : 3
+Nilai a adalah 3
+```
+
+## Percabangan Switch Case
+Berbeda dengan implementasi branching sebelumnya, `switch` hanya bisa kita gunakan untuk **perbandingan eksak** atau **sama dengan**. Artinya kita tidak bisa melakukan perbandingan seperti lebih dari dan kurang dari. **Ekspresi/kondisi** dalam statement `switch` biasanya berupa **variabel tunggal** bertipe `int` atau `char`. **Nilai** dari variabel ini akan **diperiksa di setiap blok `case`**.
 
 Syntax untuk Switch-Case:
-```c
-switch(ekspresi) {
+```c++
+switch(<Variabel>) {
 
-    case ekspresi-konstan:
-        statement;
+    case <Nilai Pertama>:
+        // Kode yang akan dieksekusi jika nilai variabel sama dengan nilai pertama
         break;
 
-    case ekspresi-konstan:
-        statement;
+    case <Nilai Kedua>:
+        // Kode yang akan dieksekusi jika nilai variabel sama dengan nilai kedua
         break;
-  
-    /* Anda bisa memiliki jumlah case sebanyak mungkin */
 
-    /* Anda harus mengakhiri blok kode Switch-Case dengan "default",
-       yaitu bagian kode yang akan dieksekusi jika tidak ada case yang memenuhi */
+    // Kita bisa menambahkan jumlah case sebanyak mungkin
 
     default: 
-        statement;
+        // Kode yang akan dieksekusi jika tidak ada case yang terpenuhi
 }
 ```
 
-#### Contoh:
+Catatan tambahan:
+- Di akhir tiap blok `case`, kita perlu menambahkan `break`. Jika tidak, program akan lanjut menjalankan blok `case` berikutnya. 
+- `default` pada `switch` mirip seperti `else` pada `if`. Jika semua `case` tidak terpenuhi, maka `default` lah yang akan dijalankan. 
+- Seperti `else`, `default` tidak wajib kita tambahkan.
+
+### Contoh:
 Jika tanggal 1 adalah hari Minggu dan 7 adalah hari Sabtu, maka lakukan pengecekan pada sebuah tanggal dan perkirakan hari apa yang jatuh pada tanggal tersebut!
 
 Dari contoh kasus di atas, dapat kita jabarkan:
@@ -1889,17 +1945,15 @@ int main()
 }
 ```
 
-Setiap blok, case harus ditambahkan statement ```break```, karena apabila tidak maka ia akan tetap menjalankan blok case di bawahnya hingga bertemu ```break``` lain atau pada akhir blok switch.
-
-### Opreator Kondisional (? :)
-Operator kondisional adalah satu-satunya operator ternary dalam bahasa C. Operator kondisional bertingkah seperti layaknya percabangan ```if - else```. Ekspresi/kondisi yang akan dievaluasi diletakkan sebelum tanda tanya (?). Apabila menghasilkan ```TRUE```, maka program akan mengeksekusi bagian di kiri tanda titik dua. Jika ```FALSE```, akan mengeksekusi bagian di kanan tanda titik dua.
+## Operator Kondisional (? :)
+Operator kondisional adalah **satu-satunya operator ternary** dalam bahasa C++. Operator kondisional bertingkah seperti ```if - else```. **Ekspresi/kondisi** yang akan dievaluasi diletakkan **sebelum tanda tanya (?)**. Apabila menghasilkan **```TRUE```**, maka program akan mengeksekusi bagian **di kiri tanda titik dua**. Jika **```FALSE```**, akan mengeksekusi **bagian di kanan tanda titik dua**.
 
 Syntax operator kondisional dapat ditulis seperti ini:
-```cpp
+```c++
 (ekspresi/kondisi) ? (ekspresi jika TRUE) : (ekspresi jika FALSE);
 ```
 
-#### Contoh:
+### Contoh:
 ```cpp
 #include <iostream>
 using namespace std;
@@ -1916,8 +1970,8 @@ int main()
 }
 ```
 
-merupakan bentuk yang sama dengan:
-```cpp
+Merupakan bentuk yang sama dengan:
+```c++
 #include <iostream>
 using namespace std;
 
@@ -1936,8 +1990,24 @@ int main()
 }
 ```
 
+----
+
+# Latihan Soal
+1. Nilai total rapot di SMA 2 dihitung dari rata-rata nilai tugas, nilai UTS, dan nilai UAS. Buatlah program yang meminta input dari user berupa ketiga nilai tersebut, lalu menghitung rata-ratanya. (Hint: Gunakan cin, variabel, dan operator aritmatika)
+2. Nilai abjad pada rapot ditentukan dari nilai total yang sudah dihitung sebelumnya, dengan ketentuan:
+    - Nilai A (Lebih dari 85)
+    - Nilai B (75 sampai 84)
+    - Nilai C (65 sampai 74)
+    - Nilai D (55 sampai 64)
+    - Nilai E (Kurang dari 54)
+    Tambahkanlah pemberian nilai abjad ini pada program nomor 1 dengan menggunakan branching. (Hint: Bisa diimplementasikan dengan if, else if, dan else)
+
+---
+
 # Referensi
 - [Modul 0: Pengenalan Pemrograman · AlproITS/DasarPemrograman Wiki (github.com)](https://github.com/AlproITS/DasarPemrograman/wiki/Modul-0:-Pengenalan-Pemrograman)
+- [Modul 1: Percabangan · AlproITS/DasarPemrograman Wiki (github.com)](https://github.com/AlproITS/DasarPemrograman/wiki/Modul-1:-Percabangan)
 - [Pemrograman Dasar | TLX (toki.id)](https://tlx.toki.id/courses/basic/)
 - [Kelas Terbuka - Belajar Dasar C++ ](https://www.youtube.com/watch?v=WtBF_-pLrjE&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI)
+
 
